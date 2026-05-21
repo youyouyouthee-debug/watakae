@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>優 | You - Official Website</title>
+    <!-- Google Fonts から洗練された明朝体とゴシック体を採用 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ベーススタイルの定義 */
+        :root {
+            --bg-color: #fcfbf9;      /* 温かみのある生成り色 */
+            --text-color: #2c2c2c;    /* 強い黒を避けた濃いグレー */
+            --accent-color: #8c7b6e;  /* 知的なアースカラー */
+            --light-gray: #e6e4e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Noto Serif JP', serif;
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* レイアウト */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 100px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        /* 英語タイポグラフィ */
+        .en-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 300;
+            font-style: italic;
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        /* 1. ヒーローセクション */
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            font-weight: 200;
+            margin-bottom: 20px;
+            letter-spacing: 0.2em;
+        }
+
+        .hero-sub {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 200;
+        }
+
+        /* 2. コンセプト */
+        .concept-text {
+            font-size: 1.05rem;
+            text-align: justify;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .concept-text p {
+            margin-bottom: 30px;
+        }
+
+        /* 3. 出版告知 */
+        .book-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .book-grid {
+                grid-template-columns: 1fr 1.5fr;
+            }
+        }
+
+        .book-cover-placeholder {
+            width: 100%;
+            aspect-ratio: 1 / 1.4;
+            background-color: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+            font-size: 0.9rem;
+            border: 1px solid #d1cfcb;
+        }
+
+        .book-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .book-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /* 4. プロフィール */
+        .profile-list {
+            list-style: none;
+        }
+
+        .profile-list li {
+            margin-bottom: 15px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 600px) {
+            .profile-list li {
+                flex-direction: row;
+            }
+            .profile-date {
+                width: 150px;
+                flex-shrink: 0;
+            }
+        }
+
+        .profile-date {
+            color: var(--accent-color);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+        }
+
+        /* 5. フッター */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+            font-family: 'Cormorant Garamond', serif;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. ヒーローセクション -->
+    <header>
+        <div class="hero-content">
+            <h1>優 You </h1>
+            <p class="hero-sub">言葉は、どこにも行けない私の、唯一の居場所だった。記すことで、私はどこへでも行ける。</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- 2. コンセプト -->
+        <section id="concept">
+            <span class="en-title">Introduction</span>
+            <div class="concept-text">
+                <p>2026年5月、言葉の持つ静かな力を信じ、一人の作家として歩み始めました。</p>
+                <p>放送大学で培った多角的な視座と、日々の移ろいを掬い上げる筆致。<br>漂うこと、考えること、あるいは生きることの記録をここに重ねていきます。</p>
+            </div>
+        </section>
+
+        <!-- 3. 出版告知 -->
+        <section id="publication">
+            <span class="en-title">Upcoming Release</span>
+            <h2>デビュー作のご案内</h2>
+            
+            <div class="book-grid">
+                <!-- 装丁イメージ（後でお好きな写真に変更可能です） -->
+                <div class="book-cover-placeholder">
+                    <span><img src="watakae.jpg" style="width: 100%; height: auto;"></span>
+                </div>
+                <div class="book-info">
+                    <h3 class="book-title">『私には帰る“場所”がない』</h3>
+                    <div class="book-meta">
+                        <p>出版社：デザインエッグ社</p>
+                        <p>発売時期：2026年 秋 </p>
+                    </div>
+                    <p>現代を生きる私たちが抱える「根無し草」のような不安と、その先に見つけ出す微かな光を描いたエッセイ集。ケイト・ミレットが社会に突きつけた「The Personal is Political」という問い。
+家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。
+本書は、個人の喪失と再生のプロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。
+立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、そしてヴェイユの哲学が、彼女の道を照らす光となった。
+今、明日が見えずにいる人、そしてかつて絶望を経験したあなたに、一つの道標として本書を提示したい。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. プロフィール -->
+        <section id="profile">
+            <span class="en-title">Biography</span>
+            <h2>プロフィール</h2>
+            
+            <ul class="profile-list">
+                <li>
+                    <span class="profile-date">Biography</span>
+                    <span>優 You / 作家</span>
+                </li>
+                <li>
+                    <span class="profile-date">Education</span>
+                    <span>放送大学教養学部 卒業。人文学や社会学へのアプローチを背景に執筆を行う。</span>
+                </li>
+                <li>
+                    <span class="profile-date">May 2026</span>
+                    <span>作家として独立。個人の内面に深く潜る文章と言葉のあり方を追究すべく起業。</span>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- 5. フッター -->
+    <footer>
+        <p>&copy; 2026 You. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+
