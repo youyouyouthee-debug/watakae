@@ -10,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;400;600&display=swap" rel="stylesheet">
     
     <style>
-        /* ベーススタイルの定義 */
         :root {
+            /* 知的で温かみのあるカラーパレット */
             --bg-color: #fcfbf9;      /* 温かみのある生成り色 */
-            --text-color: #2c2c2c;    /* 強い黒を避けた濃いグレー */
+            --text-main: #2c2c2c;     /* 強い黒を避けた濃いグレー */
             --accent-color: #8c7b6e;  /* 知的なアースカラー */
+            --dark-sepia: #1e1a17;    /* 深みのあるダークセピア */
             --light-gray: #e6e4e0;
         }
 
@@ -24,72 +25,194 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
             font-family: 'Noto Serif JP', serif;
-            line-height: 1.8;
-            letter-spacing: 0.05em;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            line-height: 1.9;
+            letter-spacing: 0.08em;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* レイアウト */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+        /* ヘッダー */
+        header {
+            background-color: var(--dark-sepia);
+            color: #ffffff;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
         }
 
-        section {
-            padding: 100px 0;
-            border-bottom: 1px solid var(--light-gray);
+        header h1 {
+            font-size: 1.3rem;
+            letter-spacing: 0.2em;
+            font-weight: 300;
+            z-index: 100;
         }
 
-        /* 英語タイポグラフィ */
+        header h1 a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        /* ナビゲーションメニュー */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s ease, opacity 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+            opacity: 0.8;
+        }
+
+        /* ハンバーガーボタン（PCでは非表示） */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 100;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 24px;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 6px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* スマートフォン向けレイアウト（768px以下） */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            nav ul {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background-color: rgba(30, 26, 23, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: right 0.4s ease-in-out;
+                z-index: 99;
+                gap: 2rem;
+            }
+
+            nav ul.active {
+                right: 0;
+            }
+
+            nav a {
+                font-size: 1.2rem;
+            }
+
+            .hamburger.active span:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active span:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+
+        /* 英語タイポグラフィの共通設定 */
         .en-title {
             font-family: 'Cormorant Garamond', serif;
             font-weight: 300;
             font-style: italic;
             color: var(--accent-color);
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1.6rem;
+            margin-bottom: 15px;
             display: block;
+            letter-spacing: 0.1em;
         }
 
-        h2 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 40px;
+        /* 各セクションの共通レイアウト */
+        .section-container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 120px 25px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        /* スクロールアニメーション用の初期状態 */
+        .animate-target {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s ease, transform 1.2s ease;
+        }
+
+        .animate-target.fade-in {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         /* 1. ヒーローセクション */
-        header {
+        .hero {
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 20px;
+            background: linear-gradient(to bottom, #fcfbf9 0%, #f5f3ee 100%);
+            margin-top: 0;
         }
 
-        .hero-content h1 {
-            font-size: 2.5rem;
+        .hero h2 {
+            font-size: 2.6rem;
             font-weight: 200;
-            margin-bottom: 20px;
-            letter-spacing: 0.2em;
+            margin-bottom: 35px;
+            letter-spacing: 0.3em;
+            text-indent: 0.3em;
         }
 
-        .hero-sub {
-            font-size: 1.1rem;
-            color: #666;
+        .hero p {
+            font-size: 1.05rem;
+            color: #555;
             font-weight: 200;
+            line-height: 2;
+            max-width: 600px;
+            margin: 0 auto;
+            word-break: keep-all;
         }
 
         /* 2. コンセプト */
         .concept-text {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             text-align: justify;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
         }
 
@@ -97,17 +220,28 @@
             margin-bottom: 30px;
         }
 
-        /* 3. 出版告知 */
+        .concept-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 3. 出版告知 (Grid) */
+        .book-section h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 50px;
+            letter-spacing: 0.15em;
+        }
+
         .book-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
-            align-items: center;
+            gap: 50px;
+            align-items: start;
         }
 
         @media (min-width: 768px) {
             .book-grid {
-                grid-template-columns: 1fr 1.5fr;
+                grid-template-columns: 1fr 1.4fr;
             }
         }
 
@@ -118,40 +252,81 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #888;
-            font-size: 0.9rem;
             border: 1px solid #d1cfcb;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .book-cover-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .book-cover-placeholder:hover img {
+            transform: scale(1.03);
         }
 
         .book-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
         }
 
         .book-meta {
             font-size: 0.9rem;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border-left: 2px solid var(--accent-color);
+            padding-left: 15px;
+        }
+
+        .book-meta p {
+            margin-bottom: 5px;
+        }
+
+        .book-description {
+            font-size: 0.95rem;
+            text-align: justify;
+            color: #3c3c3c;
+        }
+
+        .book-description p {
+            margin-bottom: 18px;
         }
 
         /* 4. プロフィール */
+        .profile-section h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 50px;
+            letter-spacing: 0.15em;
+        }
+
         .profile-list {
             list-style: none;
         }
 
         .profile-list li {
-            margin-bottom: 15px;
+            padding: 20px 0;
+            border-bottom: 1px dashed var(--light-gray);
             display: flex;
             flex-direction: column;
+        }
+
+        .profile-list li:last-child {
+            border-bottom: none;
         }
 
         @media (min-width: 600px) {
             .profile-list li {
                 flex-direction: row;
+                align-items: flex-start;
             }
             .profile-date {
-                width: 150px;
+                width: 180px;
                 flex-shrink: 0;
             }
         }
@@ -160,92 +335,157 @@
             color: var(--accent-color);
             font-family: 'Cormorant Garamond', serif;
             font-weight: 400;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
         }
 
-        /* 5. フッター */
+        .profile-desc {
+            font-size: 0.95rem;
+        }
+
+        /* フッター */
         footer {
-            padding: 60px 0;
+            background-color: var(--dark-sepia);
+            color: #ffffff;
             text-align: center;
-            font-size: 0.8rem;
-            color: #888;
+            padding: 3rem 2rem;
+            font-size: 0.85rem;
             font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.15em;
         }
     </style>
 </head>
 <body>
 
-    <!-- 1. ヒーローセクション -->
+    <!-- ヘッダー・ナビゲーション -->
     <header>
-        <div class="hero-content">
-            <h1>優 You　</h1>
-            <p class="hero-sub">言葉は、どこにも行けない私の、唯一の居場所だった。記すことで、私はどこへでも行ける。</p>
-        </div>
+        <h1><a href="#home">優 | You</a></h1>
+        
+        <button class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav>
+            <ul id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#concept" class="nav-link">Introduction</a></li>
+                <li><a href="#publication" class="nav-link">Publication</a></li>
+                <li><a href="#profile" class="nav-link">Biography</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="container">
+    <!-- 1. ヒーローセクション -->
+    <section class="hero" id="home">
+        <div class="animate-target">
+            <h2>優 You</h2>
+            <p>言葉は、どこにも行けない私の、唯一の居場所だった。<br>記すことで、私はどこへでも行ける。</p>
+        </div>
+    </section>
+
+    <!-- 2. コンセプト -->
+    <section class="section-container animate-target" id="concept">
+        <span class="en-title">Introduction</span>
+        <div class="concept-text">
+            <p>2026年5月、言葉の持つ静かな力を信じ、一人の作家として歩み始めました。</p>
+            <p>放送大学で培った多角的な視座と、日々の移ろいを掬い上げる筆致。<br>漂うこと、考えること、あるいは生きることの記録をここに重ねてしていきます。</p>
+        </div>
+    </section>
+
+    <!-- 3. 出版告知 -->
+    <section class="section-container book-section animate-target" id="publication">
+        <span class="en-title">Upcoming Release</span>
+        <h3>デビュー作のご案内</h3>
         
-        <!-- 2. コンセプト -->
-        <section id="concept">
-            <span class="en-title">Introduction</span>
-            <div class="concept-text">
-                <p>2026年5月、言葉の持つ静かな力を信じ、一人の作家として歩み始めました。</p>
-                <p>放送大学で培った多角的な視座と、日々の移ろいを掬い上げる筆致。<br>漂うこと、考えること、あるいは生きることの記録をここに重ねていきます。</p>
+        <div class="book-grid">
+            <!-- 装丁イメージ -->
+            <div class="book-cover-placeholder">
+                <img src="images/watakae.jpg" alt="私には帰る"場所"がない 装丁イメージ">
             </div>
-        </section>
-
-        <!-- 3. 出版告知 -->
-        <section id="publication">
-            <span class="en-title">Upcoming Release</span>
-            <h2>デビュー作のご案内</h2>
-            
-            <div class="book-grid">
-                <!-- 装丁イメージ（後でお好きな写真に変更可能です） -->
-                <div class="book-cover-placeholder">
-                    <span><img src="watakae.jpg" style="width: 100%; height: auto;"></span>
+            <div class="book-info">
+                <h3 class="book-title">『私には帰る"場所"がない』</h3>
+                <div class="book-meta">
+                    <p>出版社：デザインエッグ社</p>
+                    <p>発売時期：2026年 秋</p>
                 </div>
-                <div class="book-info">
-                    <h3 class="book-title">『私には帰る“場所”がない』</h3>
-                    <div class="book-meta">
-                        <p>出版社：デザインエッグ社</p>
-                        <p>発売時期：2026年 秋 </p>
-                    </div>
-                    <p>現代を生きる私たちが抱える「根無し草」のような不安と、その先に見つけ出す微かな光を描いたエッセイ集。ケイト・ミレットが社会に突きつけた「The Personal is Political」という問い。
-家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。
-本書は、個人の喪失と再生のプロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。
-立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、そしてヴェイユの哲学が、彼女の道を照らす光となった。
-今、明日が見えずにいる人、そしてかつて絶望を経験したあなたに、一つの道標として本書を提示したい。</p>
+                <div class="book-description">
+                    <p>現代を生きる私たちが抱える「根無し草」のような不安と、その先に見つけ出す微かな光を描いたエッセイ集。</p>
+                    <p>ケイト・ミレットが社会に突きつけた「The Personal is Political（個人的なことは政治的なこと）」という問い。家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。本書は、個人の喪失と再生のプロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。</p>
+                    <p>立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、そしてヴェイユの哲学が、彼女の道を照らす光となった。</p>
+                    <p>今、明日が見えずにいる人、そしてかつて絶望を経験したあなたに、一つの道標として本書を提示したい。</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 4. プロフィール -->
-        <section id="profile">
-            <span class="en-title">Biography</span>
-            <h2>プロフィール</h2>
-            
-            <ul class="profile-list">
-                <li>
-                    <span class="profile-date">Biography</span>
-                    <span>優 You / 作家</span>
-                </li>
-                <li>
-                    <span class="profile-date">Education</span>
-                    <span>放送大学教養学部 卒業。人文学や社会学へのアプローチを背景に執筆を行う。</span>
-                </li>
-                <li>
-                    <span class="profile-date">May 2026</span>
-                    <span>作家として独立。個人の内面に深く潜る文章と言葉のあり方を追究すべく起業。</span>
-                </li>
-            </ul>
-        </section>
-
-    </div>
+    <!-- 4. プロフィール -->
+    <section class="section-container profile-section animate-target" id="profile">
+        <span class="en-title">Biography</span>
+        <h3>プロフィール</h3>
+        
+        <ul class="profile-list">
+            <li>
+                <span class="profile-date">Biography</span>
+                <span class="profile-desc">優 You / 作家</span>
+            </li>
+            <li>
+                <span class="profile-date">Education</span>
+                <span class="profile-desc">放送大学教養学部 卒業。人文学や社会学へのアプローチを背景に執筆を行う。</span>
+            </li>
+            <li>
+                <span class="profile-date">May 2026</span>
+                <span class="profile-desc">作家として独立。個人の内面に深く潜る文章と言葉のあり方を追究すべく起業。</span>
+            </li>
+        </ul>
+    </section>
 
     <!-- 5. フッター -->
     <footer>
         <p>&copy; 2026 You. All Rights Reserved.</p>
     </footer>
 
+    <!-- JavaScript: ハンバーガーメニューとスクロールアニメーション -->
+    <script>
+        /* === ハンバーガーメニューの開閉 === */
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        /* === スクロールに応じたフェードイン (Intersection Observer) === */
+        const animateTargets = document.querySelectorAll('.animate-target');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animateTargets.forEach(target => {
+            observer.observe(target);
+        });
+    </script>
 </body>
 </html>
-
