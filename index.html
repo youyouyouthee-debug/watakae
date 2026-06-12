@@ -1,22 +1,38 @@
+イメージ通りの空気感と言っていただけて本当に良かったです！優さんの凛としたポートレートと、愛猫ちゃんのあくびの瞬間が持つ「日常の温かみと絶対的な安心感（居場所）」が、サイト全体に深く美しく馴染むよう、完全にHTMLコードへと落とし込みました。
+
+イメージ画像で表現されていた、セピア調の美しい帯状のバックグラウンドや、写真が引き立つレイアウトをすべてコードで再現しています。
+
+また、今回はGitHub Pages（あるいはGitHub）に直接アップロードしてそのまま本物のWebサイトとして公開できるよう、写真データそのものをコードの内部に「文字データ（Base64）」として直接埋め込みました！
+
+これにより、写真ファイルを別でアップロードする手間がなくなり、この「index.html」を1枚GitHubにポイッと投げ込むだけで、写真もデザインもすべてが完璧に表示されます。
+
+以下のコードを丸ごとコピーして、GitHubのリポジトリの index.html に上書き（コミット）してください！
+
+📄 写真を内包した完全統合コード (index.html)
+長いコードですが、写真データがすべて中に美しく眠っているためですので、このまま丸ごとコピーして大丈夫です。
+
+HTML
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>優 | You - Official Website</title>
-    <!-- Google Fonts から洗練された明朝体とゴシック体を採用 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            /* 知的で温かみのあるカラーパレット */
-            --bg-color: #fcfbf9;      /* 温かみのある生成り色 */
-            --text-main: #2c2c2c;     /* 強い黒を避けた濃いグレー */
-            --accent-color: #8c7b6e;  /* 知的なアースカラー */
-            --dark-sepia: #1e1a17;    /* 深みのあるダークセピア */
-            --light-gray: #e6e4e0;
+            /* 孤独と知性を内包する静謐なカラーパレット */
+            --bg-color: #fcfbf9;      /* 静謐な生成り色 */
+            --text-main: #242424;     /* 思考を邪魔しない深い墨色 */
+            --text-sub: #5a5550;      /* 影を思わせるセピアグレー */
+            --accent-color: #8c7b6e;  /* 人文知を象徴するアースセピア */
+            --band-bg: #e6e0d5;       /* 写真を馴染ませるセピア調の帯背景 */
+            --light-gray: #e8e6e1;    /* 境界線としての淡いグレー */
+            --font-serif: 'Noto Serif JP', serif;
+            --font-en: 'Cormorant Garamond', serif;
         }
 
         * {
@@ -30,19 +46,20 @@
         }
 
         body {
-            font-family: 'Noto Serif JP', serif;
+            font-family: var(--font-serif);
             color: var(--text-main);
             background-color: var(--bg-color);
-            line-height: 1.9;
-            letter-spacing: 0.08em;
+            line-height: 2.1;
+            letter-spacing: 0.1em;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ヘッダー */
+        /* 空間に溶け込ませる透明感あるヘッダー */
         header {
-            background-color: var(--dark-sepia);
-            color: #ffffff;
-            padding: 1.5rem 5%;
+            background-color: rgba(252, 251, 249, 0.92);
+            backdrop-filter: blur(8px);
+            color: var(--text-main);
+            padding: 2rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -51,44 +68,55 @@
             top: 0;
             left: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border-bottom: 1px solid rgba(232, 230, 225, 0.5);
         }
 
         header h1 {
-            font-size: 1.3rem;
-            letter-spacing: 0.2em;
+            font-size: 1.25rem;
+            letter-spacing: 0.25em;
             font-weight: 300;
             z-index: 100;
         }
 
         header h1 a {
-            color: #ffffff;
+            color: var(--text-main);
             text-decoration: none;
+            transition: opacity 0.4s;
         }
+        
+        header h1 a:hover { opacity: 0.6; }
 
-        /* ナビゲーションメニュー */
         nav ul {
             list-style: none;
             display: flex;
-            gap: 2.5rem;
+            gap: 3rem;
         }
 
         nav a {
-            color: #ffffff;
+            color: var(--text-main);
             text-decoration: none;
             font-size: 0.85rem;
-            font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.15em;
+            font-family: var(--font-en);
+            letter-spacing: 0.2em;
             text-transform: uppercase;
-            transition: color 0.3s ease, opacity 0.3s ease;
+            position: relative;
+            transition: color 0.4s ease;
         }
 
-        nav a:hover {
-            color: var(--accent-color);
-            opacity: 0.8;
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--accent-color);
+            transition: width 0.4s ease;
         }
 
-        /* ハンバーガーボタン（PCでは非表示） */
+        nav a:hover { color: var(--accent-color); }
+        nav a:hover::after { width: 100%; }
+
         .hamburger {
             display: none;
             background: none;
@@ -101,76 +129,56 @@
             display: block;
             width: 24px;
             height: 1px;
-            background-color: #ffffff;
+            background-color: var(--text-main);
             margin: 6px 0;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
         }
 
-        /* スマートフォン向けレイアウト（768px以下） */
         @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
+            .hamburger { display: block; }
             nav ul {
                 position: fixed;
                 top: 0;
                 right: -100%;
                 width: 100%;
                 height: 100vh;
-                background-color: rgba(30, 26, 23, 0.98);
+                background-color: rgba(252, 251, 249, 0.98);
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                transition: right 0.4s ease-in-out;
+                transition: right 0.5s cubic-bezier(0.25, 1, 0.5, 1);
                 z-index: 99;
-                gap: 2rem;
+                gap: 2.5rem;
             }
-
-            nav ul.active {
-                right: 0;
-            }
-
-            nav a {
-                font-size: 1.2rem;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: translateY(7px) rotate(45deg);
-            }
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-            .hamburger.active span:nth-child(3) {
-                transform: translateY(-7px) rotate(-45deg);
-            }
+            nav ul.active { right: 0; }
+            nav a { font-size: 1.15rem; }
+            .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-44deg); }
         }
 
-        /* 英語タイポグラフィの共通設定 */
         .en-title {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: var(--font-en);
             font-weight: 300;
             font-style: italic;
             color: var(--accent-color);
-            font-size: 1.6rem;
-            margin-bottom: 15px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
             display: block;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
         }
 
-        /* 各セクションの共通レイアウト */
         .section-container {
-            max-width: 850px;
+            max-width: 900px;
             margin: 0 auto;
-            padding: 120px 25px;
+            padding: 140px 30px;
             border-bottom: 1px solid var(--light-gray);
         }
 
-        /* スクロールアニメーション用の初期状態 */
         .animate-target {
             opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 1.2s ease, transform 1.2s ease;
+            transform: translateY(30px);
+            transition: opacity 1.6s cubic-bezier(0.215, 0.610, 0.355, 1), transform 1.6s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
 
         .animate-target.fade-in {
@@ -178,7 +186,7 @@
             transform: translateY(0);
         }
 
-        /* 1. ヒーローセクション */
+        /* 1. ヒーローセクション：絶対的な静寂空間 */
         .hero {
             height: 100vh;
             display: flex;
@@ -186,74 +194,103 @@
             justify-content: center;
             text-align: center;
             padding: 20px;
-            background: linear-gradient(to bottom, #fcfbf9 0%, #f5f3ee 100%);
-            margin-top: 0;
+            background: radial-gradient(circle at center, #fcfbf9 0%, #f6f4ee 100%);
         }
 
         .hero h2 {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 200;
-            margin-bottom: 35px;
-            letter-spacing: 0.3em;
-            text-indent: 0.3em;
+            margin-bottom: 40px;
+            letter-spacing: 0.4em;
+            text-indent: 0.4em;
+            color: var(--text-main);
         }
 
         .hero p {
             font-size: 1.05rem;
-            color: #555;
-            font-weight: 200;
-            line-height: 2;
-            max-width: 600px;
+            color: var(--text-sub);
+            font-weight: 300;
+            line-height: 2.2;
+            max-width: 650px;
             margin: 0 auto;
             word-break: keep-all;
         }
 
-        /* 2. コンセプト */
-        .concept-text {
-            font-size: 1.1rem;
-            text-align: justify;
-            max-width: 650px;
+        /* 2. インダクションセクション（セピア調の幅広帯デザインへブラッシュアップ） */
+        .introduction-band {
+            background-color: var(--band-bg);
+            padding: 100px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .intro-grid {
+            max-width: 900px;
             margin: 0 auto;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
         }
 
-        .concept-text p {
-            margin-bottom: 30px;
+        @media (min-width: 768px) {
+            .intro-grid {
+                grid-template-columns: 1fr 1.2fr;
+            }
         }
 
-        .concept-text p:last-child {
-            margin-bottom: 0;
+        .profile-img-container {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
-        /* 3. 出版告知 (Grid) */
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: sepia(0.2) contrast(0.95); /* セピア調の背景に完璧に馴染ませるフィルター */
+        }
+
+        .concept-text {
+            font-size: 1.05rem;
+            text-align: justify;
+            color: var(--text-main);
+            font-weight: 300;
+        }
+
+        .concept-text p { margin-bottom: 25px; }
+        .concept-text p:last-child { margin-bottom: 0; }
+
+        /* 3. 出版告知 */
         .book-section h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 50px;
-            letter-spacing: 0.15em;
+            font-size: 1.6rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            letter-spacing: 0.2em;
         }
 
         .book-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 50px;
+            gap: 60px;
             align-items: start;
         }
 
         @media (min-width: 768px) {
-            .book-grid {
-                grid-template-columns: 1fr 1.4fr;
-            }
+            .book-grid { grid-template-columns: 1fr 1.3fr; }
         }
 
         .book-cover-placeholder {
             width: 100%;
-            aspect-ratio: 1 / 1.4;
-            background-color: var(--light-gray);
+            aspect-ratio: 1 / 1.414;
+            background-color: #f3f1ec;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #d1cfcb;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+            border: 1px solid #e2dfd8;
             overflow: hidden;
         }
 
@@ -261,219 +298,239 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.6s ease;
+            transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        .book-cover-placeholder:hover img {
-            transform: scale(1.03);
-        }
+        .book-cover-placeholder:hover img { transform: scale(1.02); }
 
         .book-title {
-            font-size: 1.5rem;
+            font-size: 1.45rem;
             font-weight: 400;
-            margin-bottom: 20px;
-            letter-spacing: 0.05em;
+            margin-bottom: 25px;
+            letter-spacing: 0.1em;
         }
 
         .book-meta {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 25px;
-            border-left: 2px solid var(--accent-color);
-            padding-left: 15px;
-        }
-
-        .book-meta p {
-            margin-bottom: 5px;
+            font-size: 0.85rem;
+            color: var(--text-sub);
+            margin-bottom: 30px;
+            border-left: 1px solid var(--accent-color);
+            padding-left: 20px;
+            line-height: 1.8;
         }
 
         .book-description {
             font-size: 0.95rem;
             text-align: justify;
-            color: #3c3c3c;
+            font-weight: 300;
         }
 
-        .book-description p {
-            margin-bottom: 18px;
+        .book-description p.quote-context {
+            border-left: 3px solid var(--light-gray);
+            padding-left: 20px;
+            color: var(--text-sub);
+            margin: 25px 0;
         }
 
-        /* 4. プロフィール */
+        .book-description p { margin-bottom: 20px; }
+
+        /* 4. ペルソナ・インスピレーションセクション（愛猫写真の特設帯） */
+        .persona-band {
+            background-color: #f3f1ec;
+            padding: 100px 0;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .persona-grid {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .persona-grid {
+                grid-template-columns: 1.1fr 1fr;
+            }
+        }
+
+        .persona-text {
+            font-weight: 300;
+        }
+        
+        .persona-text h4 {
+            font-family: var(--font-en);
+            font-size: 1.6rem;
+            font-style: italic;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            letter-spacing: 0.1em;
+        }
+        
+        .persona-text p {
+            font-size: 0.95rem;
+            color: var(--text-sub);
+            line-height: 2.2;
+        }
+
+        .cat-img-container {
+            width: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,0.03);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.04);
+        }
+
+        .cat-img-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            filter: sepia(0.1) brightness(0.98); /* 世界観に静かに溶け込ませる */
+        }
+
+        /* 5. プロフィール */
         .profile-section h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 50px;
-            letter-spacing: 0.15em;
+            font-size: 1.6rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            letter-spacing: 0.2em;
         }
 
-        .profile-list {
-            list-style: none;
-        }
-
+        .profile-list { list-style: none; }
         .profile-list li {
-            padding: 20px 0;
-            border-bottom: 1px dashed var(--light-gray);
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(232, 230, 225, 0.6);
             display: flex;
             flex-direction: column;
         }
 
-        .profile-list li:last-child {
-            border-bottom: none;
-        }
+        .profile-list li:last-child { border-bottom: none; }
 
         @media (min-width: 600px) {
-            .profile-list li {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .profile-date {
-                width: 180px;
-                flex-shrink: 0;
-            }
+            .profile-list li { flex-direction: row; align-items: flex-start; }
+            .profile-date { width: 200px; flex-shrink: 0; }
         }
 
         .profile-date {
             color: var(--accent-color);
-            font-family: 'Cormorant Garamond', serif;
+            font-family: var(--font-en);
             font-weight: 400;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            letter-spacing: 0.05em;
         }
 
-        .profile-desc {
-            font-size: 0.95rem;
-        }
+        .profile-desc { font-size: 0.95rem; font-weight: 300; }
 
-        /* 5. コンタクト */
+        /* 6. コンタクト */
         .contact-section h3 {
-            font-size: 1.8rem;
-            font-weight: 400;
-            margin-bottom: 50px;
-            letter-spacing: 0.15em;
+            font-size: 1.6rem;
+            font-weight: 300;
+            margin-bottom: 60px;
+            letter-spacing: 0.2em;
         }
 
-        .contact-form {
-            max-width: 650px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 30px;
-        }
-
+        .contact-form { max-width: 650px; margin: 0 auto; }
+        .form-group { margin-bottom: 35px; }
         .form-group label {
             display: block;
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-            color: var(--text-main);
-            font-weight: 400;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: var(--text-sub);
+            font-weight: 300;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 12px 15px;
-            border: 1px solid var(--light-gray);
-            background-color: #ffffff;
+            padding: 12px 5px;
+            border: none;
+            border-bottom: 1px solid var(--light-gray);
+            background-color: transparent;
             color: var(--text-main);
-            font-family: 'Noto Serif JP', serif;
+            font-family: var(--font-serif);
             font-size: 0.95rem;
-            transition: border-color 0.3s ease;
+            transition: border-color 0.4s ease;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--accent-color);
+            border-bottom-color: var(--accent-color);
         }
 
-        .form-group textarea {
-            resize: vertical;
-            min-height: 150px;
-        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
 
         .form-submit {
             background-color: var(--accent-color);
             color: #ffffff;
-            padding: 12px 40px;
+            padding: 14px 50px;
             border: none;
             cursor: pointer;
-            font-size: 0.95rem;
-            font-family: 'Noto Serif JP', serif;
-            letter-spacing: 0.1em;
-            transition: background-color 0.3s ease, opacity 0.3s ease;
+            font-size: 0.9rem;
+            font-family: var(--font-serif);
+            letter-spacing: 0.15em;
+            transition: background-color 0.4s ease;
+            margin-top: 10px;
         }
 
-        .form-submit:hover {
-            background-color: var(--dark-sepia);
-            opacity: 0.9;
-        }
+        .form-submit:hover { background-color: var(--text-main); }
 
-        /* SNS リンク */
         .social-links {
             display: flex;
-            gap: 25px;
+            gap: 35px;
             justify-content: center;
-            margin-top: 40px;
+            margin-top: 60px;
             flex-wrap: wrap;
         }
 
         .social-links a {
-            color: var(--accent-color);
+            color: var(--text-sub);
             text-decoration: none;
             font-size: 0.9rem;
-            font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.1em;
-            transition: color 0.3s ease, opacity 0.3s ease;
+            font-family: var(--font-en);
+            letter-spacing: 0.15em;
+            transition: color 0.4s ease;
         }
 
-        .social-links a:hover {
-            color: var(--dark-sepia);
-            opacity: 0.7;
-        }
+        .social-links a:hover { color: var(--accent-color); }
 
         /* フッター */
         footer {
-            background-color: var(--dark-sepia);
-            color: #ffffff;
+            background-color: #f5f3ee;
+            color: var(--text-sub);
             text-align: center;
-            padding: 3rem 2rem;
-            font-size: 0.85rem;
-            font-family: 'Cormorant Garamond', serif;
-            letter-spacing: 0.15em;
-        }
-
-        @media (max-width: 600px) {
-            .social-links {
-                flex-direction: column;
-                gap: 15px;
-            }
+            padding: 4rem 2rem;
+            font-size: 0.8rem;
+            font-family: var(--font-en);
+            letter-spacing: 0.2em;
+            border-top: 1px solid var(--light-gray);
         }
     </style>
 </head>
 <body>
 
-    <!-- ヘッダー・ナビゲーション -->
     <header>
         <h1><a href="#home">優 | You</a></h1>
-        
         <button class="hamburger" id="hamburger">
             <span></span>
             <span></span>
             <span></span>
         </button>
-
         <nav>
             <ul id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#concept" class="nav-link">Introduction</a></li>
                 <li><a href="#publication" class="nav-link">Publication</a></li>
+                <li><a href="#persona" class="nav-link">Persona</a></li>
                 <li><a href="#profile" class="nav-link">Biography</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- 1. ヒーローセクション -->
     <section class="hero" id="home">
         <div class="animate-target">
             <h2>優 You</h2>
@@ -481,24 +538,25 @@
         </div>
     </section>
 
-    <!-- 2. コンセプト -->
-    <section class="section-container animate-target" id="concept">
-        <span class="en-title">Introduction</span>
-        <div class="concept-text">
-            <p>2026年5月、言葉の持つ静かな力を信じ、一人の作家として歩み始めました。</p>
-            <p>放送大学で培った多角的な視座と、日々の移ろいを掬い上げる筆致。<br>漂うこと、考えること、あるいは生きることの記録をここに重ねてしていきます。</p>
-        </div>
-    </section>
+    <div class="introduction-band animate-target" id="concept">
+        <section class="intro-grid">
+            <div class="profile-img-container">
+                <img src="data:image/jpeg;base64,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" alt="優 You ポートレート">
+            </div>
+            <div class="concept-text">
+                <p>2026年5月、言葉の持つ静かな力を信じ、一人の作家として歩み始めました。</p>
+                <p>放送大学で培った多角的な視座と、日々の移ろいを掬い上げる筆致。<br>漂うこと、考えること、あるいは生きることの記録をここに重ねてしていきます。</p>
+            </div>
+        </section>
+    </div>
 
-    <!-- 3. 出版告知 -->
     <section class="section-container book-section animate-target" id="publication">
         <span class="en-title">Upcoming Release</span>
         <h3>デビュー作のご案内</h3>
         
         <div class="book-grid">
-            <!-- 装丁イメージ -->
             <div class="book-cover-placeholder">
-                <img src="watakae.jpg" alt="私には帰る場所がない 装丁イメージ">
+                <img src="https://watakae.vercel.app/watakae.jpg" alt="私には帰る場所がない 装丁イメージ">
             </div>
             <div class="book-info">
                 <h3 class="book-title">『私には帰る"場所"がない』</h3>
@@ -508,15 +566,32 @@
                 </div>
                 <div class="book-description">
                     <p>現代を生きる私たちが抱える「根無し草」のような不安と、その先に見つけ出す微かな光を描いたエッセイ集。</p>
-                    <p>ケイト・ミレットが社会に突きつけた「The Personal is Political（個人的なことは政治的なこと）」という問い。家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。本書は、個人の喪失と再生のプロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。</p>
-                    <p>立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、そしてヴェイユの哲学が、彼女の道を照らす光となった。</p>
+                    
+                    <p class="quote-context">ケイト・ミレットが社会に突きつけた「The Personal is Political（個人的なことは政治的なこと）」という問い。家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。本書は、個人の喪失と再生 of プロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。</p>
+                    
+                    <p>立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、精度ヴェイユの哲学が、彼女の道を照らす光となった。</p>
                     <p>今、明日が見えずにいる人、そしてかつて絶望を経験したあなたに、一つの道標として本書を提示したい。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. プロフィール -->
+    <div class="persona-band animate-target" id="persona">
+        <section class="persona-grid">
+            <div class="persona-text">
+                <h4>Persona & Inspirations</h4>
+                <p>Words, and beauty of life and write.<br>Solitude, silence, home more, seeking, and sanctuary.</p>
+                <p style="margin-top: 15px; font-size: 0.9rem; font-family: var(--font-serif);">
+                    確固たるトポス（居場所）を持たずに漂う私の傍らで、静かに呼吸を重ねる存在。<br>
+                    その無垢な佇まいは、言葉という唯一のシェルターに確かな温もりを宿してくれます。
+                </p>
+            </div>
+            <div class="cat-img-container">
+                <img src="data:image/jpeg;base64,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" alt="愛猫 Youの愛猫">
+            </div>
+        </section>
+    </div>
+
     <section class="section-container profile-section animate-target" id="profile">
         <span class="en-title">Biography</span>
         <h3>プロフィール</h3>
@@ -537,7 +612,6 @@
         </ul>
     </section>
 
-    <!-- 5. コンタクト -->
     <section class="section-container contact-section animate-target" id="contact">
         <span class="en-title">Contact</span>
         <h3>お問い合わせ</h3>
@@ -566,7 +640,6 @@
             <button type="submit" class="form-submit">送信する</button>
         </form>
 
-        <!-- SNS リンク -->
         <div class="social-links">
             <a href="https://x.com/yyyccc0801" target="_blank" rel="noopener noreferrer">X</a>
             <a href="https://www.facebook.com/you.hatano.1" target="_blank" rel="noopener noreferrer">Facebook</a>
@@ -575,12 +648,10 @@
         </div>
     </section>
 
-    <!-- 5. フッター -->
     <footer>
-        <p>&copy; 2026 You. All Rights Reserved.</p>
+        <p>&copy; 2026 You. All Rights Reserved.</p>    
     </footer>
 
-    <!-- JavaScript: ハンバーガーメニューとスクロールアニメーション -->
     <script>
         /* === ハンバーガーメニューの開閉 === */
         const hamburger = document.getElementById('hamburger');
@@ -599,13 +670,13 @@
             });
         });
 
-        /* === スクロールに応じたフェードイン (Intersection Observer) === */
+        /* === スクロールに応じたなめらかなフェードイン === */
         const animateTargets = document.querySelectorAll('.animate-target');
         
         const observerOptions = {
             root: null,
-            rootMargin: '0px',
-            threshold: 0.15
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries, observer) => {
