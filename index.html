@@ -271,19 +271,20 @@
 
         .book-cover-placeholder {
             width: 100%;
-            aspect-ratio: 1 / 1.414;
-            background-color: #f3f1ec;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #e2dfd8;
+            max-width: 280px;
+            margin: 0 auto;
+            aspect-ratio: 5 / 7;
             overflow: hidden;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
         }
 
         .book-cover-placeholder img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain;
+            object-position: center;
+            display: block;
             transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
@@ -517,12 +518,15 @@
         </nav>
     </header>
 
+    <!-- 1. ヒーローセクション -->
     <section class="hero" id="home">
         <div class="animate-target">
             <h2>優 You</h2>
             <p>言葉は、どこにも行けない私の、唯一の居場所だった。<br>記すことで、私はどこへでも行ける。</p>
-    
+        </div>
+    </section>
 
+    <!-- 2. インダクションセクション -->
     <div class="introduction-band animate-target" id="concept">
         <section class="intro-grid">
             <div class="profile-img-container">
@@ -535,6 +539,7 @@
         </section>
     </div>
 
+    <!-- 3. 出版告知 -->
     <section class="section-container book-section animate-target" id="publication">
         <span class="en-title">Upcoming Release</span>
         <h3>デビュー作のご案内</h3>
@@ -543,25 +548,6 @@
             <div class="book-cover-placeholder">
                 <img src="watakae.jpg" alt="私には帰る場所がない 装丁イメージ">
             </div>
-            <style>
-.book-cover-placeholder {
-  width: 100%;
-  max-width: 280px;
-  margin: 0 auto;
-  aspect-ratio: 5 / 7;
-  overflow: hidden;
-  border-radius: 6px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-}
-
-.book-cover-placeholder img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-}
-</style>
             <div class="book-info">
                 <h3 class="book-title">『私には帰る"場所"がない』</h3>
                 <div class="book-meta">
@@ -570,9 +556,7 @@
                 </div>
                 <div class="book-description">
                     <p>現代を生きる私たちが抱える「根無し草」のような不安と、その先に見つけ出す微かな光を描いたエッセイ集。</p>
-                    
                     <p class="quote-context">ケイト・ミレットが社会に突きつけた「The Personal is Political（個人的なことは政治的なこと）」という問い。家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。本書は、個人の喪失と再生のプロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。</p>
-                    
                     <p>立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、シモーヌ・ヴェイユの哲学が、彼女の道を照らす光となった。</p>
                     <p>今、明日が見えずにいる人、かつて絶望を経験したあなたに、一つの道標として本書を提示したい。</p>
                 </div>
@@ -580,6 +564,7 @@
         </div>
     </section>
 
+    <!-- 4. ペルソナ・インスピレーションセクション -->
     <div class="persona-band animate-target" id="persona">
         <section class="persona-grid">
             <div class="persona-text">
@@ -596,6 +581,7 @@
         </section>
     </div>
 
+    <!-- 5. プロフィール -->
     <section class="section-container profile-section animate-target" id="profile">
         <span class="en-title">Biography</span>
         <h3>プロフィール</h3>
@@ -616,6 +602,7 @@
         </ul>
     </section>
 
+    <!-- 6. コンタクト -->
     <section class="section-container contact-section animate-target" id="contact">
         <span class="en-title">Contact</span>
         <h3>お問い合わせ</h3>
@@ -652,10 +639,12 @@
         </div>
     </section>
 
+    <!-- フッター -->
     <footer>
         <p>&copy; 2026 You. All Rights Reserved.</p>    
     </footer>
 
+    <!-- スクリプト -->
     <script>
         /* === ハンバーガーメニューの開閉 === */
         const hamburger = document.getElementById('hamburger');
@@ -697,8 +686,11 @@
         });
     </script>
       
-<a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" 
-   style="position: fixed !important; bottom: 30px !important; right: 30px !important; background-color: #41c192 !important; color: #ffffff !important; text-decoration: none !important; padding: 12px 24px !important; border-radius: 30px !important; font-weight: 700 !important; font-size: 14px !important; box-shadow: 0 5px 20px rgba(65, 193, 146, 0.4) !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; z-index: 999999 !important; font-family: sans-serif !important;">
-    <span>note を読む</span>
-    <span style="font-size: 12px !important;">↗</span>
-</a>
+    <!-- 固定ボタン -->
+    <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" 
+       style="position: fixed !important; bottom: 30px !important; right: 30px !important; background-color: #41c192 !important; color: #ffffff !important; text-decoration: none !important; padding: 12px 24px !important; border-radius: 30px !important; font-weight: 700 !important; font-size: 14px !important; box-shadow: 0 5px 20px rgba(65, 193, 146, 0.4) !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; z-index: 999999 !important; font-family: sans-serif !important;">
+        <span>note を読む</span>
+        <span style="font-size: 12px !important;">↗</span>
+    </a>
+</body>
+</html>
