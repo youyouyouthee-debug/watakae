@@ -698,4 +698,61 @@
         });
     </script>
 </body>
+    .note-floating-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #41c192;
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 20px rgba(65, 193, 146, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 9999;
+            transition: all 0.3s ease;
+        }
+
+        .note-floating-btn:hover {
+            background-color: #36a37b;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(65, 193, 146, 0.5);
+        }
+
+        /* スマホ閲覧時はフローティングボタンを少し小さく */
+        @media (max-width: 480px) {
+            .note-floating-btn {
+                bottom: 20px;
+                right: 20px;
+                padding: 10px 18px;
+                font-size: 0.85rem;
+            }
+            .note-title {
+                font-size: 1.35rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="note-card-container">
+        <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" class="note-banner-card">
+            <span class="note-badge">Official note</span>
+            <h2 class="note-title">Neko Neko Library</h2>
+            <p class="note-description">言葉と思索を紡ぐ、公式エッセイ・プラットフォーム</p>
+            <span class="note-action-text">記事を読む</span>
+        </a>
+    </div>
+
+    <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" class="note-floating-btn">
+        <span>note を読む</span>
+        <span style="font-size: 0.75rem;">↗</span>
+    </a>
+
+</body>
+</html>
 </html>
