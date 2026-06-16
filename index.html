@@ -321,6 +321,92 @@
 
         .book-description p { margin-bottom: 20px; }
 
+        /* 追加：note大バナーセクション用のスタイル */
+        .note-banner-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 30px 100px 30px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+
+        .note-banner-link {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            padding: 4.5rem 2rem;
+            background: linear-gradient(135deg, #41c192 0%, #36a37b 100%);
+            border-radius: 12px;
+            color: #ffffff;
+            box-shadow: 0 12px 35px rgba(65, 193, 146, 0.25);
+            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .note-banner-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at cubic-bezier(0.25, 1, 0.5, 1), rgba(255,255,255,0.15) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .note-banner-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 45px rgba(65, 193, 146, 0.4);
+        }
+
+        .note-banner-link:hover::before {
+            opacity: 1;
+        }
+
+        .note-banner-sub {
+            font-family: var(--font-en);
+            font-size: 1.1rem;
+            font-weight: 300;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .note-banner-main {
+            font-family: var(--font-serif);
+            font-size: 1.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .note-banner-btn {
+            background-color: #ffffff;
+            color: #36a37b;
+            padding: 10px 35px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .note-banner-link:hover .note-banner-btn {
+            background-color: #f0fdf4;
+        }
+
+        @media (max-width: 600px) {
+            .note-banner-link { padding: 3.5rem 1.5rem; }
+            .note-banner-main { font-size: 1.4rem; }
+        }
+
         /* 4. ペルソナ・インスピレーションセクション */
         .persona-band {
             background-color: #f3f1ec;
@@ -564,6 +650,15 @@
         </div>
     </section>
 
+    <!-- ★追加：note メンバーシップ・エッセイ誘導大バナー★ -->
+    <div class="note-banner-container animate-target">
+        <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" class="note-banner-link">
+            <span class="note-banner-sub">Neko Neko Library</span>
+            <h3 class="note-banner-main">言葉のシェルターへ、ようこそ。<br>note で日々の思索を配信しています。</h3>
+            <span class="note-banner-btn">note の最新エッセイを読む ↗</span>
+        </a>
+    </div>
+
     <!-- 4. ペルソナ・インスピレーションセクション -->
     <div class="persona-band animate-target" id="persona">
         <section class="persona-grid">
@@ -593,7 +688,7 @@
             </li>
             <li>
                 <span class="profile-date">Education</span>
-                <span class="profile-desc">放送大学教養学部 卒業。人文学や心理学、社会学へのアプローチを背景に執筆を行う。</span>
+                <span class="profile-desc">放送大学教養学部 卒業。人文学や心理学、社会学へのアプローチを背景に執筆を行う.</span>
             </li>
             <li>
                 <span class="profile-date">May 2026</span>
