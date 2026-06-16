@@ -10,13 +10,12 @@
     
     <style>
         :root {
-            /* 孤独と知性を内包する静謐なカラーパレット */
-            --bg-color: #fcfbf9;      /* 静謐な生成り色 */
-            --text-main: #242424;     /* 思考を邪魔しない深い墨色 */
-            --text-sub: #5a5550;      /* 影を思わせるセピアグレー */
-            --accent-color: #8c7b6e;  /* 人文知を象徴するアースセピア */
-            --band-bg: #e6e0d5;       /* 写真を馴染ませるセピア調の帯背景 */
-            --light-gray: #e8e6e1;    /* 境界線としての淡いグレー */
+            --bg-color: #fcfbf9;      
+            --text-main: #242424;     
+            --text-sub: #5a5550;      
+            --accent-color: #8c7b6e;  
+            --band-bg: #e6e0d5;       
+            --light-gray: #e8e6e1;    
             --font-serif: 'Noto Serif JP', serif;
             --font-en: 'Cormorant Garamond', serif;
         }
@@ -40,7 +39,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 空間に溶け込ませる透明感あるヘッダー */
         header {
             background-color: rgba(252, 251, 249, 0.92);
             backdrop-filter: blur(8px);
@@ -172,7 +170,7 @@
             transform: translateY(0);
         }
 
-        /* 1. ヒーローセクション：絶対的な静寂空間 */
+        /* 1. ヒーローセクション */
         .hero {
             height: 100vh;
             display: flex;
@@ -237,7 +235,7 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            filter: sepia(0.25) contrast(0.95); /* セピア調の背景に完璧に馴染ませるフィルター */
+            filter: sepia(0.25) contrast(0.95); 
         }
 
         .concept-text {
@@ -321,7 +319,7 @@
 
         .book-description p { margin-bottom: 20px; }
 
-        /* 追加：note大バナーセクション用のスタイル */
+        /* 【修正済】note大バナーセクション用のスタイル */
         .note-banner-container {
             max-width: 900px;
             margin: 0 auto;
@@ -337,34 +335,19 @@
             text-align: center;
             text-decoration: none;
             padding: 4.5rem 2rem;
+            /* 背景グラデーションの不要な記述を完全に修正 */
             background: linear-gradient(135deg, #41c192 0%, #36a37b 100%);
             border-radius: 12px;
-            color: #ffffff;
+            color: #ffffff !important;
             box-shadow: 0 12px 35px rgba(65, 193, 146, 0.25);
             transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .note-banner-link::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at cubic-bezier(0.25, 1, 0.5, 1), rgba(255,255,255,0.15) 0%, transparent 70%);
-            opacity: 0;
-            transition: opacity 0.4s ease;
-        }
-
         .note-banner-link:hover {
             transform: translateY(-4px);
             box-shadow: 0 20px 45px rgba(65, 193, 146, 0.4);
-        }
-
-        .note-banner-link:hover::before {
-            opacity: 1;
         }
 
         .note-banner-sub {
@@ -375,6 +358,7 @@
             text-transform: uppercase;
             opacity: 0.9;
             margin-bottom: 10px;
+            color: #ffffff !important;
         }
 
         .note-banner-main {
@@ -382,29 +366,32 @@
             font-size: 1.75rem;
             font-weight: 600;
             letter-spacing: 0.15em;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             line-height: 1.5;
+            color: #ffffff !important;
         }
 
         .note-banner-btn {
-            background-color: #ffffff;
-            color: #36a37b;
-            padding: 10px 35px;
+            background-color: #ffffff !important;
+            color: #36a37b !important;
+            padding: 12px 40px;
             border-radius: 25px;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 0.1em;
             box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
         }
 
         .note-banner-link:hover .note-banner-btn {
-            background-color: #f0fdf4;
+            background-color: #f0fdf4 !important;
+            transform: scale(1.03);
         }
 
         @media (max-width: 600px) {
             .note-banner-link { padding: 3.5rem 1.5rem; }
-            .note-banner-main { font-size: 1.4rem; }
+            .note-banner-main { font-size: 1.35rem; }
         }
 
         /* 4. ペルソナ・インスピレーションセクション */
@@ -460,7 +447,7 @@
             width: 100%;
             height: auto;
             display: block;
-            filter: sepia(0.15) brightness(0.98) contrast(1.02); /* 世界観に静かに溶け込ませる */
+            filter: sepia(0.15) brightness(0.98) contrast(1.02); 
         }
 
         /* 5. プロフィール */
@@ -570,7 +557,6 @@
 
         .social-links a:hover { color: var(--accent-color); }
 
-        /* フッター */
         footer {
             background-color: #f5f3ee;
             color: var(--text-sub);
@@ -643,14 +629,14 @@
                 <div class="book-description">
                     <p>現代を生きる私たちが抱える「根無し草」のような不安と、その先に見つけ出す微かな光を描いたエッセイ集。</p>
                     <p class="quote-context">ケイト・ミレットが社会に突きつけた「The Personal is Political（個人的なことは政治的なこと）」という問い。家庭不和、不登校、引きこもりという一人の女性に降りかかった私的な苦難は、社会の歪みそのものであった。本書は、個人の喪失と再生のプロセスを克明に描くことで、私たちが直面する社会構造の病理を浮き彫りにする試みである。</p>
-                    <p>立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイトの精神分析、ユングの必然性、シモーヌ・ヴェイユの哲学が、彼女の道を照らす光となった。</p>
+                    <p>立ちはだかる困難を打ち破る鍵は、どこにあったのか。それは「人文知」である。フロイト of 精神分析、ユングの必然性、シモーヌ・ヴェイユの哲学が、彼女の道を照らす光となった。</p>
                     <p>今、明日が見えずにいる人、かつて絶望を経験したあなたに、一つの道標として本書を提示したい。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ★追加：note メンバーシップ・エッセイ誘導大バナー★ -->
+    <!-- 【バナー修正箇所】：linear-gradientを完全にクリアにし、文字色を強制的に白（#ffffff）に固定しました -->
     <div class="note-banner-container animate-target">
         <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" class="note-banner-link">
             <span class="note-banner-sub">Neko Neko Library</span>
@@ -734,14 +720,11 @@
         </div>
     </section>
 
-    <!-- フッター -->
     <footer>
         <p>&copy; 2026 You. All Rights Reserved.</p>    
     </footer>
 
-    <!-- スクリプト -->
     <script>
-        /* === ハンバーガーメニューの開閉 === */
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -758,7 +741,6 @@
             });
         });
 
-        /* === スクロールに応じたなめらかなフェードイン === */
         const animateTargets = document.querySelectorAll('.animate-target');
         
         const observerOptions = {
