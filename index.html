@@ -741,94 +741,7 @@
         </ul>
     </section>
 
-    <!-- 6. コンタクト -->
-    <section class="section-container contact-section animate-target" id="contact">
-        <span class="en-title">Contact</span>
-        <h3>お問い合わせ</h3>
-        
-        <form class="contact-form" action="https://formspree.io/f/mzdqygqn" method="POST">
-            <div class="form-group">
-                <label for="name">お名前 *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="email">メールアドレス *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="subject">件名 *</label>
-                <input type="text" id="subject" name="subject" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="message">メッセージ *</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
-            
-            <button type="submit" class="form-submit">送信する</button>
-        </form>
-
-        <div class="social-links">
-            <a href="https://x.com/yyyccc0801" target="_blank" rel="noopener noreferrer">X</a>
-            <a href="https://www.facebook.com/you.hatano.1" target="_blank" rel="noopener noreferrer">Facebook</a>
-            <a href="https://www.instagram.com/yyyccc0801?igsh=MTcyeTFjdDQ0ejNuOQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
-            <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer">note</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 You. All Rights Reserved.</p>    
-    </footer>
-
-    <script>
-        const hamburger = document.getElementById('hamburger');
-        const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-
-        const animateTargets = document.querySelectorAll('.animate-target');
-        
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -60px 0px',
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        animateTargets.forEach(target => {
-            observer.observe(target);
-        });
-    </script>
-      
-    <!-- 固定ボタン（こちらも色を統合しました） -->
-    <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" 
-       style="position: fixed !important; bottom: 30px !important; right: 30px !important; background-color: #607d6b !important; color: #ffffff !important; text-decoration: none !important; padding: 12px 24px !important; border-radius: 30px !important; font-weight: 700 !important; font-size: 14px !important; box-shadow: 0 5px 20px rgba(96, 125, 107, 0.3) !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; z-index: 999999 !important; font-family: sans-serif !important;">
-        <span>note を読む</span>
-        <span style="font-size: 12px !important;">↗</span>
-    </a>
-
-    <!-- ここから年表 -->
+                <!-- ここから年表 -->
         <hr style="border: 0; border-top: 1px solid #eee; margin: 50px 0;">
         
         <h2 style="color: #2c3e50; margin-bottom: 5px;">略歴：実存のカルテ</h2>
@@ -900,6 +813,95 @@
             </div>
         </div>
         <!-- 年表ここまで -->
+    
+
+    <!-- 6. コンタクト -->
+    <section class="section-container contact-section animate-target" id="contact">
+        <span class="en-title">Contact</span>
+        <h3>お問い合わせ</h3>
+        
+        <form class="contact-form" action="https://formspree.io/f/mzdqygqn" method="POST">
+            <div class="form-group">
+                <label for="name">お名前 *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">メールアドレス *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="subject">件名 *</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">メッセージ *</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            
+            <button type="submit" class="form-submit">送信する</button>
+        </form>
+
+        <div class="social-links">
+            <a href="https://x.com/yyyccc0801" target="_blank" rel="noopener noreferrer">X</a>
+            <a href="https://www.facebook.com/you.hatano.1" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/yyyccc0801?igsh=MTcyeTFjdDQ0ejNuOQ==" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer">note</a>
+        </div>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2026 You. All Rights Reserved.</p>    
+    </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+
+        const animateTargets = document.querySelectorAll('.animate-target');
+        
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60px 0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        animateTargets.forEach(target => {
+            observer.observe(target);
+        });
+    </script>
+      
+    <!-- 固定ボタン（こちらも色を統合しました） -->
+    <a href="https://note.com/yyyccc0801" target="_blank" rel="noopener noreferrer" 
+       style="position: fixed !important; bottom: 30px !important; right: 30px !important; background-color: #607d6b !important; color: #ffffff !important; text-decoration: none !important; padding: 12px 24px !important; border-radius: 30px !important; font-weight: 700 !important; font-size: 14px !important; box-shadow: 0 5px 20px rgba(96, 125, 107, 0.3) !important; display: inline-flex !important; align-items: center !important; gap: 8px !important; z-index: 999999 !important; font-family: sans-serif !important;">
+        <span>note を読む</span>
+        <span style="font-size: 12px !important;">↗</span>
+    </a>
     
 </body>
 </html>
