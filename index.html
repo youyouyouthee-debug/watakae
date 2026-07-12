@@ -9,6 +9,62 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
     
     <style>
+
+        /* タイムライン（年表）のデザイン */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left; /* 左詰めに固定 */
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #2c3e50;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+            margin-left: -1px;
+        }
+        .timeline-item {
+            padding: 0 0 30px 40px;
+            position: relative;
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 3px solid #d35400;
+            top: 6px;
+            left: 14px;
+            z-index: 1;
+        }
+        .time-period {
+            font-weight: bold;
+            color: #d35400;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        .timeline-title {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-weight: 700;
+        }
+        .timeline-content {
+            font-size: 0.95rem;
+            color: #4f5d73;
+            background: #fff;
+            padding: 20px;
+            border-radius: 6px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+        }
+        
         :root {
             /* 孤独と知性を内包する静謐なカラーパレット */
             --bg-color: #fcfbf9;      /* 静謐な生成り色 */
@@ -771,5 +827,79 @@
         <span>note を読む</span>
         <span style="font-size: 12px !important;">↗</span>
     </a>
+
+    <!-- ここから年表 -->
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 50px 0;">
+        
+        <h2 style="color: #2c3e50; margin-bottom: 5px;">略歴：実存のカルテ</h2>
+        <p style="color: #7f8c8d; margin-bottom: 40px; font-size: 0.9rem;">作家・優（You）のこれまでの歩み</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time-period">幼少期 〜</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">原初体験としての家庭環境</h3>
+                    <p style="margin: 0;">強権的かつ機能不全な家庭環境のなか、従属的な立ち位置を余儀なくされる。家族から「お荷物」や「トラブルの戦犯」として扱われた記憶が、後の対人関係におけるトラウマの原初体験となる。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">小学3年生（夏）</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">社会のレールからの離脱</h3>
+                    <p style="margin: 0;">夏休み明けから突然、学校へ行けなくなり、長期の引きこもり・不登校に陥る。同時に家庭は極貧を極め、ライフラインの途絶や飢え、ゴミ屋敷化を経験。地域からの「非言語的な白い目」を察知し、強烈な原罪意識と希死念慮を抱える。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">小学5年生（3ヶ月間）</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">ネットカフェ潜伏と児童相談所の一時保護</h3>
+                    <p style="margin: 0;">借金取りから避難するため、ネットカフェでの寝泊まりを経験。ハンゲームのチャットでタイピングを習得する。友人の通報により警察経由で児童相談所に一時保護（3ヶ月間）され、閉鎖的な家庭から救出される（干天の慈雨）。ここで疑似家族の感覚や、集団生活、勉強のタイムアタックを経験し、知性の土台を作る。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">小学後半 〜 中学生</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">暗闇の引きこもり期間と識字体験</h3>
+                    <p style="margin: 0;">家庭に戻されたのち、再び社交性を失い引きこもる。感情鈍麻を催し、生きることに精一杯な日々を送る。現実の環境と地続きである「ホラー小説」を読み漁ることで、後に大きな武器となる読書・識字体験を重ねる。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">中学3年生</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">最初の転機：社会との再接続</h3>
+                    <p style="margin: 0;">出席日数不足による中学卒業危殆の回避として、スクールカウンセリング登校を開始。そこで生涯の友人となる人物と出会い、初めて「人慣れ」を果たす。周囲からの嘲笑に傷つきつつも漢字の独学を進め、当時の作文に「将来は心理学を学びたい」と記す。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">高校時代</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">ギャルデビューと、経済的困窮による勤労</h3>
+                    <p style="margin: 0;">通信制の青松高校へ入学（4年かけて卒業）。引きこもりからの「高校デビュー」として、外見はつけま・茶髪のギャル、内面はオタク・陰キャという両極端のアイデンティティを生きる。家計を支えるためにウエイトレスとコンビニのアルバイトを掛け持ちし、激しい対人恐怖と闘いながらも、経済的切迫感によって引きこもりからの脱皮を果たす。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">社会人 〜 大学時代</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">通信制大学の卒業と思思想の獲得</h3>
+                    <p style="margin: 0;">社会人として事務職などを経験しながら、通信制の放送大学に入学・卒業。文系科目を幅広く学び、中3の頃の心残りであった「心理学」を修める。V.E.フランクル『それでも人生にイエスと言う』に出会い、物質的成功ではなく「主観的幸福（実存）」の重要性を確信する。</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="time-period">現在（2026年）</div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">作家・優（You）として言葉を紡ぐ</h3>
+                    <p style="margin: 0;">プラットフォーム「note」での連載・収益化、およびXでの個人的信頼関係の構築。過去のすべての欠損や後遺症と向き合いながら、それらを「思考」と「執筆」のエネルギーへと昇華させている。<strong>同年10月には、デザインエッグ社より初のエッセー本を出版予定。</strong></p>
+                </div>
+            </div>
+        </div>
+        <!-- 年表ここまで -->
+    
 </body>
 </html>
