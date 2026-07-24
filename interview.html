@@ -89,23 +89,24 @@
         .pullquote { border-left: 4px solid var(--accent-color); padding: 30px; margin: 50px 0; background-color: var(--pastel-lavender); font-size: 1.05rem; font-weight: 400; line-height: 2.1; color: var(--text-main); border-radius: 2px; }
         .observation { background-color: var(--pastel-peach); padding: 20px 25px; margin: 30px 0; border-left: 3px solid var(--light-gray); font-size: 0.9rem; color: var(--text-sub); font-style: italic; line-height: 1.8; border-radius: 2px; }
 
-        /* ▼★写真用スタイル（サイズ調整・スマホ対応・色味調整）★▼ */
+        /* ▼★写真用スタイル（コンパクト化・横長トリミング・フィルター強化）★▼ */
         .interview-photo-container {
-            margin: 35px 0;
+            margin: 45px auto;
             text-align: center;
             width: 100%;
-            overflow: hidden;
+            max-width: 600px; /* 横幅を絞って主張を抑える */
         }
         .interview-photo {
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            border-radius: 6px;
-            box-shadow: 0 4px 20px rgba(140, 123, 110, 0.12);
+            aspect-ratio: 16 / 9; /* 横長に固定トリミング */
+            object-fit: cover; /* 縦横比を崩さず中央を自動カット */
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(140, 123, 110, 0.1);
             display: block;
             margin: 0 auto;
-            /* サイトの柔らかなトーンになじませるフィルター */
-            filter: sepia(12%) contrast(94%) brightness(98%);
+            /* セピア感を強め、彩度を少し落としてマットで温かみのあるフィルム質感に */
+            filter: sepia(25%) saturate(85%) contrast(90%) brightness(96%);
+            transition: filter 0.3s ease;
         }
 
         strong { color: var(--text-main); font-weight: 600; }
@@ -122,9 +123,9 @@
             .interview-lead { font-size: 0.95rem; }
             .question, .answer { font-size: 0.95rem; }
             .interview-meta { gap: 15px; }
-            /* スマホ表示時の写真の余白調整 */
-            .interview-photo-container { margin: 25px 0; }
-            .interview-photo { border-radius: 4px; }
+            /* スマホ表示時の写真調整 */
+            .interview-photo-container { margin: 30px auto; max-width: 100%; }
+            .interview-photo { aspect-ratio: 16 / 9; }
         }
     </style>
 </head>
