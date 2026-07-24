@@ -267,11 +267,13 @@
             overflow: hidden;
             border-radius: 12px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            height: 350px;
         }
 
         .photo-container img {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
             display: block;
             filter: sepia(0.12) contrast(0.98);
         }
@@ -348,6 +350,10 @@
             .interview-meta {
                 gap: 15px;
             }
+
+            .photo-container {
+                height: 220px;
+            }
         }
     </style>
 </head>
@@ -412,12 +418,12 @@
             </div>
         </div>
 
-        <!-- 写真1：執筆の現場 -->
+        <!-- 写真1 -->
         <div class="photo-section">
             <div class="photo-container">
-                <img src="https://via.placeholder.com/820x380?text=Workspace" alt="執筆ノートとペン">
+                <img src="33781_0.jpg" alt="執筆風景">
             </div>
-            <p class="photo-caption">5年間、優さんが執筆に使い続けたノートとペン。ページの端々に推敲の跡が残る。</p>
+            <p class="photo-caption">5年間の執筆期間を通じて、何度も見つめられたページたち。</p>
         </div>
 
         <!-- セクション2 -->
@@ -441,12 +447,12 @@
                 「書くことは、私にとって単なる表現ではなく、自己確認の儀式であり、生存の証明である」
             </div>
 
-            <!-- 写真2：思考の軌跡 -->
+            <!-- 写真2 -->
             <div class="photo-section">
                 <div class="photo-container">
-                    <img src="https://via.placeholder.com/820x380?text=Manuscripts" alt="原稿の推敲跡">
+                    <img src="33782_0.jpg" alt="思考の軌跡">
                 </div>
-                <p class="photo-caption">何度も推敲された原稿ページ。書き込みと修正が、5年間の思考の歩みを記録している。</p>
+                <p class="photo-caption">推敲を重ねられた原稿。書き込みと修正が、5年間の思考の歩みを記録している。</p>
             </div>
         </div>
 
@@ -467,14 +473,14 @@
                     <p>やはりこの不景気なご時世でお金を払ってわざわざ私の書籍を手に取って購入しようと決めてくださる以上は、確かな読了感を得ていただきたいと思っています。</p>
                 </div>
             </div>
-        </div>
 
-        <!-- 写真3：執筆空間 -->
-        <div class="photo-section">
-            <div class="photo-container">
-                <img src="https://via.placeholder.com/820x380?text=Writing+Space" alt="執筆環境">
+            <!-- 写真3 -->
+            <div class="photo-section">
+                <div class="photo-container">
+                    <img src="33783_0.jpg" alt="執筆環境">
+                </div>
+                <p class="photo-caption">執筆を続ける中で出会った、言葉との関係。そこには苦しさと、それでもなお信じ続けた希望が存在する。</p>
             </div>
-            <p class="photo-caption">優さんが日々執筆する空間。机上には参考文献と執筆ノートが並ぶ。5年間、ここで言葉と向き合い続けた。</p>
         </div>
 
         <!-- セクション4 -->
