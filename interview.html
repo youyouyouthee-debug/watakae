@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
-    
     <style>
         :root {
             --bg-color: #fcfbf9;
@@ -90,6 +89,25 @@
         .pullquote { border-left: 4px solid var(--accent-color); padding: 30px; margin: 50px 0; background-color: var(--pastel-lavender); font-size: 1.05rem; font-weight: 400; line-height: 2.1; color: var(--text-main); border-radius: 2px; }
         .observation { background-color: var(--pastel-peach); padding: 20px 25px; margin: 30px 0; border-left: 3px solid var(--light-gray); font-size: 0.9rem; color: var(--text-sub); font-style: italic; line-height: 1.8; border-radius: 2px; }
 
+        /* ▼★写真用スタイル（サイズ調整・スマホ対応・色味調整）★▼ */
+        .interview-photo-container {
+            margin: 35px 0;
+            text-align: center;
+            width: 100%;
+            overflow: hidden;
+        }
+        .interview-photo {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(140, 123, 110, 0.12);
+            display: block;
+            margin: 0 auto;
+            /* サイトの柔らかなトーンになじませるフィルター */
+            filter: sepia(12%) contrast(94%) brightness(98%);
+        }
+
         strong { color: var(--text-main); font-weight: 600; }
         u { text-decoration: underline; text-decoration-color: var(--accent-color); text-underline-offset: 3px; }
 
@@ -104,6 +122,9 @@
             .interview-lead { font-size: 0.95rem; }
             .question, .answer { font-size: 0.95rem; }
             .interview-meta { gap: 15px; }
+            /* スマホ表示時の写真の余白調整 */
+            .interview-photo-container { margin: 25px 0; }
+            .interview-photo { border-radius: 4px; }
         }
     </style>
 </head>
