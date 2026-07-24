@@ -275,7 +275,7 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            filter: sepia(0.12) contrast(0.98);
+            filter: sepia(0.25) contrast(0.95);
         }
 
         .photo-caption {
@@ -421,7 +421,7 @@
         <!-- 写真1 -->
         <div class="photo-section">
             <div class="photo-container">
-                <img src="33781_0.jpg" alt="執筆風景">
+                <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33781_0.jpg" alt="執筆風景">
             </div>
             <p class="photo-caption">5年間の執筆期間を通じて、何度も見つめられたページたち。</p>
         </div>
@@ -450,7 +450,7 @@
             <!-- 写真2 -->
             <div class="photo-section">
                 <div class="photo-container">
-                    <img src="33782_0.jpg" alt="思考の軌跡">
+                    <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33782_0.jpg" alt="思考の軌跡">
                 </div>
                 <p class="photo-caption">推敲を重ねられた原稿。書き込みと修正が、5年間の思考の歩みを記録している。</p>
             </div>
@@ -477,7 +477,7 @@
             <!-- 写真3 -->
             <div class="photo-section">
                 <div class="photo-container">
-                    <img src="33783_0.jpg" alt="執筆環境">
+                    <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33783_0.jpg" alt="執筆環境">
                 </div>
                 <p class="photo-caption">執筆を続ける中で出会った、言葉との関係。そこには苦しさと、それでもなお信じ続けた希望が存在する。</p>
             </div>
