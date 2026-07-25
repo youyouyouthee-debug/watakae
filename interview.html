@@ -43,6 +43,40 @@
             }
         }
 
+       /* ★一番上の横長ヘッダー画像用スタイル★ */
+        .header-photo-container {
+            margin: 0 auto 50px;
+            text-align: center;
+            width: 100%;
+            max-width: 820px; /* 本文幅に合わせて余白をすっきり整える */
+            background-color: #ffffff; /* 余白をきれいな白に設定 */
+            padding: 10px; /* 画像まわりの白い余白フレーム */
+            border-radius: 4px;
+        }
+
+        .header-photo {
+            width: 100%;
+            aspect-ratio: 21 / 9; /* かなりスリムで横長なパノラマ比率 */
+            object-fit: cover;
+            object-position: center 25%; /* 上寄りにフォーカスして顔・手元を収める */
+            border-radius: 2px;
+            display: block;
+            margin: 0 auto;
+            /* 世界観に馴染む柔らかなフィルム風フィルター */
+            filter: sepia(20%) saturate(88%) contrast(92%) brightness(97%);
+        }
+
+        @media (max-width: 600px) {
+            .header-photo-container {
+                margin-bottom: 30px;
+                padding: 6px;
+            }
+            .header-photo {
+                aspect-ratio: 16 / 8; /* スマホでも顔が消えない程よい横長 */
+                object-position: center 20%;
+            }
+        }
+
         /* ▼★扉絵（ヘッダー下メイン写真）専用スタイル★▼ */
         .hero-photo-container {
             margin: 0 auto 60px;
