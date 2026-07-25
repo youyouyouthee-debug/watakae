@@ -283,15 +283,26 @@
         .back-link { display: inline-block; color: var(--accent-color); text-decoration: none; font-size: 0.9rem; margin-top: 20px; transition: opacity 0.3s; }
         .back-link:hover { opacity: 0.6; }
 
-        @media (max-width: 600px) {
-            .interview-container { padding: 60px 20px 40px; }
-            .interview-header h1 { font-size: 1.7rem; }
-            .interview-lead { font-size: 0.95rem; }
-            .question, .answer { font-size: 0.95rem; }
-            .interview-meta { gap: 15px; }
-            .interview-photo-container { margin: 30px auto; max-width: 100%; }
-            .interview-photo { aspect-ratio: 16 / 9; object-position: center 20%; }
+        @media (max-width: 600px) {header-image-container {
+    width: 100%;
+    max-width: 580px; /* 横幅を小さめにギュッと絞ります */
+    margin: 20px auto 30px; /* 中央寄せにして上下に程よい余白を作ります */
+    padding: 8px; /* 白い余白フレームを作ります */
+    background-color: #ffffff; /* 余白の色を白にします */
+    border: 1px solid #e8e6e1; /* 上品な薄い外枠 */
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    box-sizing: border-box;
         }
+
+            .header-image {
+    width: 100%;
+    aspect-ratio: 21 / 9; /* 高さを抑えて細身の横長サイズにします */
+    object-fit: cover;
+    object-position: center 25%; /* お顔が切れない位置に合わせます */
+    display: block;
+    border-radius: 2px;
+    filter: sepia(18%) saturate(88%) contrast(92%) brightness(97%);
     </style>
 </head>
 <body>
