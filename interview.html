@@ -1,402 +1,520 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
-    <figure class="header-photo-container">
-            <img src="33948.jpg" alt="ヘッダー写真" class="header-photo">
-        </figure>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>インタビュー：5年越しの出版に込められた想い | 優 You</title>
+    <title>【インタビュー】優 | 『私には帰る“場所”がない』出版記念</title>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <style>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet">
 
-        /* 🌟スマートなヘッダー写真（スマホ対応・左右均等・馴染みフィルター付き）🌟 */
+    <style>
+        /* Base Styling */
+        body {
+            background-color: #fcfbf9; /* 和紙のような温かみのある白 */
+            color: #2b2b2b;
+            font-family: 'Noto Serif JP', 'Shippori Mincho', Georgia, serif;
+            line-height: 2.1;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Outer Container */
+        .interview-container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 40px 20px 80px;
+        }
+
+        /* Header Area */
+        .interview-header {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e2ded7;
+        }
+
+        .interview-eyebrow {
+            font-size: 0.85rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #8c8275;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .interview-header h1 {
+            font-size: 1.85rem;
+            font-weight: 600;
+            line-height: 1.5;
+            letter-spacing: 0.05em;
+            color: #1a1a1a;
+            margin: 0 0 20px 0;
+        }
+
+        .interview-meta {
+            font-size: 0.85rem;
+            color: #736c63;
+            letter-spacing: 0.05em;
+        }
+
+        /* Body Content & Dialogue */
+        .interview-body {
+            font-size: 1.02rem;
+            letter-spacing: 0.03em;
+        }
+
+        /* Speaker Styles */
+        .interviewer {
+            margin-top: 45px;
+            margin-bottom: 25px;
+            background-color: #f5f3ef;
+            padding: 24px 28px;
+            border-left: 3px solid #8c8275;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .interviewer-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: #5c554e;
+            margin-bottom: 10px;
+            letter-spacing: 0.08em;
+            display: block;
+        }
+
+        .interviewer p {
+            margin: 0;
+            line-height: 1.9;
+            color: #383430;
+        }
+
+        .respondent {
+            margin-top: 25px;
+            margin-bottom: 40px;
+            padding-left: 10px;
+        }
+
+        .respondent-label {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: 0.08em;
+            display: block;
+        }
+
+        .respondent p {
+            margin: 0 0 1.5em 0;
+            line-height: 2.15;
+            color: #222222;
+        }
+
+        .respondent p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Photo Styles */
         .header-photo-container {
             width: 100%;
-            max-width: 580px;         /* でかすぎない上品で適度なサイズ */
-            margin-left: auto;        /* 左右均等に配置（完全中央寄せ） */
+            max-width: 580px;
+            margin-left: auto;
             margin-right: auto;
             margin-top: 20px;
             margin-bottom: 35px;
-            padding: 8px;              /* 写真を包む清潔感のある白枠 */
-            background-color: #ffffff; /* 白枠背景 */
-            border: 1px solid #e8e6e1; /* 上品な薄い縁取り */
+            padding: 8px;
+            background-color: #ffffff;
+            border: 1px solid #e8e6e1;
             border-radius: 4px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            box-sizing: border-box;    /* スマホで右側がはみ出るのを完璧に防止 */
+            box-sizing: border-box;
         }
 
         .header-photo {
             width: 100%;
-            aspect-ratio: 16 / 9;      /* 横長で扉絵らしい安定した比率 */
+            aspect-ratio: 16 / 9;
             object-fit: cover;
-            object-position: center 25%; /* お顔や手が切れずに綺麗に収まるフォーカス位置 */
+            object-position: center 25%;
             display: block;
             border-radius: 2px;
-            /* ページの雰囲気（和紙・レトロ感）に優しく馴染ませるトーンフィルター */
             filter: sepia(16%) saturate(88%) contrast(92%) brightness(97%);
         }
 
+        /* Utility Headings & Lists */
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #2b2b2b;
+            color: #1a1a1a;
+        }
+
+        .sub-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2b2b2b;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.8;
+        }
+
+        /* Footer / Back link */
+        .interview-footer {
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 1px solid #e2ded7;
+            text-align: center;
+        }
+
+        .back-link {
+            color: #736c63;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #1a1a1a;
+        }
+
+        /* Responsive Settings */
         @media (max-width: 600px) {
+            .interview-container {
+                padding: 20px 15px 50px;
+            }
+
             .header-photo-container {
-                width: 90%;            /* スマホ画面でも左右に均等な10%のゆとりを保持 */
+                width: 90%;
                 margin-top: 15px;
                 margin-bottom: 25px;
                 padding: 6px;
             }
+            
             .header-photo {
                 aspect-ratio: 16 / 9;
                 object-position: center 20%;
             }
-        }
-        :root {
-            --bg-color: #fcfbf9;
-            --text-main: #242424;
-            --text-sub: #5a5550;
-            --accent-color: #8c7b6e;
-            --band-bg: #e6e0d5;
-            --light-gray: #e8e6e1;
-            --pastel-rose: #f4d4d0;
-            --pastel-sage: #d9e8e0;
-            --pastel-lavender: #e8dfe8;
-            --pastel-peach: #f5e0d3;
-            --font-serif: 'Noto Serif JP', serif;
-            --font-en: 'Cormorant Garamond', serif;
-        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+            .interview-header h1 {
+                font-size: 1.45rem;
+            }
 
-        html { scroll-behavior: smooth; }
+            .interviewer {
+                padding: 18px 20px;
+            }
 
-        body {
-            font-family: var(--font-serif);
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            line-height: 2;
-            letter-spacing: 0.05em;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        header {
-            background-color: rgba(252, 251, 249, 0.95);
-            backdrop-filter: blur(8px);
-            padding: 2rem 5%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid rgba(232, 230, 225, 0.5);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        header h1 { font-size: 1rem; letter-spacing: 0.2em; font-weight: 300; }
-        header h1 a { color: var(--text-main); text-decoration: none; transition: opacity 0.3s; }
-        header h1 a:hover { opacity: 0.6; }
-        nav a { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-family: var(--font-en); letter-spacing: 0.15em; transition: opacity 0.3s; }
-        nav a:hover { opacity: 0.6; }
-
-        .interview-container { max-width: 820px; margin: 0 auto; padding: 80px 30px 60px; }
-        .interview-header { margin-bottom: 80px; text-align: center; border-bottom: 1px solid var(--light-gray); padding-bottom: 60px; }
-        .interview-eyebrow { font-size: 0.85rem; color: var(--accent-color); letter-spacing: 0.25em; text-transform: uppercase; font-family: var(--font-en); margin-bottom: 20px; font-weight: 400; }
-        .interview-header h1 { font-size: 2.2rem; font-weight: 300; margin-bottom: 25px; line-height: 1.6; letter-spacing: 0.08em; }
-        .interview-lead { font-size: 1rem; color: var(--text-sub); line-height: 2; max-width: 700px; margin: 0 auto 40px; font-weight: 300; }
-        .interview-meta { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-sub); font-family: var(--font-en); letter-spacing: 0.1em; }
-        .meta-item { display: flex; flex-direction: column; align-items: center; gap: 5px; }
-        .meta-label { color: var(--accent-color); font-weight: 400; }
-
-        .interviewer-info { background-color: var(--pastel-rose); padding: 40px 30px; margin: 60px 0; border-left: 3px solid var(--accent-color); border-radius: 4px; }
-        .interviewer-info p { margin-bottom: 10px; }
-        .interviewer-info p:last-child { margin-bottom: 0; }
-
-        .interview-section { margin: 80px 0; padding: 50px 0; border-bottom: 1px solid var(--light-gray); }
-        .interview-section:last-of-type { border-bottom: none; }
-        .section-title { font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; letter-spacing: 0.1em; color: var(--text-main); }
-        .section-number { color: var(--accent-color); font-size: 0.9rem; font-family: var(--font-en); letter-spacing: 0.15em; display: block; margin-bottom: 5px; }
-
-        .qa-block { margin: 40px 0; }
-        .question { background-color: var(--pastel-sage); padding: 25px 30px; margin-bottom: 25px; border-left: 4px solid var(--accent-color); border-radius: 2px; font-size: 0.98rem; line-height: 2; }
-        .question::before { content: ''; color: var(--accent-color); font-weight: 600; display: block; margin-bottom: 12px; font-family: var(--font-serif); font-size: 0.95rem; }
-
-        .answer { padding: 0 20px; font-size: 0.97rem; line-height: 2.1; text-align: justify; }
-        .answer p { margin-bottom: 20px; }
-        .answer p:last-child { margin-bottom: 0; }
-        .answer::before { content: ''; color: var(--accent-color); font-weight: 600; display: block; margin-bottom: 15px; font-family: var(--font-serif); font-size: 0.95rem; }
-
-        .pullquote { border-left: 4px solid var(--accent-color); padding: 30px; margin: 50px 0; background-color: var(--pastel-lavender); font-size: 1.05rem; font-weight: 400; line-height: 2.1; color: var(--text-main); border-radius: 2px; }
-        .observation { background-color: var(--pastel-peach); padding: 20px 25px; margin: 30px 0; border-left: 3px solid var(--light-gray); font-size: 0.9rem; color: var(--text-sub); font-style: italic; line-height: 1.8; border-radius: 2px; }
-
-        /* ▼★写真用スタイル（トリミング位置を上寄りに調整）★▼ */
-        .interview-photo-container {
-            margin: 45px auto;
-            text-align: center;
-            width: 100%;
-            max-width: 600px;
-        }
-        .interview-photo {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            /* 上部20%の位置を中心に切り抜く（顔が見切れにくくなります） */
-            object-position: center 20%; 
-            border-radius: 4px;
-            box-shadow: 0 4px 16px rgba(140, 123, 110, 0.1);
-            display: block;
-            margin: 0 auto;
-            filter: sepia(25%) saturate(85%) contrast(90%) brightness(96%);
-            transition: filter 0.3s ease;
-        }
-
-        strong { color: var(--text-main); font-weight: 600; }
-        u { text-decoration: underline; text-decoration-color: var(--accent-color); text-underline-offset: 3px; }
-
-        footer { background-color: var(--band-bg); padding: 60px 30px; text-align: center; border-top: 1px solid var(--light-gray); margin-top: 100px; }
-        .footer-meta { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 20px; font-family: var(--font-en); letter-spacing: 0.1em; }
-        .back-link { display: inline-block; color: var(--accent-color); text-decoration: none; font-size: 0.9rem; margin-top: 20px; transition: opacity 0.3s; }
-        .back-link:hover { opacity: 0.6; }
-
-        @media (max-width: 600px) {
-            .interview-container { padding: 60px 20px 40px; }
-            .interview-header h1 { font-size: 1.7rem; }
-            .interview-lead { font-size: 0.95rem; }
-            .question, .answer { font-size: 0.95rem; }
-            .interview-meta { gap: 15px; }
-            .interview-photo-container { margin: 30px auto; max-width: 100%; }
-            .interview-photo { aspect-ratio: 16 / 9; object-position: center 20%; }
+            .section-title {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1><a href="index.html">優 | You</a></h1>
-        <nav><a href="index.html#publication">出版情報へ</a></nav>
-    </header>
 
-    <div class="interview-container">
+    <main class="interview-container">
+
+        <figure class="header-photo-container">
+            <img src="33948.jpg" alt="ヘッダー写真" class="header-photo">
+        </figure>
+
         <div class="interview-header">
-            <span class="interview-eyebrow">Special Interview</span>
-            <h1>5年越しの出版に込められた想い<br>〜『私には帰る“場所”がない』制作秘話〜</h1>
-            <p class="interview-lead">デザインエッグ社から2026年秋に出版される『私には帰る"場所"がない』。その5年にわたる執筆期間、文体の変化、そして著者の思想がいかに熟成されたのか――全てが明かされる。</p>
-            <div class="interview-meta">
-                <div class="meta-item"><span class="meta-label">取材日</span><span>2026年7月22日</span></div>
-                <div class="meta-item"><span class="meta-label">インタビュアー</span><span>編集部</span></div>
-            </div>
+            <p class="interview-eyebrow">Interview</p>
+            <h1>取材のための質問・進行案（文字起こし・記事化前提）</h1>
+            <p class="interview-meta">話者：優 | 聞き手：インタビュアー</p>
         </div>
 
-        <div class="interviewer-info">
-            <p><strong>このインタビューについて</strong></p>
-            <p>本稿は、デビュー作『私には帰る"場所"がない』の出版を控える著者・優さんへの独占インタビューです。5年間の執筆プロセス、言語化することの本質、そしてタイトルに込められた想いが語られています。</p>
+        <div class="interview-body">
+
+            <h2 class="section-title">1. 導入：5年越しの出版、その「空白」の真相</h2>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「ついに、5年越しのご出版ということで、本当におめでとうございます。読者の方々にとっても『待ちに待った』という瞬間だと思うのですが、私自身、一番気になっているのはその『5年』という歳月の意味なんです。<br>
+決して短くないこの期間、あえて原稿を寝かせていたのか、あるいは葛藤があったのか……。この5年という時間を置いたからこそ、熟成されて『書けるようになったこと』、逆に、あの熱量のままだからこそ書けて、時間が経ったことで『書けなくなってしまったこと』がきっとあると思うんです。そのあたりのリアルな舞台裏から、まずはお聞かせいただけますか？」</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「」</p>
+            </div>
+
+            <ul>
+                <li><strong>深掘りポイント（エピソード誘導）</strong>
+                    <ul>
+                        <li>今回デザインエッグ社から10月に出版される『私には帰る“場所”がない』は実に5年間分の原稿で構成されています。初期の頃の文体から見ると文体や、物事をみる視点が変わっているように思えます。例えば『縁の寿命』は小学校の頃の記憶など、過去を回想し、人生の教訓としている作品ですが、実に瑞々しい筆致で書かれております。<br>
+書く内容や、表現方法はなぜ変わったと思われますか？何か象徴的な瞬間があれば、お聞かせください。</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 class="section-title">2. 核心：「優さんにとって『書く』とは何か」と言語化の壁</h2>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「私は優さんの文章を読んでいると、言葉の一つひとつに、単なる文章を超えた執念のようなものを感じます。そもそも優さんは、なぜ書くのでしょうか？<br>
+世の中には、思っていることがあっても胸にしまっておく人もいれば、喋って発散する人もいます。その中で、あえて『言語化する』という、時に痛みを伴う作業に優さんが駆り立てられるのはなぜなのか。優さんにとって、頭の中で爆発するようなインスピレーションを言葉に落とし込む（言語化する）ということは、何か必然性がある行為に思えます。その点優さんはどのように思われますか？ そして、そうやって命を削るようにして書くことで、優さん自身は一体何を得ているのだと思いますか？」</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「」</p>
+            </div>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ（多め）】</span>
+                <p>「実際にこうして本という形で電子出版、紙での出版と世の中に出ていくわけですが、周りの方々の反応はいかがですか？ 驚かれたり、喜ばれたり、様々なドラマがあったのではないかと思います。<br>
+この作品を通じて、優さんが今の世の中に一番伝えたかったこと、もっと言えば今の社会に対して『一石を投じたかった問い』とは何なのでしょうか。読んだ人のどんな感情を揺さぶりたいと思って、この本を世に送り出したのか、その覚悟を教えてください」</p>
+            </div>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアー】</span>
+                <p>次に本のタイトルについて質問させてください。これまで友人知人に少なからず反響をいただいたと思います。なぜこのタイトルであるのかと。<br>
+この『帰る場所』という言葉には、物理的な家や故郷という意味合いだけでなく、精神的な拠り所や、ありのままの自分でいられる関係性など、様々な捉え方があると私は思うんですね。優さんが本作のタイトルで表現したかった『帰る場所』とは、どのようなものを指しているのでしょうか？」</p>
+            </div>
+
+            <h3 class="sub-title">質問2. 「ない」と言い切る強さと込められた感情</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「あえて『ない』と断言することで、非常に強いインパクトと切実さが伝わってきます。この言葉の裏には、純粋な喪失感や孤独があるのでしょうか。それとも、既存の枠組みに縛られない自由や、自ら新しい居場所を創り出そうとする静かな決意のようなものも含まれているのでしょうか？」</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「文字通り、私には帰る場所がありません。それは実家がないといった物理的な意味です。これは、一見幸福で豊かにみえる位相にも埋めようのない原初的な欠損があるということで、まず読む方々になにか励みになればよいとの想いがありました。生きるなかで何がしかの喪失体験からは避けられ得ず、そして往々にして人はその喪のプロセスを辿り、生涯をかけて昇華してゆきます。そうした心の整理になるような言葉を紡ぎたかったのと、単なる武勇伝のような成功譚で終わらせたくなかったのです。そして、読者もそれは恐らく望んでいません。それは人の不幸を愉しむシャーデンフロイデの意味合いではなく、生存バイアスに過ぎないからです。つまり再現性がない。再現性がないということは、端的に読者に役立つような話にはなりません。やはりこの不景気なご時世でお金を払ってわざわざ私の書籍を手に取って購入しようと決めてくださる以上は、確かな読了感を与えられるような筆致を連ねたいと感じました。そうした私の思想の根幹ともいえるなにか相対主義的なもの・・・AもBも両立する、つまり「ない」と「ある」が並行しそれぞれが内包されるような、そうした一枚岩ではない複雑な現代へ向けて、タイトルをつけました。「ない」と断言することで逆説的に浮き出る「ある」ほうへと、目を向けてもらいたかったのです。」</p>
+            </div>
+
+            <h3 class="sub-title">タイトル誕生の背景とプロセス</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「この『私には帰る場所がない』という印象的な言葉は、執筆の初期段階からすでに優さんの中に明確にあったのでしょうか。それとも、原稿を書き進めている中で発見した言葉なのでしょうか。このタイトルで行こうとした、瞬間があったはずです。何か象徴的で具体的なエピソードがあればお聞かせください。」</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「当初はまったくタイトルが思い浮かびませんでした。なにしろ人文学の短編集のような、広範囲に渡るアラカルトのような詰め物ですので、まるで統一性がないのです。もちろん、それが豊かなバリエーションとなり、読む人を飽きさせないことは請け合い—というか自信のある特徴なのですが、総括する命題とはなんだろう？というのはずっと考えあぐねていました。その頃、担当編集さん—そう、あなた！（ここで指を指す）と一緒に「なにかインスピレーション湧きませんかねえ～(´・ω・｀)」と本屋さんをうろうろしていると、来た来た閃きました。まず第一にあったのはやはり、単なる自慢話と受け取られたくなかったこと、ここに起因します。それで、私は幸いさまざまな方のお力を借りているけれど（そのぶん、これから恩返しをしてゆくけれど）、現状厳しい環境にいる人に、前向きなメッセージは果たして真っ直ぐ届くのだろうか？個人の濃淡を突きつけられ、あまりに残酷なのではないか？と「これは絶対に後ろ向きなタイトルがいい」と決断しました。まず読書は私的空間での自他との個人的対話になるため、突き抜けた明るさはそぐわないのと、人はやはり光よりもなにか陰った事象に様々な背景を洞察するように思います。私が苦労してきた意味は何？と根源的な問いに立ち還る際に、自分のこれまで背負ってきた暗い影を翻訳しなければどうするの、私はなんのために活動させてもらってるんだよ、という使命感からなります。」</p>
+            </div>
+
+            <h3 class="sub-title">現代社会の心理とのリンク</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「現代は、常に誰かと繋がれるツールがある一方で、本当の意味で安心できる『帰る場所』を見失い、見えない疎外感を抱えている人が少なくない時代だと感じます。この作品は、そうした現代社会の空気や人々の心理と、どのように共鳴しているとお考えですか？」</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「現代では、全体的に内向的になり、個人主義がきわまっていると感じています。そうした意味で、誰しもが疎外感を感じながらも、その「疎」に対して安心感を抱いている。これは、地域社会から核家族化し、経済の衰退とともに一人っ子が増え、兄弟間あるいは地域間で社会を学ぶ、といった戯れがなくなったからだと思います。そうした道程を辿っても私には帰る場所がないということが、必ずしもネガティヴだとは考えません。むしろ、「帰る場所がない」のではなく翻って「どこへでもゆける」点できわめて自由で幅広い可動域を確保できているのです。「帰る場所」があることは、取りも直さず「責任」や「縛られる」窮屈さも内包します。固定の場所を伴った安全には維持管理義務が発生する。そうした意味合いでも、果たして実際に「ある」ことは必ずしもポジティブなだけなのだろうか？という問いかけでもあります。何事も両極があり、絶えずその二軸を反復しながら葛藤とともに生きているのが通常であり、むしろそれを「矛盾」や「二律背反」として非難するほうが原理に逆らっている。私が相対主義こそ人間の在り様であり、橋渡し役になると確信している所以です。」</p>
+            </div>
+
+            <h3 class="sub-title">読者へのメッセージと作品の役割</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「タイトルを目にしてハッとしたり、自分自身を重ね合わせて本を手に取る読者も多いはずです。ご自身の『帰る場所』について揺らぎを感じている読者にとって、本作がどのような存在として届くことを願っていらっしゃいますか？」</p>
+            </div>
+
+            <h3 class="sub-title">6 【質問①：変化と普遍について】</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「この10年で、優さんの環境や活動の場は大きく広がったかと思います。ご自身の中で実感されている『ここが一番変わった』という部分と、逆に『10年前からこれだけはずっと変わらない』という信念や芯の部分はどこにありますか？」<br>
+(ここで10年間の具体的なエピソードや、優さんの価値観を引き出します)</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「まず、私はいま35歳です。そうすると、10年前は25歳なんですね。25歳の頃は、いまの自由奔放で自我を解放した現状とは真反対の真面目一徹堅物人間でした。それはやはり環境が規定するのですね。その頃私は、行政で非正規公務員として働いていました。窓口では「俺らの税金で給料を貰いやがって・・・」と言われるような監視の目がありましたから（公務員だって同じように税金を払っているにも拘らず！）、町に出るにも絶えず市民の方や同僚などの視線を気にしながら、縮こまって杓子定規の生活をしていましたね。もちろん、職場の皆様は良い方々ばかりでした。ほんとうに楽しかったですよ。市民の方々を真剣に考え、どうすれば町がよくなるか、そういったことに真摯に向き合っている姿には、まさに「私もそうした陣営に伴いたい。よし、大学に行こう！」と学位の必要性や、高等教育の重要性を実際に現場で痛感した偶然性からなります。そうした意味合いでも、この10年で素朴に学力がこれでも幾許か上がったように思います。また、読書が好きになりましたし、その頃に乱読した経験が今に活きています。<br>
+ あるいは、象徴的な出来事として、上記で真面目一徹堅物人間と述べましたが、人とあまりコミュニケーションを取らずに「結果さえ出せばよいのだ。それは数字が全て規定するのだ。」と思っていました。ですから、仕事もこなさず人と話してばかりの人がなぜ評価されるのか、仕事が途切れないのか、皆目理解不能でした。そのぶん、私が仕事をしているのになぜ？というフラストレーションでいっぱいでした。でも今なら分かるのですが、評価は一元的ではないのですね。きわめて立体性があり、黙々とこなせる人、仕事が早い人、遅いけど正確な人、人とたくさん話してハブになる人、場を和ます人などなど、人事では様々なでこぼこをそれぞれある程度フラットに観察しているのですね。若い頃はそれに気づかなかった。そしていま35歳になり、いつのまにか10年前に憎み、あるいは嫉妬していた？その人にいま自分がなっている。これは不思議な巡り合わせだと感じました。私、あの人になりたかったんだって。<br>
+ 当時話を聴いてくださっていた恩師から、その職場での理不尽（だと主観的に感じていたこと）を相談すると「あのね、物事は中庸なのよ。白黒じゃない。中庸を大切にね。」と言われました。そうです、10年前の私は完璧主義かつ白黒思考だったのです。いまだに極端なところはありますが、皆様のご教育のお陰で角が取れて丸くなりました。身体も(笑)。だからこそ、相対主義の重要さが分かるのかもしれません。極端な思考は往々にして生き辛いですからね。」</p>
+            </div>
+
+            <h3 class="sub-title">【質問②：10年前の自分への言葉】</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ】</span>
+                <p>「そんなご自身の歩みを振り返ってみて……もし今、隣に『10年前の優さん』が座っていたとしたら、どう声をかけますか？ 何を伝えて、安心させてあげたいですか？」</p>
+            </div>
+
+            <div class="respondent">
+                <span class="respondent-label">優さん</span>
+                <p>「あのときはとにかく、性分に合わない仕事をしていたことや、ホルモンバランスと闘っていたこと、実家から飛び出してまだ数年であり落ち着いてアタッチメントの再形成ができる時期ではなかったことなど、とにかく生き辛さを抱えていました。まだまだそのときは人に言えない傷があり、そして述懐して大勢の人に受容されるような今の経験を辿っていなかったので、絶えず重荷を背負い交友関係も狭いままに、視野狭窄に陥っていました。なにしろ全くメタ認知ができなかった。それを一変させたのが放送大学での心理学の学びです。<br>
+ そこで10年前、25歳の私に声を掛けたいのは・・・、うーんでも、特段声を掛ける必要はなさそうですね。あのときはあのときで、頼もしく感じていますし、いまより随分しっかりしていたと思います。それはそれで完成していた。だから、「そのまま生きていいよ、そしたらここに来るから。」という端的な言葉でしょうかね。私はやはりユング心理学における「コンステレーション」という概念を信じているため、どうせ10年経ったらここに来るという必然性があっけなく一筋貫いているのですね。」</p>
+            </div>
+
+            <ul>
+                <li><strong>深掘りポイント（エピソード誘導）</strong>
+                    <ul>
+                        <li>「あ、今、自分の感情が言葉になった」と強烈に実感した過去の体験（エピソード②）</li>
+                        <li>書くことで救われた、あるいは逆に苦しんだ具体的なエピソード</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 class="section-title">3. 社会との接点：周囲の反応と、世に問いたいこと</h2>
+
+            <ul>
+                <li><strong>深掘りポイント（エピソード誘導）</strong>
+                    <ul>
+                        <li>身近な人（家族、友人、あるいは最初の読者）から言われて一番心に残っている言葉（エピソード③）</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 class="section-title">💡 さらに臨場感を出すために「他に聞くべきこと・提案」</h2>
+
+            <p>週刊誌風の臨場感（生々しさや人間味）を出し、WEB記事として写真を効果的に使うために、以下の要素も追加でインタビュー中に突っ込んで聞いてみることをおすすめします。</p>
+
+            <h3 class="sub-title">① 「五感」を刺激する具体的なシチュエーションの質問</h3>
+
+            <p>WEB記事で写真を複数枚使うとのことなので、<strong>「視覚的に絵が浮かぶ質問」</strong>を挟むと、読者が一気に引き込まれます。</p>
+
+            <ul>
+                <li><strong>追加の問いかけ例：</strong>
+                    <ul>
+                        <li>「5年間、どこで、どんな風に書いていたんですか？ お気に入りのカフェ、あるいは夜中の自室のデスクの上には、何が置いてありましたか？」</li>
+                        <li>「執筆中、一番煮詰まった時に必ず聴いていた音楽や、食べていたものはありますか？」</li>
+                        <li>⇒ ここで「お気に入りの執筆アイテム」や「実際のノート」などの写真を入れると、WEB記事として非常に映えます。</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">② 5年前の自分へのメッセージ</h3>
+
+            <p>「5年越しの出版」というドラマをさらに際立たせるための質問です。</p>
+
+            <ul>
+                <li><strong>追加の問いかけ例：</strong>
+                    <ul>
+                        <li>「今、こうして本を出し終えた優さんから、5年前の『書けなくて苦しんでいた自分』に声をかけるとしたら、なんて言ってあげたいですか？」</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">③ インタビュアー（あなた）の「主観・観察」をメモしておく</h3>
+
+            <p>口頭でのインタビュー中、優さんの<strong>「表情の変化」や「間の取り方」</strong>をぜひメモしておいてください。</p>
+
+            <ul>
+                <li>（例：「ここで優さんは、一瞬視線を落とし、5年前を懐かしむように小さく笑った」）</li>
+                <li>これらを記事の地の文（カッコ書きなど）に入れるだけで、一気に週刊誌のようなリアルな現場感が生まれます。</li>
+            </ul>
+
+            <h2 class="section-title">取材のための質問・進行案（文字起こし・記事化前提）</h2>
+
+            <h3 class="sub-title">1. 導入：5年越しの出版、その「空白」の真相</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ（多め）】</span>
+                <p>「ついに、5年越しのご出版ということで、本当におめでとうございます。ファンや読者の方々にとっても『待ちに待った』という瞬間だと思うのですが、私自身、一番気になっているのはその<strong>『5年』という歳月の意味</strong>なんです。<br>
+決して短くないこの期間、あえて原稿を寝かせていたのか、あるいは葛藤があったのか……。この5年という時間を置いたからこそ、熟成されて『書けるようになったこと』、逆に、あの熱量のままだからこそ書けて、時間が経ったことで『書けなくなってしまったこと』がきっとあると思うんです。そのあたりのリアルな舞台裏から、まずはお聞かせいただけますか？」</p>
+            </div>
+
+            <ul>
+                <li><strong>深掘りポイント（エピソード誘導）</strong>
+                    <ul>
+                        <li>5年間で一番「書く内容」が変わった、象徴的な瞬間（エピソード①）</li>
+                        <li>当時は尖っていたけれど、今振り返ると丸くなって落とした表現など</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">2. 核心：「優さんにとって『書く』とは何か」と言語化の壁</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ（多め）】</span>
+                <p>「本書を読んでいると、言葉の一つひとつに、単なる文章を超えた執念のようなものを感じます。そもそも優さんは、なぜ書くのでしょうか？<br>
+世の中には、思っていることがあっても胸にしまっておく人もいれば、喋って発散する人もいます。その中で、あえて『言語化する』という、時に痛みを伴う作業に優さんが駆り立てられるのはなぜなのか。優さんにとって、頭の中のもやもやを言葉に落とし込む（言語化する）とは、一体どういう行為なのでしょうか？ そして、そうやって命を削るようにして書くことで、優さん自身は一体何を得ているのだと思いますか？」</p>
+            </div>
+
+            <ul>
+                <li><strong>深掘りポイント（エピソード誘導）</strong>
+                    <ul>
+                        <li>「あ、今、自分の感情が言葉になった」と強烈に実感した過去の体験（エピソード②）</li>
+                        <li>書くことで救われた、あるいは逆に苦しんだ具体的なエピソード</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">3. 社会との接点：周囲の反応と、世に問いたいこと</h3>
+
+            <div class="interviewer">
+                <span class="interviewer-label">【インタビュアーの問いかけ（多め）】</span>
+                <p>「実際にこうして本という形になって世に出たわけですが、周りの方々の反応はいかがでしたか？ 驚かれたり、あるいは核心を突かれて涙されたり、様々なドラマがあったのではないかと思います。<br>
+この作品を通じて、優さんが今の世の中に一番伝えたかったこと、もっと言えば<strong>『一石を投じたかった問い』</strong>とは何なのでしょうか。読んだ人のどんな感情を揺さぶりたいと思って、この本を世に送り出したのか、その覚覚悟を教えてください」</p>
+            </div>
+
+            <ul>
+                <li><strong>深掘りポイント（エピソード誘導）</strong>
+                    <ul>
+                        <li>身近な人（家族、友人、あるいは最初の読者）から言われて一番心に残っている言葉（エピソード③）</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2 class="section-title">💡 さらに臨場感を出すために「他に聞くべきこと・提案」</h2>
+
+            <p>週刊誌風の臨場感（生々しさや人間味）を出し、WEB記事として写真を効果的に使うために、以下の要素も追加でインタビュー中に突っ込んで聞いてみることをおすすめします。</p>
+
+            <h3 class="sub-title">① 「五感」を刺激する具体的なシチュエーションの質問</h3>
+
+            <p>WEB記事で写真を複数枚使うとのことなので、<strong>「視覚的に絵が浮かぶ質問」</strong>を挟むと、読者が一気に引き込まれます。</p>
+
+            <ul>
+                <li><strong>追加の問いかけ例：</strong>
+                    <ul>
+                        <li>「5年間、どこで、どんな風に書いていたんですか？ お気に入りのカフェ、あるいは夜中の自室のデスクの上には、何が置いてありましたか？」</li>
+                        <li>「執筆中、一番煮詰まった時に必ず聴いていた音楽や、食べていたものはありますか？」</li>
+                        <li>⇒ ここで「お気に入りの執筆アイテム」や「実際のノート」などの写真を入れると、WEB記事として非常に映えます。</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">② 5年前の自分へのメッセージ</h3>
+
+            <p>「5年越しの出版」というドラマをさらに際立たせるための質問です。</p>
+
+            <ul>
+                <li><strong>追加の問いかけ例：</strong>
+                    <ul>
+                        <li>「今、こうして本を出し終えた優さんから、5年前の『書けなくて苦しんでいた自分』に声をかけるとしたら、なんて言ってあげたいですか？」</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="sub-title">③ インタビュアー（あなた）の「主観・観察」をメモしておく</h3>
+
+            <p>口頭でのインタビュー中、優さんの<strong>「表情の変化」や「間の取り方」</strong>をぜひメモしておいてください。</p>
+
+            <ul>
+                <li>（例：「ここで優さんは、一瞬視線を落とし、5年前を懐かしむように小さく笑った」）</li>
+                <li>これらを記事の地の文（カッコ書きなど）に入れるだけで、一気に週刊誌のようなリアルな現場感が生まれます。</li>
+            </ul>
+
         </div>
 
-        <!-- 導入 -->
-        <div class="interview-section">
-            <span class="section-number"></span>
-            <h2 class="section-title">5年という「空白」の真相</h2>
-            
-            <div class="qa-block">
-                <div class="question">
-                    ついに、<strong>5年越しのご出版</strong>ということで、本当におめでとうございます。ファンや読者の方々にとっても『待ちに待った』という思いがあると思います。その一方で、SNS上では『なぜ5年もかかったのか』という疑問の声もありました。<br>
-                    決して短くないこの期間、あえて原稿を寝かせていたのか、あるいは葛藤があったのか……。この5年という時間を置いたからこそ見えてきた『何か』があるのではないかと推測しますが、いかがでしょうか？
-                </div>
-                
-                <div class="answer">
-                    <p>ありがとうございます。本当に長い期間でしたね。当初、私はこの執筆を一気に完成させるつもりでいました。でも実際には、<strong>人生の方が執筆の速度に追いついてくれなかった</strong>んです。</p>
-                    
-                    <p>初期に書いた原稿は、正直なところ<strong>尖りすぎていた</strong>と感じます。社会への怒り、自分の人生に対する疑問、そうした感情的な激しさが全編を貫いていました。当時の私は、『この怒りを世に放つことで何かが変わるのではないか』と考えていたんです。</p>
-                    
-                    <p>しかし5年の間に、<u>私の人生観そのものが変わりました</u>。大学進学、学位取得、それに伴う人間関係の広がり、そして何より『他者の視点』を獲得したんです。</p>
-                    
-                    <p>その過程で気づいたのは、『世界は複雑であり、善悪二項では語れない』ということです。そうすると、初期の尖った原稿の多くが『子どもじみた正義感』に見えるようになってしまった。</p>
-                    
-                    <p>つまり、5年という時間は、単なる『寝かせ期間』ではなく、<strong>私自身が成熟するための必要な期間</strong>だったんです。焦ってあの時点で出版していたら、今とは全く異なる本になっていたでしょう。それは良い意味での『遅延』だったと思います。</p>
-                </div>
-  <!-- ★修正後 -->
-<div class="interview-photo-container">
-    <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33781_0.jpg" alt="インタビューを受ける様子" class="interview-photo">
-</div>
-                
-            </div>
-            
-            
-        <!-- 核心 -->
-        <div class="interview-section">
-            <span class="section-number"></span>
-            <h2 class="section-title">核心：「書く」という行為の本質</h2>
-            
-            <div class="qa-block">
-                <div class="question">
-                    本書を読んでいると、言葉の一つひとつに、<strong>単なる文章を超えた執念</strong>のようなものを感じます。そもそも優さんは、<u>なぜここまで『書く』ことに執着するのか</u>――という根源的な問いが浮かびます。<br>
-                    世の中には、思っていることがあっても胸にしまっておく人もいれば、喋って発散する人もいます。その中で、あえて『言語化する』という方法を選択した優さん。<br>
-                    優さんにとって、<strong>頭の中のもやもやを言葉に落とし込む（言語化する）とは、一体どういう行為なのでしょうか？</strong> そこに苦しみはありますか？ 喜びはありますか？ 何を得ているのですか？
-                </div>
-                
-                <div class="answer">
-                    <p>それは、私にとって<strong>生存そのもの</strong>なんです。言葉がなければ、私は存在を実感することができない。</p>
-                    
-                    <p>幼少期から、私は<strong>感情表現が困難な環境</strong>にいました。親との関係も複雑でしたし、学校という集団システムの中では『自分の本音』を声にすることなど許されませんでした。</p>
-                    
-                    <p>しかし<strong>ある時点で、ペンと紙を手にした</strong>。その瞬間、初めて『自分の内側にあるモノ』を外部に表出させることができたんです。</p>
-                    
-                    <p>つまり、『書くことで、初めて私は自分が存在していることを実感できる』んです。これはある種の強迫的な行為かもしれません。生きることそのもの、存在を確認するための儀式。</p>
-                    
-                    <p>言語化の痛みについても、その通りです。<strong>思考の中にあるもやもやしたものを、言葉という『形』に変換する際には、必ず『損失』が生じます</strong>。心の中の感覚はアナログ的で無限ですが、言葉はデジタル的で有限ですから。</p>
-                    
-                    <p>そして最後に、『何を得ているのか』ということについては――<strong>私は自分を得ている</strong>んだと思います。書くまでは、自分は霧の中にいるような状態。書き終わった瞬間に、初めて『ああ、私ってこういう人間だったんだ』と理解できるんです。</p>
-                </div>
-            </div>
-            
-            <div class="pullquote">「書くことは、私にとって単なる表現ではなく、<strong>自己確認の儀式であり、生存の証明</strong>である」</div>
-
-            <!-- ★修正後 -->
-<div class="interview-photo-container">
-    <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33782_0.jpg" alt="インタビューを受ける様子" class="interview-photo">
-</div>
-            
-        <!-- タイトルについて -->
-        <div class="interview-section">
-            <span class="section-number"></span>
-            <h2 class="section-title">『帰る場所がない』というタイトルの真意</h2>
-            
-            <div class="qa-block">
-                <div class="question">
-                    本のタイトル『<strong>私には帰る"場所"がない</strong>』について、質問させてください。これまで友人知人に少なからず反響をいただいているタイトルです。<br>
-                    この『帰る場所』という言葉には、物理的な家や故郷という意味合いだけでなく、精神的な拠り所や、ありのままの自分でいられる空間といった含みがあるのではないかと推測します。<br>
-                    優さんが本作のタイトルで表現したかった『帰る場所』とは、<u>どのようなものを指しているのでしょうか？</u>
-                </div>
-                
-                <div class="answer">
-                    <p><strong>文字通り、私には帰る場所がありません。それは実家がないといった物理的な意味です。</strong>これは、一見幸福で豊かに見える現代社会では『例外的』なことかもしれません。多くの人は『実家がある』『帰る場所がある』という前提の上で人生を設計しています。</p>
-                    
-                    <p>生きるなかで何がしかの喪失体験からは避けられ得ず、そして往々にして人は<strong>その喪のプロセスを辿り、生涯をかけて昇華していく</strong>ものです。しかし私の場合は『喪』が解消されることなく、常に『ない』状態が続いている。</p>
-                    
-                    <p>そして、読者もそれは恐らく望んでいません。それは人の不幸を愉しむ<strong>シャーデンフロイデ</strong>の意味合いではなく、『人生を生き抜く上で、その苦しみから何が生まれるのか』という<u>再現可能性</u>を求めているんだと思うんです。</p>
-                    
-                    <p>再現性がないということは、端的に読者に役立つような話にはなりません。やはりこの不景気なご時世でお金を払ってわざわざ本を買う人というのは、『この本に、自分の人生に活かせる何かがあるのではないか』という期待を抱いているはずです。</p>
-                    
-                    <p>そうした私の思想の根幹ともいえるなにか<u>相対主義的なもの</u>――AもBも両立する、つまり「ない」と「ある」が並行してそこに存在する――ということを表現したかったんです。</p>
-                    
-                    <p>「ない」と断言することで<strong>逆説的に浮き出る「ある」ほうへと、目を向けてもらいたかった</strong>のです。</p>
-                </div>
-            </div>
-            
-            <div class="qa-block">
-                <div class="question">
-                    この『帰る場所がない』という印象的な言葉は、<strong>執筆の初期段階からすでに優さんの中に明確にあった</strong>のでしょうか？ あるいは、執筆を進める過程の中で、ある瞬間に『これだ！』と立ち現れたタイトルなのでしょうか？<br>
-                    このタイトルで行こうとした瞬間があったはずです。何か象徴的で具体的なエピソードがあればお聞かせください。
-                </div>
-                
-                <div class="answer">
-                    <p><strong>当初はまったくタイトルが思い浮かびませんでした。</strong>なにしろ人文学の短編集のような、広範囲に渡るアラカルト的なエッセイ群ですから、『これ一つで全てを表現するタイトル』を見つけるのは容易ではなかったんです。</p>
-                    
-                    <p>もちろん、それが豊かなバリエーションとなり、読む人を飽きさせないことは請け合い――というか自信のある特徴なのですが、『本として一つに束ねる軸足』がなかなか見つからなくて……。</p>
-                    
-                    <p>その頃、担当編集さん――そう、あなた！（ここで指を指す）と一緒に「なにかインスピレーション湧きませんかねえ～」と本屋をブラブラしたりしていました（笑）。</p>
-                    
-                    <p>まず第一にあったのはやはり、<strong>『単なる自慢話と受け取られたくなかったこと』</strong>、ここに起因します。それで、私は意識的に『弱さ』『欠落』『喪失』といったテーマを前景化させることにしたんです。</p>
-                    
-                    <p>個人の濃淡を突きつけられ、<strong>あまりに残酷なのではないか？</strong>と「<strong>これは絶対に後ろ向きなタイトルがいいな</strong>」という直感が来たんです。</p>
-                    
-                    <p>まず読書は私的空間での自他との個人的対話になるため、<strong>突き抜けた明るさはそぐわない</strong>のと、人はやはり光より<u>影の中に真実を見出す</u>傾向があるからです。</p>
-                    
-                    <p>『私が苦労してきた意味は何？』と根源的な問いに立ち還る際に、<strong>自分のこれまで背負ってきた暗い影を翻訳しなければ</strong>、本当の『光』は生まれないんだと思うんです。</p>
-                </div>
-            </div>
+        <div class="interview-footer">
+            <a href="index.html" class="back-link">← トップページへ戻る</a>
         </div>
 
-        <!-- 変化と普遍 -->
-        <div class="interview-section">
-            <span class="section-number"></span>
-            <h2 class="section-title">変化と普遍：10年の歩みを振り返る</h2>
-            
-            <div class="qa-block">
-                <div class="question">
-                    この10年で、優さんの環境や活動の場は大きく広がったかと思います。ご自身の中で実感されている『<strong>ここが一番変わった</strong>』というポイントは何でしょうか？
-                </div>
-                
-                <div class="answer">
-                    <p>まず、私はいま<strong>35歳</strong>です。そうすると、10年前は25歳なんですね。25歳の頃は、いまの自由奔放で自我を解放した現状からは想像もつかないほど、<u>社会的な規範に縛られていた</u>んです。</p>
-                    
-                    <p>その頃私は、<strong>行政で非正規公務員として働いていました。</strong>窓口では「俺らの税金で給料を貰いやがって……」と怒鳴る市民もいれば、感謝してくれる方もいました。</p>
-                    
-                    <p>もちろん、職場の皆様は良い方々ばかりでした。本当に楽しかったですよ。市民の方々を真剣に考え、『どうすれば町がよくなるのか』と真摯に向き合う同僚たちの姿を見て、私も感化されていました。</p>
-                    
-                    <p>その意味で、一番変わったのは<u>『自由度と心理的ゆとり』</u>ですね。今の私は、社会的な眼差しをそこまで気にしなくなった。個人として、『自分は何をしたいのか』『自分の声は何なのか』に向き合う時間が増えました。</p>
-                    
-                    <p>一方、ずっと変わらないのは『<strong>人の痛みに向き合いたい、その痛みを言葉に変えたい</strong>』という根源的な衝動ですね。これは25歳の頃から今まで、一貫して流れている何か――私の本質だと思います。</p>
-                </div>
-            </div>
-            
-            <div class="qa-block">
-                <div class="question">
-                    そんなご自身の歩みを振り返ってみて……もし今、隣に『<strong>10年前の優さん</strong>』が座っていたとしたら、<u>どう声をかけますか？</u>
-                </div>
-                
-                <div class="answer">
-                    <p>「大丈夫。今は苦しいかもしれないけど、<strong>その苦しさは全部、後で誰かのための言葉に変わる。</strong>君の痛みは無駄にはならないんだよ」って言いたいですね。</p>
-                    
-                    <p>そしてもう一つ、<strong>「君は一人じゃないよ」</strong>と言いたい。当時の私は、本当に孤立していると感じていた。でも、それは幻想だったんです。むしろ、その孤立が私を『言葉』へと導いてくれたんですから。</p>
-                    
-                    <p>つまり、『<u>孤立することは決して終わりではなく、むしろ新たな始まりかもしれない</u>』ということを、あの時の自分に教えてあげたい。</p>
-                </div>
-            </div>
+    </main>
 
-        <!-- 社会への問い -->
-        <div class="interview-section">
-            <span class="section-number"></span>
-            <h2 class="section-title">社会への問い：現代が抱える「帰る場所」の喪失</h2>
-            
-            <div class="qa-block">
-                <div class="question">
-                    現代は、常に誰かと繋がれるツールがある一方で、本当の意味で安心できる『帰る場所』を見失い、<strong>見えない疎外感を抱える</strong>人が増えているように思います。SNSで繋がっているのに『孤独』を感じる――その矛盾を抱えた現代人の姿があります。<br>
-                    本書が提示する『帰る場所がない』という状態は、実は現代の多くの人が無意識のうちに体験している、ある種の『普遍的な喪失感』ではないでしょうか？
-                </div>
-                
-                <div class="answer">
-                    <p>その通りです。現代は、テクノロジーが発達し、情報が溢れ、一見として自由で豊かに見えます。でも同時に、<strong>多くの人が『本当に安心できる場所』を持つことができなくなった</strong>んです。</p>
-                    
-                    <p>現代では、全体的に<u>内向的になり、個人主義がきわまっている</u>と感じています。そうした意味で、誰しもが<strong>疎外感を抱えながら生きている</strong>というのは、あながち大げさではないと思います。</p>
-                    
-                    <p>そうした道程を辿っても私には帰る場所がないということが、<u>必ずしもネガティヴだとは考えません。</u>むしろ、「帰る場所がない」ことは「あらゆる場所が帰る場所になり得る」という可能性を秘めているんです。</p>
-                    
-                    <p>「帰る場所」があることは、取りも直さず『<strong>責任</strong>』や『<strong>縛られる</strong>』窮屈さも内包します。固定の場所を持つことの自由さと不自由さ――その両軸が常に存在するんです。</p>
-                    
-                    <p>何事も両極があり、<strong>絶えずその二軸を反復しながら葛藤とともに生きているのが通常</strong>であり、むしろそれを「矛盾」ではなく「複雑性」として受け入れることが、現代を生き抜く知恵なんだと思うんです。</p>
-                    
-                    <p>私が<u>相対主義こそ人間の在り様であり、橋渡し役になると確信している所以です。</u></p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 終わりに -->
-        <div class="interview-section">
-            <h2 class="section-title" style="margin-top: 60px;">終わりに</h2>
-            
-            <p style="font-size: 0.98rem; line-height: 2.1;">
-                インタビューの終盤、優さんは「<strong>書くことで、初めて私は自分を理解できる。そして、その自分の言葉が誰かの心に届く時、初めて『帰る場所』が生まれるんです</strong>」と語った。その言葉には、言語を通じた人間の本質的な繋がりへの確信が感じられた。
-            </p>
-            
-            <p style="font-size: 0.98rem; line-height: 2.1; margin-top: 20px;">
-                5年間の執筆プロセスは、単なる本の完成ではなく、<strong>一人の作家の思想と人格が熟成されるプロセス</strong>そのものであった。その過程で形成された相対主義的な世界観は、現代を生きる私たちに新たな視座をもたらす。
-            </p>
-            
-            <p style="font-size: 0.98rem; line-height: 2.1; margin-top: 30px; color: var(--text-sub); font-style: italic;">
-                『私には帰る"場所"がない』は、2026年秋、デザインエッグ社より出版予定。電子版・紙版の同時発売が予定されている。
-            </p>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-meta">
-            <p>『私には帰る"場所"がない』<br>出版社：デザインエッグ社 | 発売予定：2026年秋</p>
-        </div>
-        <a href="index.html" class="back-link">← 優のプロフィールに戻る</a>
-    </footer>
 </body>
 </html>
