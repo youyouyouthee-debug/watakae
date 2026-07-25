@@ -7,7 +7,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
-    <style>
+   <style>
+
+        /* ▼★扉絵（ヘッダー下メイン写真）専用スタイル★▼ */
+        .hero-photo-container {
+            margin: 0 auto 60px;
+            text-align: center;
+            width: 100%;
+            max-width: 720px; /* 本文より少し広く見栄えのするサイズ */
+        }
+        .hero-photo {
+            width: 100%;
+            aspect-ratio: 16 / 9; /* 横長で扉絵らしい安定感 */
+            object-fit: cover;
+            object-position: center 30%; /* 顔と手元が綺麗に収まる位置 */
+            border-radius: 6px;
+            box-shadow: 0 6px 24px rgba(140, 123, 110, 0.12);
+            display: block;
+            margin: 0 auto;
+            /* 温もりあるトーンに馴染ませるフィルター */
+            filter: sepia(18%) saturate(90%) contrast(93%) brightness(98%);
+        }
+
+        @media (max-width: 600px) {
+            .hero-photo-container { margin-bottom: 40px; }
+            .hero-photo { aspect-ratio: 16 / 10; object-position: center 25%; }
+        }
+        
         :root {
             --bg-color: #fcfbf9;
             --text-main: #242424;
@@ -150,6 +176,11 @@
             <p><strong>このインタビューについて</strong></p>
             <p>本稿は、デビュー作『私には帰る"場所"がない』の出版を控える著者・優さんへの独占インタビューです。5年間の執筆プロセス、言語化することの本質、そしてタイトルに込められた想いが語られています。</p>
         </div>
+
+        <!-- ★扉絵（上部のメイン写真）★ -->
+<figure class="hero-photo-container">
+    <img src="33948.jpg" alt="インタビュー扉絵" class="hero-photo">
+</figure>
 
         <!-- 導入 -->
         <div class="interview-section">
