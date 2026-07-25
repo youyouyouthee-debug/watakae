@@ -12,6 +12,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
+
+        /* 🌟スマートなヘッダー写真（スマホ対応・左右均等・馴染みフィルター付き）🌟 */
+        .header-photo-container {
+            width: 100%;
+            max-width: 580px;         /* でかすぎない上品で適度なサイズ */
+            margin-left: auto;        /* 左右均等に配置（完全中央寄せ） */
+            margin-right: auto;
+            margin-top: 20px;
+            margin-bottom: 35px;
+            padding: 8px;              /* 写真を包む清潔感のある白枠 */
+            background-color: #ffffff; /* 白枠背景 */
+            border: 1px solid #e8e6e1; /* 上品な薄い縁取り */
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;    /* スマホで右側がはみ出るのを完璧に防止 */
+        }
+
+        .header-photo {
+            width: 100%;
+            aspect-ratio: 16 / 9;      /* 横長で扉絵らしい安定した比率 */
+            object-fit: cover;
+            object-position: center 25%; /* お顔や手が切れずに綺麗に収まるフォーカス位置 */
+            display: block;
+            border-radius: 2px;
+            /* ページの雰囲気（和紙・レトロ感）に優しく馴染ませるトーンフィルター */
+            filter: sepia(16%) saturate(88%) contrast(92%) brightness(97%);
+        }
+
+        @media (max-width: 600px) {
+            .header-photo-container {
+                width: 90%;            /* スマホ画面でも左右に均等な10%のゆとりを保持 */
+                margin-top: 15px;
+                margin-bottom: 25px;
+                padding: 6px;
+            }
+            .header-photo {
+                aspect-ratio: 16 / 9;
+                object-position: center 20%;
+            }
+        }
         :root {
             --bg-color: #fcfbf9;
             --text-main: #242424;
