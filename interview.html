@@ -7,67 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
-   <style>
-
-       /* ★一番上の横長ヘッダー画像用スタイル★ */
-        .header-photo-container {
-            margin: 0 auto 50px;
-            text-align: center;
-            width: 100%;
-            max-width: 820px; /* 本文幅に合わせて余白をすっきり整える */
-            background-color: #ffffff; /* 余白をきれいな白に設定 */
-            padding: 10px; /* 画像まわりの白い余白フレーム */
-            border-radius: 4px;
-        }
-
-        .header-photo {
-            width: 100%;
-            aspect-ratio: 21 / 9; /* かなりスリムで横長なパノラマ比率 */
-            object-fit: cover;
-            object-position: center 25%; /* 上寄りにフォーカスして顔・手元を収める */
-            border-radius: 2px;
-            display: block;
-            margin: 0 auto;
-            /* 世界観に馴染む柔らかなフィルム風フィルター */
-            filter: sepia(20%) saturate(88%) contrast(92%) brightness(97%);
-        }
-
-        @media (max-width: 600px) {
-            .header-photo-container {
-                margin-bottom: 30px;
-                padding: 6px;
-            }
-            .header-photo {
-                aspect-ratio: 16 / 8; /* スマホでも顔が消えない程よい横長 */
-                object-position: center 20%;
-            }
-        }
-
-        /* ▼★扉絵（ヘッダー下メイン写真）専用スタイル★▼ */
-        .hero-photo-container {
-            margin: 0 auto 60px;
-            text-align: center;
-            width: 100%;
-            max-width: 720px; /* 本文より少し広く見栄えのするサイズ */
-        }
-        .hero-photo {
-            width: 100%;
-            aspect-ratio: 16 / 9; /* 横長で扉絵らしい安定感 */
-            object-fit: cover;
-            object-position: center 30%; /* 顔と手元が綺麗に収まる位置 */
-            border-radius: 6px;
-            box-shadow: 0 6px 24px rgba(140, 123, 110, 0.12);
-            display: block;
-            margin: 0 auto;
-            /* 温もりあるトーンに馴染ませるフィルター */
-            filter: sepia(18%) saturate(90%) contrast(93%) brightness(98%);
-        }
-
-        @media (max-width: 600px) {
-            .hero-photo-container { margin-bottom: 40px; }
-            .hero-photo { aspect-ratio: 16 / 10; object-position: center 25%; }
-        }
-        
+    <style>
         :root {
             --bg-color: #fcfbf9;
             --text-main: #242424;
@@ -197,15 +137,6 @@
 
     <div class="interview-container">
         <div class="interview-header">
-            <div class="interview-header">
-    
-    <!-- ★ここに挿入（タイトルの上の扉絵）★ -->
-    <figure class="article-top-photo">
-        <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33948.jpg" alt="扉絵" class="top-photo">
-    </figure>
-
-    <p class="interview-eyebrow">Interview</p>
-    <h1>私には帰る場所がない</h1>
             <span class="interview-eyebrow">Special Interview</span>
             <h1>5年越しの出版に込められた想い<br>〜『私には帰る場所がない』制作秘話〜</h1>
             <p class="interview-lead">デザインエッグ社から2026年秋に出版される『私には帰る"場所"がない』。その5年にわたる執筆期間、文体の変化、そして著者の思想がいかに熟成されたのか――全てが明かされる。</p>
@@ -219,10 +150,6 @@
             <p><strong>このインタビューについて</strong></p>
             <p>本稿は、デビュー作『私には帰る"場所"がない』の出版を控える著者・優さんへの独占インタビューです。5年間の執筆プロセス、言語化することの本質、そしてタイトルに込められた想いが語られています。</p>
         </div>
-
-        <figure class="header-photo-container">
-    <img src="33948.jpg" alt="ヘッダー画像" class="header-photo">
-</figure>
 
         <!-- 導入 -->
         <div class="interview-section">
