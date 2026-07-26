@@ -997,4 +997,48 @@
     </a>
     
 </body>
+    <!-- インタビューを読む ポップアップボタン（CSS内効） -->
+<style>
+  /* 追従ポップアップボタンのスタイル */
+  .floating-interview-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 20px; /* 左側に置きたい場合は right: 20px を left: 20px に変更してください */
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #3c4858 0%, #1a2b40 100%);
+    color: #ffffff !important;
+    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-decoration: none !important;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  /* ホバー（マウスをのせたとき）の動き */
+  .floating-interview-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    background: linear-gradient(135deg, #4a5a6a 0%, #2b3c50 100%);
+  }
+
+  /* アイコン装飾 */
+  .floating-interview-btn .btn-icon {
+    font-size: 12px;
+    opacity: 0.8;
+  }
+</style>
+
+<!-- ボタン本体 -->
+<a href="interview.html" class="floating-interview-btn">
+  <span>インタビューを読む</span>
+  <span class="btn-icon">→</span>
+</a>
 </html>
