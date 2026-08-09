@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
-    <figure class="header-photo-container">
-            <img src="33948.jpg" alt="ヘッダー写真" class="header-photo">
-        </figure>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>インタビュー：5年越しの出版に込められた想い | 優 You</title>
@@ -12,46 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-
-        /* 🌟スマートなヘッダー写真（スマホ対応・左右均等・馴染みフィルター付き）🌟 */
-        .header-photo-container {
-            width: 100%;
-            max-width: 580px;         /* でかすぎない上品で適度なサイズ */
-            margin-left: auto;        /* 左右均等に配置（完全中央寄せ） */
-            margin-right: auto;
-            margin-top: 20px;
-            margin-bottom: 35px;
-            padding: 8px;              /* 写真を包む清潔感のある白枠 */
-            background-color: #ffffff; /* 白枠背景 */
-            border: 1px solid #e8e6e1; /* 上品な薄い縁取り */
-            border-radius: 4px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-            box-sizing: border-box;    /* スマホで右側がはみ出るのを完璧に防止 */
-        }
-
-        .header-photo {
-            width: 100%;
-            aspect-ratio: 16 / 9;      /* 横長で扉絵らしい安定した比率 */
-            object-fit: cover;
-            object-position: center 25%; /* お顔や手が切れずに綺麗に収まるフォーカス位置 */
-            display: block;
-            border-radius: 2px;
-            /* ページの雰囲気（和紙・レトロ感）に優しく馴染ませるトーンフィルター */
-            filter: sepia(16%) saturate(88%) contrast(92%) brightness(97%);
-        }
-
-        @media (max-width: 600px) {
-            .header-photo-container {
-                width: 90%;            /* スマホ画面でも左右に均等な10%のゆとりを保持 */
-                margin-top: 15px;
-                margin-bottom: 25px;
-                padding: 6px;
-            }
-            .header-photo {
-                aspect-ratio: 16 / 9;
-                object-position: center 20%;
-            }
-        }
         :root {
             --bg-color: #fcfbf9;
             --text-main: #242424;
@@ -100,7 +56,7 @@
         header h1 { font-size: 1rem; letter-spacing: 0.2em; font-weight: 300; }
         header h1 a { color: var(--text-main); text-decoration: none; transition: opacity 0.3s; }
         header h1 a:hover { opacity: 0.6; }
-        nav a { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-family: var(--font-en); letter-spacing: 0.15em; transition: opacity 0.3s; }
+        nav a { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-family: var(--font-en); letter-spacing: 0.15em; transition: opacity 0.3s; margin-left: 1.2em; }
         nav a:hover { opacity: 0.6; }
 
         .interview-container { max-width: 820px; margin: 0 auto; padding: 80px 30px 60px; }
@@ -123,44 +79,182 @@
 
         .qa-block { margin: 40px 0; }
         .question { background-color: var(--pastel-sage); padding: 25px 30px; margin-bottom: 25px; border-left: 4px solid var(--accent-color); border-radius: 2px; font-size: 0.98rem; line-height: 1.9; }
-        .question::before { content: ''; color: var(--accent-color); font-weight: 600; display: block; margin-bottom: 12px; font-family: var(--font-serif); font-size: 0.95rem; }
+        .question::before { content: ''; }
 
         .answer { padding: 0 20px; font-size: 0.97rem; line-height: 2.1; text-align: justify; }
         .answer p { margin-bottom: 20px; }
         .answer p:last-child { margin-bottom: 0; }
-        .answer::before { content: ''; color: var(--accent-color); font-weight: 600; display: block; margin-bottom: 15px; font-family: var(--font-serif); font-size: 0.95rem; }
+        .answer::before { content: ''; }
 
-        .pullquote { border-left: 4px solid var(--accent-color); padding: 30px; margin: 50px 0; background-color: var(--pastel-lavender); font-size: 1.05rem; font-weight: 400; line-height: 2.1; }
-        .observation { background-color: var(--pastel-peach); padding: 20px 25px; margin: 30px 0; border-left: 3px solid var(--light-gray); font-size: 0.9rem; color: var(--text-sub); font-style: italic; }
-
-        /* ▼★写真用スタイル（トリミング位置を上寄りに調整）★▼ */
-        .interview-photo-container {
-            margin: 45px auto;
-            text-align: center;
-            width: 100%;
-            max-width: 600px;
-        }
-        .interview-photo {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            /* 上部20%の位置を中心に切り抜く（顔が見切れにくくなります） */
-            object-position: center 20%; 
-            border-radius: 4px;
-            box-shadow: 0 4px 16px rgba(140, 123, 110, 0.1);
-            display: block;
-            margin: 0 auto;
-            filter: sepia(25%) saturate(85%) contrast(90%) brightness(96%);
-            transition: filter 0.3s ease;
-        }
+        .pullquote { border-left: 4px solid var(--accent-color); padding: 30px; margin: 50px 0; background-color: var(--pastel-lavender); font-size: 1.05rem; font-weight: 400; line-height: 2.1; text-align: center; }
 
         strong { color: var(--text-main); font-weight: 600; }
         u { text-decoration: underline; text-decoration-color: var(--accent-color); text-underline-offset: 3px; }
 
-        footer { background-color: var(--band-bg); padding: 60px 30px; text-align: center; border-top: 1px solid var(--light-gray); margin-top: 100px; }
+        /* 目次 */
+        .table-of-contents {
+            background-color: #f8f6f1;
+            padding: 30px 40px;
+            margin: 40px 0 60px;
+            border-radius: 8px;
+            border: 1px solid var(--light-gray);
+        }
+        .table-of-contents h2 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.1em;
+            color: var(--accent-color);
+        }
+        .table-of-contents ul {
+            list-style: none;
+        }
+        .table-of-contents li {
+            margin-bottom: 8px;
+        }
+        .table-of-contents a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.3s;
+        }
+        .table-of-contents a:hover {
+            opacity: 0.6;
+        }
+
+        footer { background-color: var(--band-bg); padding: 60px 30px; text-align: center; border-top: 1px solid var(--light-gray); margin-top: 100px; border-radius: 16px 16px 0 0; }
         .footer-meta { font-size: 0.85rem; color: var(--text-sub); margin-bottom: 20px; font-family: var(--font-en); letter-spacing: 0.1em; }
         .back-link { display: inline-block; color: var(--accent-color); text-decoration: none; font-size: 0.9rem; margin-top: 20px; transition: opacity 0.3s; }
         .back-link:hover { opacity: 0.6; }
+
+        /* 終わりに・次章案内 */
+        .pastel-container {
+            background-color: #f4f0ea;
+            border-radius: 16px;
+            padding: 30px;
+            color: #2b2b2b;
+            line-height: 1.85;
+            max-width: 750px;
+            margin: 0 auto 40px;
+        }
+        .pastel-header {
+            background: linear-gradient(135deg, #e8f0fe 0%, #fce8e6 100%);
+            border-radius: 12px;
+            padding: 25px 20px;
+            margin-bottom: 25px;
+            border-left: 6px solid #b3c5e5;
+            text-align: center;
+        }
+        .pastel-header h2 {
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: #3c4858;
+            margin: 0;
+            letter-spacing: 0.1em;
+        }
+        .pastel-header .subtitle {
+            font-size: 0.75rem;
+            color: #7a8a9e;
+            margin-top: 6px;
+            letter-spacing: 0.12em;
+            font-family: var(--font-en);
+        }
+        .pastel-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 16px;
+            border: 1px solid #f0e9df;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+        .highlight-purple { background-color: #f7f3f9; border-left: 4px solid #d4c2e2; }
+        .highlight-green { background-color: #f2f7f4; border-left: 4px solid #b3d8c4; }
+        .highlight-orange { background-color: #fff9f2; border-left: 4px solid #f7d6b3; }
+
+        .next-chapter-container {
+            background-color: #f4f0ea;
+            border-radius: 16px;
+            padding: 30px;
+            max-width: 750px;
+            margin: 30px auto 0;
+        }
+        .next-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f7f3f9 100%);
+            border-radius: 12px;
+            padding: 28px 25px;
+            border: 1px solid #e8daf0;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            text-align: center;
+        }
+        .next-badge {
+            display: inline-block;
+            background-color: #d4c2e2;
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: bold;
+            letter-spacing: 0.15em;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+        .next-title {
+            font-size: 1.3rem;
+            font-weight: 400;
+            color: #3c4858;
+            margin: 0 0 12px 0;
+            letter-spacing: 0.05em;
+        }
+        .next-description {
+            font-size: 0.95rem;
+            color: #5a6b7c;
+            margin: 0 0 24px 0;
+            text-align: center;
+            line-height: 1.8;
+        }
+        .next-teaser {
+            background-color: #ffffff;
+            border-left: 4px solid #b3d8c4;
+            border-radius: 6px;
+            padding: 15px 20px;
+            margin: 0 auto 25px;
+            max-width: 600px;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #4a5a6a;
+            line-height: 1.7;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-next {
+            background: linear-gradient(135deg, #b3c5e5 0%, #d4c2e2 100%);
+            color: #ffffff;
+            box-shadow: 0 3px 10px rgba(179, 197, 229, 0.4);
+        }
+        .btn-next:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+        .btn-index {
+            background-color: #ffffff;
+            color: #7a8a9e;
+            border: 1px solid #d0d8e0;
+        }
+        .btn-index:hover {
+            background-color: #f8fafc;
+            color: #3c4858;
+        }
 
         @media (max-width: 600px) {
             .interview-container { padding: 60px 20px 40px; }
@@ -168,531 +262,262 @@
             .interview-lead { font-size: 0.95rem; }
             .question, .answer { font-size: 0.95rem; }
             .interview-meta { gap: 15px; }
-            .interview-photo-container { margin: 30px auto; max-width: 100%; }
-            .interview-photo { aspect-ratio: 16 / 9; object-position: center 20%; }
+            .table-of-contents { padding: 25px 20px; }
         }
-        .interview-photo {
-    width: 100%;
-    height: 100%;
-    /* ↓ これを 'contain' に変更（画像全体を枠内に収める） */
-    object-fit: contain;
-    /* ↓ 上部を基準に配置する（containと相性が良い） */
-    object-position: top;
-    /* ↓ もし背景色が気になる場合は、白などに設定できます */
-    background-color: white;
-}
     </style>
 </head>
 <body>
     <header>
         <h1><a href="index.html">優 | You</a></h1>
-        <nav><a href="index.html#publication">出版情報へ</a>　<a href="interview-chu.html">中編を読む</a></nav>
+        <nav>
+            <a href="index.html#publication">出版情報へ</a>
+            <a href="interview-chu.html">中編を読む</a>
+        </nav>
     </header>
 
     <div class="interview-container">
         <div class="interview-header">
             <span class="interview-eyebrow">Special Interview</span>
             <h1>5年越しの出版に込められた想い<br>〜『私には帰る“場所”がない』制作秘話〜（前編）</h1>
-            <p class="interview-lead">デザインエッグ社から2026年秋に出版される『私には帰る"場所"がない』。その5年にわたる執筆期間、文体の変化、そ[...]
+            <p class="interview-lead">
+                デザインエッグ社から2026年秋に出版される『私には帰る"場所"がない』。その5年にわたる執筆期間、文体の変化、そして現代社会への問いを、著者・優さんに聞いた。
+            </p>
             <div class="interview-meta">
-                <div class="meta-item"><span class="meta-label">取材日</span><span>2026年7月22日</span></div>
-                <div class="meta-item"><span class="meta-label">インタビュアー</span><span>編集部</span></div>
+                <div class="meta-item">
+                    <span class="meta-label">取材日</span>
+                    <span>2026年7月22日</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">インタビュアー</span>
+                    <span>編集部</span>
+                </div>
             </div>
         </div>
 
         <div class="interviewer-info">
             <p><strong>このインタビューについて</strong></p>
-            <p>本稿は、デビュー作『私には帰る"場所"がない』の出版を控える著者・優さんへの独占インタビューです。5年間の執筆プロセス、言語[...]
+            <p>本稿は、デビュー作『私には帰る"場所"がない』の出版を控える著者・優さんへの独占インタビューです。5年間の執筆プロセス、言語化の意味、タイトルに込められた想い、そして10年の歩みを振り返ります。</p>
         </div>
 
-        <!-- 目次 (Table of Contents) -->
-<nav class="table-of-contents">
-  <h2>目次</h2>
-  <ul>
-    <li><a href="#section-1">5年という「空白」の真相</a></li>
-    <li><a href="#section-2">核心：「書く」という行為の本質</a></li>
-    <li><a href="#section-3">『帰る場所がない』というタイトルの真意</a></li>
-    <li><a href="#section-4">変化と普遍：10年の歩みを振り返る</a></li>
-    <li><a href="#section-5">社会への問い：現代が抱える「帰る場所」の喪失</a></li>
-    <li><a href="#section-6">終わりに</a></li>
-  </ul>
-</nav>
- <!-- 導入 -->
+        <!-- 目次 -->
+        <nav class="table-of-contents">
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#section-1">5年という「空白」の真相</a></li>
+                <li><a href="#section-2">核心：「書く」という行為の本質</a></li>
+                <li><a href="#section-3">『帰る場所がない』というタイトルの真意</a></li>
+                <li><a href="#section-4">変化と普遍：10年の歩みを振り返る</a></li>
+                <li><a href="#section-5">社会への問い：現代が抱える「帰る場所」の喪失</a></li>
+                <li><a href="#section-6">終わりに</a></li>
+            </ul>
+        </nav>
+
+        <!-- セクション1 -->
         <div class="interview-section">
-            <span class="section-number"></span>
             <h2 id="section-1">5年という「空白」の真相</h2>
             
             <div class="qa-block">
                 <div class="question">
-                    ———ついに、<strong>5年越しのご出版</strong>ということで、本当におめでとうございます。ファンや読者の方々にとっても『待ち�[...]
-                    決して短くないこの期間、あえて原稿を寝かせていたのか、あるいは葛藤があったのか……。この5年という時間を置いたからこそ[...]
+                    ———ついに、<strong>5年越しのご出版</strong>ということで、本当におめでとうございます。読者の方々にとっても『待ちに待った』という瞬間だと思うのですが、私自身、一番気になっているのはその『5年』という歳月の意味なんです。決して短くないこの期間、あえて原稿を寝かせていたのか、あるいは葛藤があったのか……。この5年という時間を置いたからこそ、熟成されて『書けるようになったこと』、逆に、あの熱量のままだからこそ書けて、時間が経ったことで『書けなくなってしまったこと』がきっとあると思うんです。そのあたりのリアルな舞台裏から、まずはお聞かせいただけますか？
                 </div>
                 
                 <div class="answer">
-                    <p><u>まずは、この5年と言う長く途方もない時間を24時間体制で支えてくださった全てのご関係者の皆様へ、心より、心より御礼申�[...]
-                    
-                    <p>「いよいよこれはもう駄目か。やっとここまで来たのに。」と<u>涙ながらに絶望的な深淵に立ったこともしばしばありました。<[...]
-                    
-                    <p>そのなかで、<u>這うようにして執筆した原稿</u>もあります。いま読み返すと、とても痛々しいです。<u>この5年の中で私の考え��[...]
-                    
-                    <p>これは、<u>青臭い子どもから緑のような調和を大切にする大人への変容</u>とも換言することができます。昔はとにかく前のめり[...]
-                    
-                    <p>だからこそ、<u>危なっかしく、遮二無二で向こう見ずだったところ</u>があって。 そういった部分が徐々にソリッドに削ぎ落と��[...]
-                    
-                    <p>それは書けること、書けないこと、そういったところの二つの総括した答えになるかと思います。つまり、私の受けた傷と言う�[...]
-                    
-                    <p>そこで、無駄に理由もなく反抗していた自分がなんだか凄く忌々しく思えて。「皆んなで一丸となってひとつの目標に向かって�[...]
-                    
-                    <p>使命</u>でありそうしたプレゼンスの使い方が正しいのではないか、そう思うようになってから<u>筆致のベクトルが明らかに変わ[...]
+                    <p>まずは、この5年と言う長く途方もない時間を24時間体制で支えてくださった全てのご関係者の皆様へ、心より、心より御礼申し上げます。途中で再起不能かと覚悟した休養も挟んだため「いよいよこれはもう駄目か。やっとここまで来たのに。」と涙ながらに絶望的な深淵に立ったこともしばしばありました。いまでこそ元気いっぱいに活動していますが、いちばん落ち込んでいたときはそれは、実存そのものが消え入りそうな境地にまで来ていました。そのなかで、這うようにして執筆した原稿もあります。いま読み返すと、とても痛々しいです。この5年の中で私の考えや思想が左から右へ180度変わりました。それはもう見事なまでの転回です。これは、青臭い子どもから緑のような調和を大切にする大人への変容とも換言することができます。昔はとにかく前のめりに人と話す、議論する、執筆する、何か訴えかけるといった「勇気（パレーシア）」が自分の中に宿っていたんですけれども、だからこそ、危なっかしく、遮二無二で向こう見ずだったところがあって。そういった部分が徐々にソリッドに削ぎ落とされて、余計なことを言わないとか、感情が昂っても一拍置くとか、そういった引き算が人間的な成長とともに取捨選択ができるようになっていきました。それは書けること、書けないこと、そういったところの二つの総括した答えになるかと思います。つまり、私の受けた傷と言うのは、ある種のカウンターだったわけです。「お前は大人しくしろ」と。「いい加減大人になりなさい。」といった荒治療だったように今では懐かしめるのですね。そこで、無駄に理由もなく反抗していた自分がなんだか凄く忌々しく思えて。「皆んなで一丸となってひとつの目標に向かって労力を注いでいるのに、それを蒸発させるようなことばかりして、一体私は何なんだろう。」と、活動再開を経て嘆息とともに考えが180度変わり、全体の利益をいちばんに行動するのが自分の役割であり、使命でありそうしたプレゼンスの使い方が正しいのではないか、そう思うようになってから筆致のベクトルが明らかに変わり、一皮剥けました。</p>
                 </div>
-  <!-- ★修正後 -->
-<div class="interview-photo-container">
-    <img src="https://raw.githubusercontent.com/youyouyouthee-debug/watakae/main/33781_0.jpg" alt="インタビューを受ける様子" class="interview-photo">
-</div>
-                
             </div>
-            
-            
-        <!-- 核心 -->
+
+            <div class="qa-block">
+                <div class="question">
+                    ———今回デザインエッグ社から10月に出版される『私には帰る“場所”がない』は実に5年間分の原稿で構成されています。初期の頃の文体から見ると文体や、物事をみる視点が変わっているように思えます。例えば『縁の寿命』は小学校の頃の記憶など、過去を回想し、人生の教訓としている作品ですが、実に瑞々しい筆致で書かれております。書く内容や、表現方法はなぜ変わったと思われますか？何か象徴的な瞬間があれば、お聞かせください。
+                </div>
+                <div class="answer">
+                    <p>（この部分は提供テキストに詳細な回答がなかったため、必要に応じて追加してください。現状は省略しています。）</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- セクション2 -->
         <div class="interview-section">
-            <span class="section-number"></span>
             <h2 id="section-2">核心：「書く」という行為の本質</h2>
             
             <div class="qa-block">
                 <div class="question">
-                    ———本書を読んでいると、言葉の一つひとつに、<strong>単なる文章を超えた執念</strong>のようなものを感じます。そもそも優さ��[...]
-                    世の中には、思っていることがあっても胸にしまっておく人もいれば、喋って発散する人もいます。その中で、あえて『言語化す�[...]
-                    優さんにとって、<strong>頭の中のもやもやを言葉に落とし込む（言語化する）とは、一体どういう行為なのでしょうか？</strong> そ�[...]
+                    ———私は優さんの文章を読んでいると、言葉の一つひとつに、単なる文章を超えた執念のようなものを感じます。そもそも優さんは、なぜ書くのでしょうか？<br><br>
+                    世の中には、思っていることがあっても胸にしまっておく人もいれば、喋って発散する人もいます。その中で、あえて『言語化する』という、時に痛みを伴う作業に優さんが駆り立てられるのはなぜなのか。優さんにとって、頭の中で爆発するようなインスピレーションを言葉に落とし込む（言語化する）ということは、何か必然性がある行為に思えます。その点優さんはどのように思われますか？ そして、そうやって命を削るようにして書くことで、優さん自身は一体何を得ているのだと思いますか？
                 </div>
                 
                 <div class="answer">
-               「まずは、この5年の間に<b><u>自分が書く意味それ自体が変容していきました</u></b>。
-
- 最初の頃は、セラピーや芸術療法のような形で言語化し、<b>自分の中に抱え込んだ不条理やフラストレーションを昇華させ供養させていく</b>目��[...]
-
- 自分が溜めて溜めて溜め込み切ってきたこと、当事者性を持ってどうしても伝えたいこと、理解してほしいこと、そして<b>絶対に誤解されたくな[...]
-                    
-                    <p>
-
- それが<b><u>命を削るような執着や執念</u></b>となり、どこか鬼気迫るものとして肉迫して文章に表れていたのだと思います。
-
- 一方で最近は、そうした肩肘張った一生懸命さが和らぎ、<b>どこか余白が生まれてきました</b>。
-
- そのうえで、以前抱いていた当事者性を代弁するような感覚で書いています。</p>
-                    
-                    <p>
-
- 人間である以上、誰もがあらゆる当事者性から逃れることはできませんし、<b>原理的に「非当事者」など存在しない</b>と考えています。
-
- そうした様々な当事者同士を結びつける<b><u>ハブとなり、架橋していく</u></b>——今ではそのような役割を担うための<b>使命感</b>を持って、筆を[...]
-                    
-                    <p>
-
- そもそも、<b>私には言語化に痛みが伴うことはありませんでした</b>。</p>
-                    
-                    <p>
-
- というのも、痛みが伴うということは、目を背けていた自分に向き合い<b><u>生きたまま解剖する</u></b>ということ。それらを日常的にしていなけ�[...]
-                    
-                    <p>
-
- でも、私の場合は小さい頃から孤独と共存したまま、<b>絶えず自分と対話をしていました</b>。時には自分で自分を殴り倒すような対峙の仕方を��[...]
-                    
-                    <p>
-
- だからこそ、そうした腸の中にどろどろした<b><u>濾過される前の泥濘を飼いながら</u></b>、全くもってお腹がすっきりしているような顔をして生�[...]
-                    
-                    <p>
-
- <b><u>生きているだけで、吐き気がするほどの不条理で圧し潰されそうだったのです。</u></b>」
+                    <p>まずは、この5年の間に自分が書く意味それ自体が変容していきました。最初の頃は、セラピーや芸術療法のような形で言語化し、自分の中に抱え込んだ不条理やフラストレーションを昇華させ供養させていく目的がありました。自分が溜めて溜めて溜め込み切ってきたこと、当事者性を持ってどうしても伝えたいこと、理解してほしいこと、そして絶対に誤解されたくないことを、どうにかして表現したかったのです。それが命を削るような執着や執念となり、どこか鬼気迫るものとして肉迫して文章に表れていたのだと思います。一方で最近は、そうした肩肘張った一生懸命さが和らぎ、どこか余白が生まれてきました。そのうえで、以前抱いていた当事者性を代弁するような感覚で書いています。人間である以上、誰もがあらゆる当事者性から逃れることはできませんし、原理的に「非当事者」など存在しないと考えています。そうした様々な当事者同士を結びつけるハブとなり、架橋していく——今ではそのような役割を担うための使命感を持って、筆を取っています。</p>
+                    <p>そもそも、私には言語化に痛みが伴うことはありませんでした。というのも、痛みが伴うということは、目を背けていた自分に向き合い生きたまま解剖するということ。それらを日常的にしていなければ、確かに辛いのかも知れません。でも、私の場合は小さい頃から孤独と共存したまま、絶えず自分と対話をしていました。時には自分で自分を殴り倒すような対峙の仕方をしてきました。だからこそ、そうした腸の中にどろどろした濾過される前の泥濘を飼いながら、全くもってお腹がすっきりしているような顔をして生きてきたので、ある意味言語化は私にとり「嘔吐」のような排泄行為だったんですよね。生きているだけで、吐き気がするほどの不条理で圧し潰されそうだったのです。</p>
                 </div>
             </div>
             
             <div class="pullquote">「書くことは、私にとって単なる表現ではなく、<strong>自己確認の儀式であり、生存の証明</strong>である」</div>
+        </div>
 
-<div class="interview-photo-container">
-    <img src="Screenshot_20260726_011255_X.jpg" alt="インタビューの様子" class="interview-photo">
-</div>
-            
-        <!-- タイトルについて -->
+        <!-- セクション3 -->
         <div class="interview-section">
-            <span class="section-number"></span>
             <h2 id="section-3">『帰る場所がない』というタイトルの真意</h2>
             
             <div class="qa-block">
                 <div class="question">
-                    ———本のタイトル『<strong>私には帰る"場所"がない</strong>』について、質問させてください。これまで友人知人に少なからず反響[...]
-                    この『帰る場所』という言葉には、物理的な家や故郷という意味合いだけでなく、精神的な拠り所や、ありのままの自分でいられ�[...]
-                    優さんが本作のタイトルで表現したかった『帰る場所』とは、<u>どのようなものを指しているのでしょうか？</u>
+                    ———実際にこうして本という形で電子出版、紙での出版と世の中に出ていくわけですが、周りの方々の反応はいかがですか？ 驚かれたり、喜ばれたり、様々なドラマがあったのではないかと思います。<br><br>
+                    この作品を通じて、優さんが今の世の中に一番伝えたかったこと、もっと言えば今の社会に対して『一石を投じたかった問い』とは何なのでしょうか。読んだ人のどんな感情を揺さぶりたいと思って、この本を世に送り出したのか、その覚悟を教えてください。
                 </div>
-                
-<div class="answer">
-    <p><strong>文字通り、私には帰る場所がありません。それは実家がないといった物理的な意味です。</strong>これは、一見幸福で豊かにみえる位相[...]
-                    
-                    <p>生きるなかで何がしかの喪失体験からは避けられ得ず、そして往々にして人はその喪のプロセスを辿り、生涯をかけて昇華して�[...]
-                    
-                    <p></u>そして、読者もそれは恐らく望んでいません。それは人の不幸を愉しむ<u>シャーデンフロイデ</u>の意味合いではなく、<strong>[...]
-                    
-                    <p>やはりこの不景気なご時世でお金を払ってわざわざ私の書籍を手に取って購入しようと決めてくださる以上は、<strong>確かな読��[...]
-                    
-                    <p></u>・・・AもBも両立する、つまり「ない」と「ある」が並行しそれぞれが内包されるような、そうした一枚岩ではない複雑な現�[...]
-</div>
+                <div class="answer">
+                    <p>（この部分の詳細回答は提供テキストに含まれていません。必要に応じて追加してください。）</p>
+                </div>
             </div>
-            
+
             <div class="qa-block">
                 <div class="question">
-                    ———この『帰る場所がない』という印象的な言葉は、<strong>執筆の初期段階からすでに優さんの中に明確にあった</strong>のでし��[...]
-                    このタイトルで行こうとした瞬間があったはずです。何か象徴的で具体的なエピソードがあればお聞かせください。
+                    ———次に本のタイトルについて質問させてください。これまで友人知人に少なからず反響をいただいたと思います。なぜこのタイトルであるのかと。<br><br>
+                    この『帰る場所』という言葉には、物理的な家や故郷という意味合いだけでなく、精神的な拠り所や、ありのままの自分でいられる関係性など、様々な捉え方があると私は思うんですね。優さんが本作のタイトルで表現したかった『帰る場所』とは、どのようなものを指しているのでしょうか？
                 </div>
                 
-<div class="answer">
-    <p>当初はまったくタイトルが思い浮かびませんでした。なにしろ人文学の短編集のような、広範囲に渡るアラカルトのような詰め物ですので��[...]
-                    
-                    <p><strong>総括する命題とはなんだろう？というのはずっと考えあぐねていました。</strong>その頃、担当編集さん—そう、あなた！��[...]
-                    
-                    <p>まず第一にあったのはやはり、<u>単なる自慢話と受け取られたくなかったこと</u>、ここに起因します。それで、私は幸いさまざ[...]
-                    
-                    <p>個人の濃淡を突きつけられ、あまりに残酷なのではないか？と<strong>「これは絶対に後ろ向きなタイトルがいい」と決断しまし��[...]
-                    
-                    <p></u>私が苦労してきた意味は何？と根源的な問いに立ち還る際に、<strong>自分のこれまで背負ってきた暗い影を翻訳しなければど�[...]
-</div>
+                <div class="answer">
+                    <p><strong>文字通り、私には帰る場所がありません。それは実家がないといった物理的な意味です。</strong>これは、一見幸福で豊かにみえる位相にも埋めようのない原初的な欠損があるということで、まず読む方々になにか励みになればよいとの想いがありました。生きるなかで何がしかの喪失体験からは避けられ得ず、そして往々にして人はその喪のプロセスを辿り、生涯をかけて昇華してゆきます。そうした心の整理になるような言葉を紡ぎたかったのと、単なる武勇伝のような成功譚で終わらせたくなかったのです。そして、読者もそれは恐らく望んでいません。それは人の不幸を愉しむシャーデンフロイデの意味合いではなく、生存バイアスに過ぎないからです。つまり再現性がない。再現性がないということは、端的に読者に役立つような話にはなりません。やはりこの不景気なご時世でお金を払ってわざわざ私の書籍を手に取って購入しようと決めてくださる以上は、確かな読了感を与えられるような筆致を連ねたいと感じました。そうした私の思想の根幹ともいえるなにか相対主義的なもの・・・AもBも両立する、つまり「ない」と「ある」が並行しそれぞれが内包されるような、そうした一枚岩ではない複雑な現代へ向けて、タイトルをつけました。「ない」と断言することで逆説的に浮き出る「ある」ほうへと、目を向けてもらいたかったのです。</p>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question">
+                    ———あえて『ない』と断言することで、非常に強いインパクトと切実さが伝わってきます。この言葉の裏には、純粋な喪失感や孤独があるのでしょうか。それとも、既存の枠組みに縛られない自由や、自ら新しい居場所を創り出そうとする静かな決意のようなものも含まれているのでしょうか？
+                </div>
+                <div class="answer">
+                    <p>（上記の回答に包含されています。）</p>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question">
+                    ———この『私には帰る場所がない』という印象的な言葉は、執筆の初期段階からすでに優さんの中に明確にあったのでしょうか。それとも、原稿を書き進めている中で発見した言葉なのでしょうか。このタイトルで行こうとした、瞬間があったはずです。何か象徴的で具体的なエピソードがあればお聞かせください。
+                </div>
                 
-<div class="interview-photo-container">
-    <img src="33947.jpg" alt="執筆の様子" class="interview-photo">
-</div>
+                <div class="answer">
+                    <p>当初はまったくタイトルが思い浮かびませんでした。なにしろ人文学の短編集のような、広範囲に渡るアラカルトのような詰め物ですので、まるで統一性がないのです。もちろん、それが豊かなバリエーションとなり、読む人を飽きさせないことは請け合い—というか自信のある特徴なのですが、総括する命題とはなんだろう？というのはずっと考えあぐねていました。その頃、担当編集さん—そう、あなた！（ここで指を指す）と一緒に「なにかインスピレーション湧きませんかねえ～(´・ω・｀)」と本屋さんをうろうろしていると、来た来た閃きました。まず第一にあったのはやはり、単なる自慢話と受け取られたくなかったこと、ここに起因します。それで、私は幸いさまざまな方のお力を借りているけれど（そのぶん、これから恩返しをしてゆくけれど）、現状厳しい環境にいる人に、前向きなメッセージは果たして真っ直ぐ届くのだろうか？個人の濃淡を突きつけられ、あまりに残酷なのではないか？と「これは絶対に後ろ向きなタイトルがいい」と決断しました。まず読書は私的空間での自他との個人的対話になるため、突き抜けた明るさはそぐわないのと、人はやはり光よりもなにか陰った事象に様々な背景を洞察するように思います。私が苦労してきた意味は何？と根源的な問いに立ち還る際に、自分のこれまで背負ってきた暗い影を翻訳しなければどうするの、私はなんのために活動させてもらってるんだよ、という使命感からなります。</p>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question">
+                    ———現代は、常に誰かと繋がれるツールがある一方で、本当の意味で安心できる『帰る場所』を見失い、見えない疎外感を抱えている人が少なくない時代だと感じます。この作品は、そうした現代社会の空気や人々の心理と、どのように共鳴しているとお考えですか？
+                </div>
+                
+                <div class="answer">
+                    <p>現代では、全体的に内向的になり、個人主義がきわまっていると感じています。そうした意味で、誰しもが疎外感を感じながらも、その「疎」に対して安心感を抱いている。これは、地域社会から核家族化し、経済の衰退とともに一人っ子が増え、兄弟間あるいは地域間で社会を学ぶ、といった戯れがなくなったからだと思います。そうした道程を辿っても私には帰る場所がないということが、必ずしもネガティヴだとは考えません。むしろ、「帰る場所がない」のではなく翻って「どこへでもゆける」点できわめて自由で幅広い可動域を確保できているのです。「帰る場所」があることは、取りも直さず「責任」や「縛られる」窮屈さも内包します。固定の場所を伴った安全には維持管理義務が発生する。そうした意味合いでも、果たして実際に「ある」ことは必ずしもポジティブなだけなのだろうか？という問いかけでもあります。何事も両極があり、絶えずその二軸を反復しながら葛藤とともに生きているのが通常であり、むしろそれを「矛盾」や「二律背反」として非難するほうが原理に逆らっている。私が相対主義こそ人間の在り様であり、橋渡し役になると確信している所以です。</p>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="question">
+                    ———タイトルを目にしてハッとしたり、自分自身を重ね合わせて本を手に取る読者も多いはずです。ご自身の『帰る場所』について揺らぎを感じている読者にとって、本作がどのような存在として届くことを願っていらっしゃいますか？
+                </div>
+                <div class="answer">
+                    <p>（この部分の詳細回答は提供テキストに含まれていません。必要に応じて追加してください。）</p>
+                </div>
             </div>
         </div>
-        <!-- 変化と普遍 -->
+
+        <!-- セクション4 -->
         <div class="interview-section">
-            <span class="section-number"></span>
-           <h2 id="section-4">変化と普遍：10年の歩みを振り返る</h2>
+            <h2 id="section-4">変化と普遍：10年の歩みを振り返る</h2>
             
             <div class="qa-block">
                 <div class="question">
-                    ———この10年で、優さんの環境や活動の場は大きく広がったかと思います。ご自身の中で実感されている『<strong>ここが一番変わ[...]
-                </div>
-                
-              <div class="answer">
-    <p>まず、私はいま35歳です。そうすると、10年前は25歳なんですね。<strong>25歳の頃は、いまの自由奔放で自我を解放した現状とは真反対の真面�[...]
-
-    <p>その頃私は、行政で非正規公務員として働いていました。窓口では「俺らの税金で給料を貰いやがって・・・」と言われるような監視の目��[...]
-
-    <p>もちろん、職場の皆様は良い方々ばかりでした。ほんとうに楽しかったですよ。市民の方々を真銭に考え、どうすれば町がよくなるか、そ��[...]
-
-    <p>そうした意味合いでも、この10年で素朴に学力がこれでも幾許か上がったように思います。また、読書が好きになりましたし、その頃に乱読[...]
-
-    <p>あるいは、象徴的な出来事として、上記で真面目一徹堅物人間と述べましたが、人とあまりコミュニケーションを取らずに「結果さえ出せ��[...]
-
-    <p><strong>発想の転換というか、でも今なら分かるのですが、評価は一元的ではないのですね。</strong>きわめて立体性があり、黙々とこなせる人[...]
-
-    <p><u>そしていま35歳になり、いつのまにか10年前に憎み、あるいは嫉妬していた？その人にいま自分がなっている。</u>これは不思議な巡り合わ[...]
-
-    <p>当時話を聴いてくださっていた恩師から、その職場での理不尽（だと主観的に感じていたこと）を相談すると<strong>「あのね、物事は中庸な[...]
-
-    <p>そうです、10年前の私は完璧主義かつ白黒思考だったのです。いまだに極端なところはありますが、皆様のご教育のお陰で角が取れて丸くな[...]
-</div>
-            </div>
-            
-            <div class="qa-block">
-                <div class="question">
-                    ———そんなご自身の歩みを振り返ってみて……もし今、隣に『<strong>10年前の優さん</strong>』が座っていたとしたら、<u>どう声を[...]
+                    ———この10年で、優さんの環境や活動の場は大きく広がったかと思います。ご自身の中で実感されている『ここが一番変わった』という部分と、逆に『10年前からこれだけはずっと変わらない』という信念や芯の部分はどこにありますか？
                 </div>
                 
                 <div class="answer">
-    <p>あのときはとにかく、性分に合わない仕事をしていたことや、ホルモンバランスと闘っていたこと、実家から飛び出してまだ数年であり落��[...]
-
-    <p>まだまだそのときは人に言えない傷があり、そして述懐して大勢の人に受容されるような今の経験を辿っていなかったので、<u>絶えず重荷��[...]
-
-    <p><strong>それを一変させたのが放送大学での心理学の学びです。</strong></p>
-
-    <p>そこで10年前、25歳の私に声を掛けたいのは・・・、うーんでも、特段声を掛ける必要はなさそうですね。あのときはあのときで、頼もしく�[...]
-
-    <p>だから、<u>「そのまま生きていいよ、そしたらここに来るから。」</u>という端的な言葉でしょうかね。</p>
-
-    <p>私はやはり<strong>ユング心理学における「コンステレーション」という概念を信じているため</strong>、どうせ10年経ったらここに来るという�[...]
-</div>
-
-<div class="interview-photo-container">
-    <img src="1784998571859.jpg" alt="ひょっこりの様子" class="interview-photo">
-</div>
-</div>   
+                    <p>まず、私はいま35歳です。そうすると、10年前は25歳なんですね。25歳の頃は、いまの自由奔放で自我を解放した現状とは真反対の真面目一徹堅物人間でした。それはやはり環境が規定するのですね。その頃私は、行政で非正規公務員として働いていました。窓口では「俺らの税金で給料を貰いやがって・・・」と言われるような監視の目がありましたから（公務員だって同じように税金を払っているにも拘らず！）、町に出るにも絶えず市民の方や同僚などの視線を気にしながら、縮こまって杓子定規の生活をしていましたね。もちろん、職場の皆様は良い方々ばかりでした。ほんとうに楽しかったですよ。市民の方々を真剣に考え、どうすれば町がよくなるか、そういったことに真摯に向き合っている姿には、まさに「私もそうした陣営に伴いたい。よし、大学に行こう！」と学位の必要性や、高等教育の重要性を実際に現場で痛感した偶然性からなります。そうした意味合いでも、この10年で素朴に学力がこれでも幾許か上がったように思います。また、読書が好きになりましたし、その頃に乱読した経験が今に活きています。</p>
+                    <p>あるいは、象徴的な出来事として、上記で真面目一徹堅物人間と述べましたが、人とあまりコミュニケーションを取らずに「結果さえ出せばよいのだ。それは数字が全て規定するのだ。」と思っていました。ですから、仕事もこなさず人と話してばかりの人がなぜ評価されるのか、仕事が途切れないのか、皆目理解不能でした。そのぶん、私が仕事をしているのになぜ？というフラストレーションでいっぱいでした。でも今なら分かるのですが、評価は一元的ではないのですね。きわめて立体性があり、黙々とこなせる人、仕事が早い人、遅いけど正確な人、人とたくさん話してハブになる人、場を和ます人などなど、人事では様々なでこぼこをそれぞれある程度フラットに観察しているのですね。若い頃はそれに気づかなかった。そしていま35歳になり、いつのまにか10年前に憎み、あるいは嫉妬していた？その人にいま自分がなっている。これは不思議な巡り合わせだと感じました。私、あの人になりたかったんだって。</p>
+                    <p>当時話を聴いてくださっていた恩師から、その職場での理不尽（だと主観的に感じていたこと）を相談すると「あのね、物事は中庸なのよ。白黒じゃない。中庸を大切にね。」と言われました。そうです、10年前の私は完璧主義かつ白黒思考だったのです。いまだに極端なところはありますが、皆様のご教育のお陰で角が取れて丸くなりました。身体も(笑)。だからこそ、相対主義の重要さが分かるのかもしれません。極端な思考は往々にして生き辛いですからね。</p>
+                </div>
             </div>
- <!-- 社会への問い -->
-        <div class="interview-section">
-            <span class="section-number"></span>
-          <h2 id="section-5">社会への問い：現代が抱える「帰る場所」の喪失</h2>
-            
+
             <div class="qa-block">
                 <div class="question">
-                    ―———現代は、常に誰かと繋がれるツールがある一方で、本当の意味で安心できる『帰る場所』を見失い、<strong>見えない疎外��[...]
-                    本書が提示する『帰る場所がない』という状態は、実は現代の多くの人が無意識のうちに体験している、ある種の『普遍的な喪失�[...]
+                    ———そんなご自身の歩みを振り返ってみて……もし今、隣に『10年前の優さん』が座っていたとしたら、どう声をかけますか？ 何を伝えて、安心させてあげたいですか？
                 </div>
                 
                 <div class="answer">
-                   「現代では、全体的に内向的になり、<b>個人主義がきわまっている</b>と感じています。そうした意味で、誰しもが疎外感を感じな�[...]
-
-    <p>これは、地域社会から核家族化し、経済の衰退とともに一人っ子が増え、兄弟間あるいは地域間で社会を学ぶ、といった戯れがなくなった��[...]
-
-    <p>むしろ、「帰る場所がない」のではなく翻って<b><u>「どこへでもゆける」点できわめて自由で幅広い可動域を確保できている</u></b>のです。[...]
-
-    <p>固定の場所を伴った安全には維持管理義務が発生する。そうした意味合いでも、果たして実際に「ある」ことは必ずしもポジティブなだけ��[...]
-
-<b><u>私が相対主義こそ人間の在り様であり、橋渡し役になると確信している所以です。</u></b>"
+                    <p>あのときはとにかく、性分に合わない仕事をしていたことや、ホルモンバランスと闘っていたこと、実家から飛び出してまだ数年であり落ち着いてアタッチメントの再形成ができる時期ではなかったことなど、とにかく生き辛さを抱えていました。まだまだそのときは人に言えない傷があり、そして述懐して大勢の人に受容されるような今の経験を辿っていなかったので、絶えず重荷を背負い交友関係も狭いままに、視野狭窄に陥っていました。なにしろ全くメタ認知ができなかった。それを一変させたのが放送大学での心理学の学びです。</p>
+                    <p>そこで10年前、25歳の私に声を掛けたいのは・・・、うーんでも、特段声を掛ける必要はなさそうですね。あのときはあのときで、頼もしく感じていますし、いまより随分しっかりしていたと思います。それはそれで完成していた。だから、「そのまま生きていいよ、そしたらここに来るから。」という端的な言葉でしょうかね。私はやはりユング心理学における「コンステレーション」という概念を信じているため、どうせ10年経ったらここに来るという必然性があっけなく一筋貫いているのですね。</p>
                 </div>
             </div>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<style>
-  .pastel-container {
-    background-color: #f4f0ea;
-    border-radius: 16px;
-    padding: 30px;
-    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-    color: #2b2b2b;
-    line-height: 1.85;
-    max-width: 750px;
-    margin: 0 auto;
-  }
-  
-  .pastel-header {
-    background: linear-gradient(135deg, #e8f0fe 0%, #fce8e6 100%);
-    border-radius: 12px;
-    padding: 25px 20px;
-    margin-bottom: 25px;
-    border-left: 6px solid #b3c5e5;
-    text-align: center;
-  }
+        </div>
 
-  .pastel-header h1 {
-    font-size: 28px;
-    font-weight: bold;
-    color: #3c4858;
-    margin: 0;
-    letter-spacing: 0.1em;
-  }
-
-  .pastel-header .subtitle {
-    font-size: 12px;
-    color: #7a8a9e;
-    margin-top: 6px;
-    letter-spacing: 0.12em;
-  }
-
-  .pastel-card {
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 20px 24px;
-    margin-bottom: 16px;
-    border: 1px solid #f0e9df;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-  }
-
-  .highlight-purple {
-    background-color: #f7f3f9;
-    border-left: 4px solid #d4c2e2;
-  }
-
-  .highlight-green {
-    background-color: #f2f7f4;
-    border-left: 4px solid #b3d8c4;
-  }
-
-  .highlight-orange {
-    background-color: #fff9f2;
-    border-left: 4px solid #f7d6b3;
-  }
-
-  p {
-    margin: 0;
-    font-size: 15px;
-    text-align: justify;
-  }
-
-  b {
-    color: #1a2b40;
-  }
-
-  u {
-    text-decoration: none;
-    font-weight: bold;
-  }
-
-  .highlight-purple u { background: linear-gradient(transparent 60%, #e8daf0 60%); }
-  .highlight-green u { background: linear-gradient(transparent 60%, #d2f0e0 60%); }
-  .highlight-orange u { background: linear-gradient(transparent 60%, #fce2c2 60%); }
-  .pastel-card u { background: linear-gradient(transparent 60%, #e2e8f0 60%); }
-</style>
-</head>
-<body>
-
-<div class="pastel-container">
-  <div class="pastel-header">
-    <h2 id="section-6">終わりに</h2>
-    <div class="subtitle">INTERVIEW SUMMARY & REFLECTION</div>
-  </div>
-
-  <div class="pastel-card highlight-purple">
-    <p>今回のインタビューを通して見えてきたのは、ひとりの人間が<b>「書くこと」の本質的な意味</b>を深め、変容させてきた軌跡です。</p>
-  </div>
-
-  <div class="pastel-card">
-    <p>かつての執筆は、自身の中に渦巻く不条理や過酷な感情を<u>「嘔吐」のように吐き出し、供養するための切実な排泄行為</u>でした。幼少期�[...]
-  </div>
-
-  <div class="pastel-card highlight-green">
-    <p>しかし、時を経て生まれた心の余白は、その表現を<b><u>「個の救済」から「他者との架橋」へ</u></b>と昇華させました。</p>
-  </div>
-
-  <div class="pastel-card">
-    <p>現代社会において、個人主義の深化や「帰る場所の不在」は一見すると孤立のように映ります。しかしそれは翻って、<b>「どこへでもゆけ��[...]
-  </div>
-
-  <div class="pastel-card">
-    <p>二律背反する感情や状況を安易に否定せず、その狭間で葛藤しながら生きること——それこそが人間のリアルな在り様です。</p>
-  </div>
-
-  <div class="pastel-card highlight-orange">
-    <p>かつて生傷を抱えながら言葉を紡いでいた表現者は今、様々な当事者性を包み込み、<b><u>相反する世界同士を繋ぎ合わせる「ハブ（橋渡し��[...]
-  </div>
-</div>
-
-</body>
-</html>
-
-            <!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<style>
-  .next-chapter-container {
-    background-color: #f4f0ea;
-    border-radius: 16px;
-    padding: 30px;
-    font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
-    color: #2b2b2b;
-    line-height: 1.85;
-    max-width: 750px;
-    margin: 30px auto 0;
-  }
-
-  .next-card {
-    background: linear-gradient(135deg, #ffffff 0%, #f7f3f9 100%);
-    border-radius: 12px;
-    padding: 28px 25px;
-    border: 1px solid #e8daf0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
-    text-align: center;
-  }
-
-  .next-badge {
-    display: inline-block;
-    background-color: #d4c2e2;
-    color: #ffffff;
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-    padding: 4px 14px;
-    border-radius: 20px;
-    margin-bottom: 15px;
-  }
-
-  .next-title {
-    font-size: 20px;
-    font-weight: bold;
-    color: #3c4858;
-    margin: 0 0 12px 0;
-    letter-spacing: 0.05em;
-  }
-
-  .next-description {
-    font-size: 14pt;
-    color: #5a6b7c;
-    margin: 0 0 24px 0;
-    text-align: center;
-  }
-
-  .next-teaser {
-    background-color: #ffffff;
-    border-left: 4px solid #b3d8c4;
-    border-radius: 6px;
-    padding: 15px 20px;
-    margin: 0 auto 25px;
-    max-width: 600px;
-    text-align: left;
-    font-size: 13.5px;
-    color: #4a5a6a;
-  }
-
-  .nav-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-
-  .btn-next {
-    background: linear-gradient(135deg, #b3c5e5 0%, #d4c2e2 100%);
-    color: #ffffff;
-    box-shadow: 0 3px 10px rgba(179, 197, 229, 0.4);
-  }
-
-  .btn-next:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
-  }
-
-  .btn-index {
-    background-color: #ffffff;
-    color: #7a8a9e;
-    border: 1px solid #d0d8e0;
-  }
-
-  .btn-index:hover {
-    background-color: #f8fafc;
-    color: #3c4858;
-  }
-</style>
-</head>
-<body>
-
-<div class="next-chapter-container">
-  <div class="next-card">
-    <span class="next-badge">TO BE CONTINUED</span>
-    <h2 class="next-title">対話は、中編・後編へ——</h2>
-    
-    <p class="next-description">
-      前編でお届けした「書くことの変容」と「自らの在り様」。<br>
-      物語はさらに深く、思考の核心部分へと踏み込んでいきます。
-    </p>
-
-    <div class="next-teaser">
-      <b>次回の見どころ（中編・後編）：</b><br>
-      個人の記憶と社会の接点、そして「誰しもが当事者である世界」でいかに生きていくのか。言葉の橋渡し役として巡らせる、さらなる対話と[...]
-    </div>
-
-    <div class="nav-buttons">
-      <a href="#" class="btn btn-index">目次・一覧へ戻る</a>
-      <a href="interview-chu.html" class="btn btn-next">【中編】を読む →</a>
-    </div>
-  </div>
-</div>
-
-</body>
-</html>
+        <!-- セクション5 -->
+        <div class="interview-section">
+            <h2 id="section-5">社会への問い：現代が抱える「帰る場所」の喪失</h2>
             
-            <p style="font-size: 0.98rem; line-height: 2.1; margin-top: 30px; color: var(--text-sub); font-style: italic;">
+            <div class="qa-block">
+                <div class="question">
+                    ———現代は、常に誰かと繋がれるツールがある一方で、本当の意味で安心できる『帰る場所』を見失い、見えない疎外感を抱えている人が少なくない時代だと感じます。この作品は、そうした現代社会の空気や人々の心理と、どのように共鳴しているとお考えですか？
+                </div>
+                
+                <div class="answer">
+                    <p>現代では、全体的に内向的になり、個人主義がきわまっていると感じています。そうした意味で、誰しもが疎外感を感じながらも、その「疎」に対して安心感を抱いている。これは、地域社会から核家族化し、経済の衰退とともに一人っ子が増え、兄弟間あるいは地域間で社会を学ぶ、といった戯れがなくなったからだと思います。そうした道程を辿っても私には帰る場所がないということが、必ずしもネガティヴだとは考えません。むしろ、「帰る場所がない」のではなく翻って「どこへでもゆける」点できわめて自由で幅広い可動域を確保できているのです。「帰る場所」があることは、取りも直さず「責任」や「縛られる」窮屈さも内包します。固定の場所を伴った安全には維持管理義務が発生する。そうした意味合いでも、果たして実際に「ある」ことは必ずしもポジティブなだけなのだろうか？という問いかけでもあります。何事も両極があり、絶えずその二軸を反復しながら葛藤とともに生きているのが通常であり、むしろそれを「矛盾」や「二律背反」として非難するほうが原理に逆らっている。私が相対主義こそ人間の在り様であり、橋渡し役になると確信している所以です。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 終わりに -->
+        <div class="interview-section">
+            <div class="pastel-container">
+                <div class="pastel-header">
+                    <h2 id="section-6">終わりに</h2>
+                    <div class="subtitle">INTERVIEW SUMMARY & REFLECTION</div>
+                </div>
+
+                <div class="pastel-card highlight-purple">
+                    <p>今回のインタビューを通して見えてきたのは、ひとりの人間が<strong>「書くこと」の本質的な意味</strong>を深め、変容させてきた軌跡です。</p>
+                </div>
+
+                <div class="pastel-card">
+                    <p>かつての執筆は、自身の中に渦巻く不条理や過酷な感情を<strong>「嘔吐」のように吐き出し、供養するための切実な排泄行為</strong>でした。幼少期からの孤独との共存が、その行為を可能にしていたのかもしれません。</p>
+                </div>
+
+                <div class="pastel-card highlight-green">
+                    <p>しかし、時を経て生まれた心の余白は、その表現を<strong>「個の救済」から「他者との架橋」へ</strong>と昇華させました。</p>
+                </div>
+
+                <div class="pastel-card">
+                    <p>現代社会において、個人主義の深化や「帰る場所の不在」は一見すると孤立のように映ります。しかしそれは翻って、<strong>「どこへでもゆける」自由と可動域</strong>でもあるという視点が提示されています。</p>
+                </div>
+
+                <div class="pastel-card">
+                    <p>二律背反する感情や状況を安易に否定せず、その狭間で葛藤しながら生きること——それこそが人間のリアルな在り様です。</p>
+                </div>
+
+                <div class="pastel-card highlight-orange">
+                    <p>かつて生傷を抱えながら言葉を紡いでいた表現者は今、様々な当事者性を包み込み、<strong>相反する世界同士を繋ぎ合わせる「ハブ（橋渡し役）」</strong>として筆を取っています。</p>
+                </div>
+            </div>
+
+            <div class="next-chapter-container">
+                <div class="next-card">
+                    <span class="next-badge">TO BE CONTINUED</span>
+                    <h2 class="next-title">対話は、中編・後編へ——</h2>
+                    
+                    <p class="next-description">
+                        前編でお届けした「書くことの変容」と「自らの在り様」。<br>
+                        物語はさらに深く、思考の核心部分へと踏み込んでいきます。
+                    </p>
+
+                    <div class="next-teaser">
+                        <b>次回の見どころ（中編・後編）：</b><br>
+                        個人の記憶と社会の接点、そして「誰しもが当事者である世界」でいかに生きていくのか。言葉の橋渡し役として巡らせる、さらなる対話と洞察。
+                    </div>
+
+                    <div class="nav-buttons">
+                        <a href="index.html" class="btn btn-index">目次・一覧へ戻る</a>
+                        <a href="interview-chu.html" class="btn btn-next">【中編】を読む →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="font-size: 0.98rem; line-height: 2.1; margin-top: 40px; color: var(--text-sub); font-style: italic; text-align: center;">
                 『私には帰る"場所"がない』は、2026年秋、デザインエッグ社より出版予定。電子版・紙版の同時発売が予定されている。
             </p>
         </div>
