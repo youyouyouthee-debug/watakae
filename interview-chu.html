@@ -74,8 +74,6 @@
 
         .interview-section { margin: 80px 0; padding: 50px 0; border-bottom: 1px solid var(--light-gray); }
         .interview-section:last-of-type { border-bottom: none; }
-        .section-title { font-size: 1.5rem; font-weight: 400; margin-bottom: 10px; letter-spacing: 0.1em; color: var(--text-main); }
-        .section-number { color: var(--accent-color); font-size: 0.9rem; font-family: var(--font-en); letter-spacing: 0.15em; display: block; margin-bottom: 5px; }
 
         .qa-block { margin: 40px 0; }
         .question { background-color: var(--pastel-sage); padding: 25px 30px; margin-bottom: 25px; border-left: 4px solid var(--accent-color); border-radius: 2px; font-size: 0.98rem; line-height: 1.9; }
@@ -139,6 +137,48 @@
             color: var(--accent-color);
             border-left: 4px solid var(--accent-color);
             padding-left: 15px;
+        }
+
+        /* ===== 写真スタイル（前編と同じ） ===== */
+        .header-photo-container {
+            width: 100%;
+            max-width: 580px;
+            margin: 20px auto 35px;
+            padding: 8px;
+            background-color: #ffffff;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            box-sizing: border-box;
+        }
+
+        .header-photo {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center 25%;
+            display: block;
+            border-radius: 2px;
+            filter: sepia(16%) saturate(88%) contrast(92%) brightness(97%);
+        }
+
+        .interview-photo-container {
+            margin: 45px auto;
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .interview-photo {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center 20%;
+            border-radius: 4px;
+            box-shadow: 0 4px 16px rgba(140, 123, 110, 0.1);
+            display: block;
+            margin: 0 auto;
+            filter: sepia(25%) saturate(85%) contrast(90%) brightness(96%);
         }
 
         footer { background-color: var(--band-bg); padding: 60px 30px; text-align: center; border-top: 1px solid var(--light-gray); margin-top: 100px; border-radius: 16px 16px 0 0; }
@@ -293,6 +333,19 @@
             .interview-meta { gap: 15px; }
             .table-of-contents { padding: 25px 20px; }
             .sub-heading { font-size: 1.15rem; }
+            .header-photo-container {
+                width: 90%;
+                margin-top: 15px;
+                margin-bottom: 25px;
+                padding: 6px;
+            }
+            .header-photo {
+                object-position: center 20%;
+            }
+            .interview-photo-container {
+                margin: 30px auto;
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -304,6 +357,11 @@
             <a href="index.html#publication">出版情報へ</a>
         </nav>
     </header>
+
+    <!-- ★ ヘッダー写真 -->
+    <figure class="header-photo-container">
+        <img src="33940.jpg" alt="ヘッダー写真" class="header-photo">
+    </figure>
 
     <div class="interview-container">
         <div class="interview-header">
@@ -370,7 +428,6 @@
                 </div>
             </div>
 
-            <!-- ① -->
             <h3 class="sub-heading" id="work-1">① 生き延びるための忘却</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -379,7 +436,6 @@
                 </div>
             </div>
 
-            <!-- ② -->
             <h3 class="sub-heading" id="work-2">② 『ファウスト』について</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -387,7 +443,11 @@
                 </div>
             </div>
 
-            <!-- ③ -->
+            <!-- ★ 写真1 -->
+            <div class="interview-photo-container">
+                <img src="33782_0.jpg" alt="インタビューの様子" class="interview-photo">
+            </div>
+
             <h3 class="sub-heading" id="work-3">③ なぜ猫はいきなり道路に飛び出し身の危険を晒すのか</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -395,7 +455,6 @@
                 </div>
             </div>
 
-            <!-- ④ -->
             <h3 class="sub-heading" id="work-4">④ 絶望のポリス的動物による無軌道な随筆</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -404,7 +463,7 @@
             </div>
         </div>
 
-        <!-- セクション2：シモーヌ・ヴェイユと「矛盾」（分割） -->
+        <!-- セクション2：シモーヌ・ヴェイユと「矛盾」 -->
         <div class="interview-section">
             <h2 id="section-2">シモーヌ・ヴェイユと「矛盾」</h2>
             
@@ -415,7 +474,6 @@
                 </div>
             </div>
 
-            <!-- ヴェイユ分割1 -->
             <h3 class="sub-heading" id="weil-1">出自と対比</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -423,7 +481,11 @@
                 </div>
             </div>
 
-            <!-- ヴェイユ分割2 -->
+            <!-- ★ 写真2 -->
+            <div class="interview-photo-container">
+                <img src="33783_0.jpg" alt="インタビューの様子" class="interview-photo">
+            </div>
+
             <h3 class="sub-heading" id="weil-2">日本的労働観とストイシズム</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -432,7 +494,6 @@
                 </div>
             </div>
 
-            <!-- ヴェイユ分割3 -->
             <h3 class="sub-heading" id="weil-3">矛盾と命の息吹</h3>
             <div class="qa-block">
                 <div class="answer">
@@ -441,7 +502,7 @@
             </div>
         </div>
 
-        <!-- セクション3：児童相談所の手記（完全復元） -->
+        <!-- セクション3：児童相談所の手記 -->
         <div class="interview-section">
             <h2 id="section-3">「児童相談所の手記」——有り得た家族関係</h2>
             
@@ -457,9 +518,14 @@
                     <p>この「児童相談所の手記」はまさに、人から見た不幸が内実は幸福であるという大きな倒錯がある。幸不幸は非常にリバーシブルなもので、メビウスの輪のようにどちらにも反転しかつ地続きなのです。これは実はSNS社会にも適用できて，比較対象が多くその表層だけをみると落ち込んでしまうような人の有り様も、その実不幸をコーティングしているだけだったりする。他方で、不幸を叫んでいても、実際はささやかな幸福に溢れている場合がある。そうしたデュアリティを象徴するような幼少期の出来事でした。</p>
                 </div>
             </div>
+
+            <!-- ★ 写真3 -->
+            <div class="interview-photo-container">
+                <img src="34016.jpg" alt="インタビューの様子" class="interview-photo">
+            </div>
         </div>
 
-        <!-- セクション4：終わりに（完全復元） -->
+        <!-- セクション4：終わりに -->
         <div class="interview-section">
             <div class="pastel-container">
                 <div class="pastel-header">
@@ -502,7 +568,6 @@
                     <div class="nav-buttons">
                         <a href="interview.html" class="btn btn-prev">← 【前編】を読む</a>
                         <a href="index.html" class="btn btn-index">目次・一覧へ戻る</a>
-                        <!-- 後編ができたらここにリンクを追加 -->
                     </div>
                 </div>
             </div>
