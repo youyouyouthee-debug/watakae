@@ -2,14 +2,211 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>テスト</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インタビュー：裂け目を縫う調整弁として（後編） | 優 You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Noto+Serif+JP:wght@200;300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { background: #fcfbf9; color: #242424; font-family: sans-serif; padding: 40px; }
+        :root {
+            --bg-color: #fcfbf9;
+            --text-main: #242424;
+            --text-sub: #5a5550;
+            --accent-color: #8c7b6e;
+            --band-bg: #e6e0d5;
+            --light-gray: #e8e6e1;
+            --pastel-rose: #f4d4d0;
+            --pastel-sage: #d9e8e0;
+            --pastel-lavender: #e8dfe8;
+            --font-serif: 'Noto Serif JP', serif;
+            --font-en: 'Cormorant Garamond', serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-serif); color: var(--text-main); background-color: var(--bg-color); line-height: 2; letter-spacing: 0.05em; }
+        header { background-color: rgba(252, 251, 249, 0.95); backdrop-filter: blur(8px); padding: 2rem 5%; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(232, 230, 225, 0.5); display: flex; justify-content: space-between; align-items: center; }
+        header h1 { font-size: 1rem; letter-spacing: 0.2em; font-weight: 300; }
+        header h1 a { color: var(--text-main); text-decoration: none; }
+        nav a { color: var(--text-main); text-decoration: none; font-size: 0.8rem; font-family: var(--font-en); letter-spacing: 0.15em; margin-left: 1.2em; }
+        .interview-container { max-width: 820px; margin: 0 auto; padding: 80px 30px 60px; }
+        .interview-header { margin-bottom: 80px; text-align: center; border-bottom: 1px solid var(--light-gray); padding-bottom: 60px; }
+        .interview-eyebrow { font-size: 0.85rem; color: var(--accent-color); letter-spacing: 0.25em; text-transform: uppercase; font-family: var(--font-en); margin-bottom: 20px; }
+        .interview-header h1 { font-size: 2.2rem; font-weight: 300; margin-bottom: 25px; line-height: 1.6; letter-spacing: 0.08em; }
+        .interview-lead { font-size: 1rem; color: var(--text-sub); line-height: 2; max-width: 700px; margin: 0 auto 40px; font-weight: 300; }
+        .interview-meta { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; font-size: 0.85rem; color: var(--text-sub); font-family: var(--font-en); }
+        .meta-label { color: var(--accent-color); }
+        .interviewer-info { background-color: var(--pastel-rose); padding: 40px 30px; margin: 60px 0; border-left: 3px solid var(--accent-color); border-radius: 4px; }
+        .interview-section { margin: 80px 0; padding: 50px 0; border-bottom: 1px solid var(--light-gray); }
+        .qa-block { margin: 40px 0; }
+        .question { background-color: var(--pastel-sage); padding: 25px 30px; margin-bottom: 25px; border-left: 4px solid var(--accent-color); border-radius: 2px; font-size: 0.98rem; line-height: 1.9; }
+        .answer { padding: 0 20px; font-size: 0.97rem; line-height: 2.1; text-align: justify; }
+        .answer p { margin-bottom: 20px; }
+        .table-of-contents { background-color: #f8f6f1; padding: 30px 40px; margin: 40px 0 60px; border-radius: 8px; border: 1px solid var(--light-gray); }
+        .table-of-contents h2 { font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-color); }
+        .table-of-contents ul { list-style: none; }
+        .table-of-contents a { color: var(--text-main); text-decoration: none; }
+        .header-photo-container { width: 100%; max-width: 580px; margin: 20px auto 35px; padding: 8px; background: #fff; border: 1px solid #e8e6e1; border-radius: 4px; }
+        .header-photo, .interview-photo { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 4px; }
+        .interview-photo-container { margin: 45px auto; max-width: 600px; text-align: center; }
+        .pastel-container { background-color: #f4f0ea; border-radius: 16px; padding: 30px; max-width: 750px; margin: 0 auto 40px; }
+        .pastel-header { background: linear-gradient(135deg, #e8f0fe 0%, #fce8e6 100%); border-radius: 12px; padding: 25px 20px; margin-bottom: 25px; text-align: center; }
+        .nav-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn { display: inline-block; padding: 12px 28px; border-radius: 30px; text-decoration: none; background: #fff; color: #7a8a9e; border: 1px solid #d0d8e0; }
+        footer { background-color: var(--band-bg); padding: 60px 30px; text-align: center; margin-top: 100px; }
+        @media (max-width: 600px) { .interview-container { padding: 60px 20px 40px; } .interview-header h1 { font-size: 1.7rem; } }
     </style>
 </head>
 <body>
-    <h1>表示テスト</h1>
-    <p>この文字が見えればHTMLは正常です。</p>
-    <a href="index.html">トップへ</a>
+    <header>
+        <h1><a href="index.html">優 | You</a></h1>
+        <nav>
+            <a href="interview.html">前編</a>
+            <a href="interview-chu.html">中編</a>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <figure class="header-photo-container">
+        <img src="IMG_5333.JPG" alt="優 You" class="header-photo">
+    </figure>
+
+    <div class="interview-container">
+        <div class="interview-header">
+            <span class="interview-eyebrow">Special Interview</span>
+            <h1>裂け目を縫う調整弁として<br>〜後編〜</h1>
+            <p class="interview-lead">出版、講演、ポッドキャスト、Web。多角的な活動の先に、優さんが引き受けようとしている役割とは何か。</p>
+            <div class="interview-meta">
+                <div><span class="meta-label">取材日</span> 2026年7月22日</div>
+                <div><span class="meta-label">インタビュアー</span> 編集部</div>
+            </div>
+        </div>
+
+        <div class="interviewer-info">
+            <p><strong>このインタビューについて</strong></p>
+            <p>後編では、活動のビジョン、マイノリティへの視点、母娘関係、言論文化、学問、文体、読者へのメッセージを収録しています。</p>
+        </div>
+
+        <nav class="table-of-contents">
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#section-1">イシューの裂け目を縫う</a></li>
+                <li><a href="#section-2">スティグマとラポール</a></li>
+                <li><a href="#section-3">鏡の中のフレネミー</a></li>
+                <li><a href="#section-4">日本と海外の言論空間</a></li>
+                <li><a href="#section-5">放送大学と慶應義塾大学</a></li>
+                <li><a href="#section-6">文体は選択ではなく必然</a></li>
+                <li><a href="#section-7">読者へ向けて</a></li>
+            </ul>
+        </nav>
+
+        <div class="interview-section">
+            <h2 id="section-1">イシューの裂け目を縫う</h2>
+            <div class="qa-block">
+                <div class="question">「今回の出版に加え、講演会やポッドキャスト、さらにはWeb・動画制作など、多岐にわたる事業をスピーディーに展開されています。これほど多角的な活動を通じて、優さんが最終的に実現したいビジョン、あるいは社会の中で変えていきたいこととは何でしょうか。」</div>
+                <div class="answer">
+                    <p>優　「　はい、文章そのものをメディウムとしたり、日々の活動や実際に喋っている様子からなにか伝わるものがあればと、恥を忍んで泥臭く遮二無二届けようという気持ちは強いです。ではなにを届けるかというと、やはりそのときのイシューの裂け目を縫うような調整弁として、不遜ながら役割を担わせていただきたいと考えました。</p>
+                    <p>　本書では「分断および相対主義についてのエッセイ」にも述べている内容ではあるのですが、二項対立が勃発した際になるべくそのどちらにも与しない立場というか、極論を希釈するような装置になれればと思っています。他方で、ときには極地的な言説が求められる場面も当然ありますので、必要に応じてですね。</p>
+                    <p>　当然、「中立はときに差別を増長させる！」というご批判もあろうかと拝察しております。そうした反証について紙幅を割いて文中で述べておりますので、ご興味のある方はぜひ該当ページだけでもご覧くださいませ。</p>
+                </div>
+            </div>
+            <div class="interview-photo-container">
+                <img src="IMG_8360.JPG" alt="" class="interview-photo">
+            </div>
+        </div>
+
+        <div class="interview-section">
+            <h2 id="section-2">スティグマとラポール</h2>
+            <div class="qa-block">
+                <div class="question">「社会的マイノリティやスティグマを抱えた人々に対する視点の独自性も印象的です。生活保護受給者や精神疾患を抱える方々など、時に言語化が難しいテーマに対しても、なぜそこまでフラットな姿勢で向き合うことができるのでしょうか。」</div>
+                <div class="answer">
+                    <p>優　「　私自身が、様々な社会的地位の方々と接してきたからにほかなりません。自分の交友関係自体がエコーチェンバーになっていないため、これでも幾許か相対的に眺められているのかもしれません。自分が生粋の不登校および引きこもり当事者だと思うのが、昔から共同体に上手く馴染めず、時折その集団力学から腫れ物に触るように取り扱われてきた経緯が記憶の中でトラウマティックにこびりついており、今でも当時と似た境遇に陥ると身体が強張って動けなくなるため、何も関係のない無辜の方々を困らせてしまい痛み入るのですが、そこで圧倒的「マイノリティ」としてポジショニングした経験が強く自分を貫いています。</p>
+                    <p>　そうした部分で強烈な孤独を味わって、社会的スティグマを刻印されている人と共鳴したのだと思います。例えば、腫れ物に触るように接するほど、相手は暴れようとします。これはひとつの「戦闘状態」であり、ひとつの闘争本能なのでしょう。「怖い」「気持ち悪い」「あっちいって」「話しかけないで」。こう思うほど、関係や状況は拗れていきます。なぜなら考えている思考は大なり小なり必ず伝わる仕組みになっているからです。だからこそ、真から受容や理解を重んじる態度（Attitude）で相手の実存を尊重する。この姿勢こそがラポール（信頼関係）を形成するうえで非常に重要になってくるのだと思います。</p>
+                    <p>　社会的スティグマを持たれている方々は実際のところなにも怖くないです。それは、こちらの過度の警戒心に傷ついて暴れて自分を守ろうとしているだけです。そうした全体像に気づいたら、傍から見て不思議なほど、驚くほど少数派の方々とのリレーションシップが進むような気がするんです。」</p>
+                </div>
+            </div>
+            <div class="interview-photo-container">
+                <img src="IMG_0887.JPG" alt="" class="interview-photo">
+            </div>
+        </div>
+
+        <div class="interview-section">
+            <h2 id="section-3">鏡の中のフレネミー</h2>
+            <div class="qa-block">
+                <div class="question">「『鏡の中のフレネミー：母娘という「同質性」が引き起こす愛憎の力学』についてお聞きしたいです。きっと読者の多くが自分の親が天井になり、そこから抜け出せていない状況にあるのではないかと思います。フレンドとエネミーをくっつけた言葉があることを私は初めて知りました。この言葉を知るだけで、親という牢獄から抜け出せる人もいるのではないでしょうか。とりわけ娘と母の関係性は外部から可視化されず深刻になりやすいように思えました。この点いかがでしょうか。」</div>
+                <div class="answer">
+                    <p>優　「　河合隼雄が―どの著書だったかは失念してしまったのですが（『昔話と日本人の心』だったかな？）、親と子、そこに男女を当てはめた際に、母娘がいちばん厄介で非常に難解な関係性だそうです。というのも、これから述べる言葉をそのまま受け取って炎上しないでくださいね。父子では子が父を「象徴的に」父親殺しができるのですが、象徴的母親殺しというのは達成できないそうなんです。この物騒な言葉とは何ぞやという話になるかと思いますが、心理学や文学の用語なんですね。</p>
+                    <p>　心理学では、往々にして母親が「投影」の主体になります。投影とは、自分を最初に養育した特別な他者のことを指し、この場合は往々にして母親であることが多いです。つまり、主体そのものが主体たらしめる元素なのです。一番核になる部分です。その中心地は原理的に破壊できません。なぜならその人それ自体が瓦解してしまうからです。だからこそ母娘は拗れる。これが母息子のパターンだと比較的それほど複雑でないようです。それは突き詰めるとギリシャ神話などの古典によく表れている、というわけなんですね。昔話は元型（アーキタイプ）そのものだと実に河合隼雄は喝破しましたが、なぜ古典が古典せしめるのかを、示唆してならないような気がしています。」</p>
+                </div>
+            </div>
+            <div class="interview-photo-container">
+                <img src="IMG_0527.JPG" alt="" class="interview-photo">
+            </div>
+        </div>
+
+        <div class="interview-section">
+            <h2 id="section-4">日本と海外の言論空間</h2>
+            <div class="qa-block">
+                <div class="question">「日本と海外の言論空間の違いについてもお聞かせください。他者の価値を正面から認め、優れたものをストレートに賞賛する文化は、海外の方がより成熟しているように感じます。優さんご自身も海外に強い関心を寄せられていますが、その理由を文化的背景も踏まえて教えていただけますか。」</div>
+                <div class="answer">
+                    <p>優　「　そうですね。私は海外に行ったことがないので、Xのような媒体で駅前留学のようなかたちをとれるのが本当に有難い話なのですが、海外では自他共に賛する文化がありますよね。もちろんゆきすぎるとナルシスティックだとは言われるし、謙虚は日本と同じく尊敬を集める。でも、基本的態度は「ポジティブじゃないなど格好悪いよブラザー」という感じなのですね。</p>
+                    <p>　アドラーで言うところの「共同体感覚」が価値観の基底にあり、まさに「人類皆兄弟」を地でいっているのですね。凄く鷹揚としている。傍ら日本だと、自他ともに批判的に考察する文化が激しくて、それが良かれ悪しかれスケールしない様相を帯びている。集団主義のようでいて、その実極めて個人主義的なのではないかと感じています。それが良いか悪いかはまたベクトルの向きが違う話だとは思いますが…。　私は、自動翻訳でフィルターバブルが弾け風通しが良くなっていく現代に希望を見ています。それぞれが物理的には引き続き棲み分けをしながら、傍ら本来ドメスティックであった知見それ自体は国際化され文明が分配されてゆく。非常に効率的で合理的なニューエラになっていると思います。私は未来をそれほど悲観しておらず、人類は賢明に先鋭化されているので、これからの行く末が楽しみでなりません。」</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="interview-section">
+            <h2 id="section-5">放送大学と慶應義塾大学</h2>
+            <div class="qa-block">
+                <div class="question">「放送大学と慶應義塾大学、２つの大学で学ばれたという経歴も異色です。その飽くなき探究心の源泉はどこにあるのでしょうか。また、深く学問と向き合ったことで、ご自身の中で起きた変化があれば教えてください。」</div>
+                <div class="answer">
+                    <p>優　「　私の場合は行政のお仕事に少し携わっていた時分に、「このままではいけない。大学に通わなければ。」と学位の必要性を痛感し、ちょうど恩師から教わった放送大学の入り口の広さに感銘を受け飛び込んだことが全ての始まりだったように思います。実は、専攻は政治経済周りでいま関心がある分野とはまた別ベクトルを学んでいたのですね。その後無事に学位を取得しました。</p>
+                    <p>　そして、慶應義塾大学では、放送大学で獲得したロールモデルである―よもや似ても似つかないですが―シモーヌ・ヴェイユの背景を探り進めるべく文学部で哲学を専攻しました。最初にそこで学んだのは、歴史（西洋史）です。実は―ほんとうはこういうことはあまり公で言わない方がよいのかもしれませんが、科目を履修するときにはイングランドがイギリスであることも、カトリックとプロテスタントの区別も知らず、神聖ローマ帝国がてっきりローマにあると勘違いするほど歴史に疎かったんです。でも、必死に猛勉強し、最低評価は免れた上で単位を取得できました。慶應での学びは―途中で中退してしまいましたが―、脳に極限まで負荷をぐわっとかける意味で実に筋トレに近かったです。</p>
+                    <p>　なにしろ両大学でリカレント教育あるいは生涯学習を学ぶうえで、現役以前以後といった線引きがあまりに意味をなさない指標だと気づきました。また、学歴に対する劣等感のような心境も、社会人学生を経て霧散していきました。それはひとえに、机上の座学のみならず、生きるうえでの視座そのものを何段階も繰り上げてくれたような心持ちでいるのです。そうした意味で、私は大学という教育機関に育てられたのですね。自分をイチから育て直ししていただいたようで、改めて感謝しています。」</p>
+                </div>
+            </div>
+            <div class="interview-photo-container">
+                <img src="IMG_5126.JPG" alt="" class="interview-photo">
+            </div>
+        </div>
+
+        <div class="interview-section">
+            <h2 id="section-6">文体は選択ではなく必然</h2>
+            <div class="qa-block">
+                <div class="question">「今回の書籍は、文学から心理学、社会学、ジェンダー論まで、実に領域横断的な広がりを持っています。特にフロイトやユングなど深層心理への造詣の深さが、優さんの人生観にも影響を与えているように感じました。一方で、文章そのものは学術的な作法に縛られず、非常に自由で開かれています。あえてこの文体を選択された狙いはどこにあるのでしょうか。」</div>
+                <div class="answer">
+                    <p>優　「　時期によって文体はばらばら、なんですね。緩やかで柔和であったり、傍ら四角張っていたり。まさに「本当に同じ人が書いたの？」と思われるかもしれませんが、文章のみならず文体それ自体がなにかメッセージ性を持つような満ち引きが可視されれば、それすら懊悩の一部になり、読む人の心の変容に寄与をもたらすのではないか、そう考えました。したがって、文体を「選択」したというよりは、そうするしかなかった、そう書かざるを得なかった「必然性」のほうが近いかもしれません。</p>
+                    <p>　また、作品によってはひらがなひとつとっても、開かれていたり閉じていたりします。これは、そのときどきのエッセンスや社会に漂う空気感をパッケージングして、読むたびに「ああ、あの時期はこんな議題が湧き上がっていたね。」と懐かしめるようなある種の「時事通信」として本書を興じていただければ望外の喜びです。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="interview-section">
+            <h2 id="section-7">読者へ向けて</h2>
+            <div class="qa-block">
+                <div class="question">「最後に、本書を手に取る読者へ向けてメッセージをお願いします。」</div>
+                <div class="answer">
+                    <p>優　「　これは、本書のあとがきにも書いていることなのですが、兎にも角にもお伝えしたいのは、孤独を感じている全ての方へ「あなたはひとりじゃないよ」という命綱になるような誰かの確かな一冊になりたいのです。決して人生を諦めず生き抜く限り、生き延びる限り、あなたの「帰る場所」は必ず出来る、というのは、私なりの生きる地獄を掻い潜ったような自分にとりひとつの真実でした。</p>
+                    <p>　日本は、とてもいい国で私も大好きですが、治安は相対的に良くとも、なにしろ自殺率が激しいです。とりわけ、若年層の自死についても非常に胸を痛めています。本書に通底しているのは、さまざまな考え方を学術的な知見に基づいて提示していき、生き馬の目を抜く荒野を伴走しながら駆け抜けられるような想いを込めています。</p>
+                    <p>　既にまだ出版前に帯文を頼んだ方や試作をお目通しくださった方より「今までに見たことのない面白い本だ」と好評いただいています。面白い、というのは読み応え、という面でもそうですが、きっとあなたの人生の一部の中に深く残るような、それでいて「処方箋」になるような、御守りのような本棚のひとつになれたらと、そう願っています。」</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pastel-container">
+            <div class="pastel-header">
+                <h2>終わりに</h2>
+            </div>
+            <p>三部にわたるインタビューは、ここで一区切りです。</p>
+            <div class="nav-buttons">
+                <a class="btn" href="interview.html">前編へ</a>
+                <a class="btn" href="interview-chu.html">中編へ</a>
+                <a class="btn" href="index.html">トップへ</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div>Interview Ⅲ / 優 You</div>
+    </footer>
 </body>
 </html>
