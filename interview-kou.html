@@ -45,9 +45,34 @@
         .table-of-contents h2 { font-size: 1.1rem; margin-bottom: 15px; color: var(--accent-color); }
         .table-of-contents ul { list-style: none; }
         .table-of-contents a { color: var(--text-main); text-decoration: none; }
-        .header-photo-container { width: 100%; max-width: 580px; margin: 20px auto 35px; padding: 8px; background: #fff; border: 1px solid #e8e6e1; border-radius: 4px; }
-        .header-photo, .interview-photo { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; border-radius: 4px; }
-        .interview-photo-container { margin: 45px auto; max-width: 600px; text-align: center; }
+
+        /* 写真（顔が切れにくい設定） */
+        .header-photo-container {
+            width: 100%;
+            max-width: 580px;
+            margin: 20px auto 35px;
+            padding: 8px;
+            background: #fff;
+            border: 1px solid #e8e6e1;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .header-photo,
+        .interview-photo {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto;
+            border-radius: 4px;
+        }
+        .interview-photo-container {
+            margin: 45px auto;
+            max-width: 600px;
+            text-align: center;
+        }
+
         .pastel-container { background-color: #f4f0ea; border-radius: 16px; padding: 30px; max-width: 750px; margin: 0 auto 40px; }
         .pastel-header { background: linear-gradient(135deg, #e8f0fe 0%, #fce8e6 100%); border-radius: 12px; padding: 25px 20px; margin-bottom: 25px; text-align: center; }
         .nav-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
