@@ -46,26 +46,26 @@
         .table-of-contents ul { list-style: none; }
         .table-of-contents a { color: var(--text-main); text-decoration: none; }
 
-        /* 写真（顔が切れにくい設定） */
+        /* 前編・中編と同じサイズ感で、顔をなるべく残す */
         .header-photo-container {
             width: 100%;
             max-width: 580px;
             margin: 20px auto 35px;
             padding: 8px;
-            background: #fff;
+            background-color: #ffffff;
             border: 1px solid #e8e6e1;
             border-radius: 4px;
-            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
         }
         .header-photo,
         .interview-photo {
             width: 100%;
-            max-width: 100%;
-            height: auto;
-            object-fit: contain;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center 30%;
             display: block;
-            margin: 0 auto;
-            border-radius: 4px;
+            border-radius: 2px;
+            filter: sepia(16%) saturate(88%) contrast(92%) brightness(97%);
         }
         .interview-photo-container {
             margin: 45px auto;
@@ -221,7 +221,8 @@
             <div class="pastel-header">
                 <h2>終わりに</h2>
             </div>
-            <p>三部にわたるインタビューは、ここで一区切りです。</p>
+            <p>三部にわたるこのインタビューで、優さんは「空白」を緊急避難と呼び直し、母娘やスティグマ、相対主義、文体の揺らぎまでを横断しながら、それでもなお「あなたはひとりじゃない」という言葉を手放さなかった。</p>
+            <p>裂け目を縫う調整弁として生きること。それは大きな宣言ではなく、誰かの本棚の片隅に静かに残る一冊として、確かに届けることなのかもしれない。</p>
             <div class="nav-buttons">
                 <a class="btn" href="interview.html">前編へ</a>
                 <a class="btn" href="interview-chu.html">中編へ</a>
