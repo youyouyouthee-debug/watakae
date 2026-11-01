@@ -46,7 +46,7 @@
         .table-of-contents ul { list-style: none; }
         .table-of-contents a { color: var(--text-main); text-decoration: none; }
 
-        /* 前編・中編と同じサイズ感で、顔をなるべく残す */
+        /* 前編・中編と同じサイズ感、ヘッダーは顔を残しやすく */
         .header-photo-container {
             width: 100%;
             max-width: 580px;
@@ -57,7 +57,15 @@
             border-radius: 4px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
         }
-        .header-photo,
+        .header-photo {
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+            object-position: center 15%;
+            display: block;
+            border-radius: 2px;
+            filter: sepia(16%) saturate(88%) contrast(92%) brightness(97%);
+        }
         .interview-photo {
             width: 100%;
             aspect-ratio: 16 / 9;
